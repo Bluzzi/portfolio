@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Camille Dugas - Portfolio</title>
         
-        <meta name="description" content="Hello! I'm Camille Dugas, a passionate full-stack web developer since 2016. I mainly work with the technologies proposed by the NodeJS universe." />
+        <meta name="description" content="I'm a passionate full-stack web developer since 2016. I mainly work with the technologies proposed by the NodeJS universe to create modern web applications." />
         
         <link rel="icon" href="/favicon.ico" />
       </Head>
