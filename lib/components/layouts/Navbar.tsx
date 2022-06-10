@@ -12,7 +12,7 @@ interface NavElementProps {
 const NavElement: FunctionComponent<NavElementProps> = ({ children, href }) => (
   <Link href={href}>
     <a 
-      className="text-base text-white cursor-pointer transition-colors 
+      className="text-base text-white transition-colors 
       hover:underline hover:text-primary-normal"
     >
       {children}
