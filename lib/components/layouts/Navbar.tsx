@@ -1,7 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
-import Image from "next/image";
 import Button from "../elements/Button";
 import Link from "next/link";
+import Line from "../elements/geometry/Line";
 
 // NavElement component :
 interface NavElementProps {
@@ -12,7 +12,7 @@ interface NavElementProps {
 const NavElement: FunctionComponent<NavElementProps> = ({ children, href }) => (
   <Link href={href}>
     <a 
-      className="text-white cursor-pointer transition-colors 
+      className="text-base text-white cursor-pointer transition-colors 
       hover:underline hover:text-primary-normal"
     >
       {children}
@@ -24,7 +24,7 @@ const NavElement: FunctionComponent<NavElementProps> = ({ children, href }) => (
 const Navbar: FunctionComponent = () => {
   return (
     <div className="h-navbar flex flex-col justify-between">
-      <hr className="h-0.5 w-full bg-primary-normal" />
+      <Line />
 
       <div className="flex justify-between items-center">
         <nav className="flex items-baseline gap-12 ml-16">
@@ -34,9 +34,9 @@ const Navbar: FunctionComponent = () => {
           <NavElement href="/blog">Blog</NavElement>
         </nav>
 
-        <span className="mr-16">
-          <Button href="#">Contact</Button>
-        </span>
+        <div className="mr-16">
+          <Button href="/#contact">Contact</Button>
+        </div>
       </div>
     </div>
   );
