@@ -54,15 +54,15 @@ const Cursor: FunctionComponent = () => {
   // Styles :
   const css = classNames(
     "h-10 w-10",
-    "border border-white-smooth rounded-full",
+    "border border-white rounded-full",
     "fixed z-50",
     "pointer-events-none",
     "-translate-x-1/2 -translate-y-1/2",
     "transition-cursor ease-in-out",
     {
-      "bg-white-smooth scale-90": clicked,
+      "bg-white scale-90": clicked,
 
-      "bg-white-smooth mix-blend-normal scale-50": linkHovered, // or scale 125
+      "bg-white mix-blend-normal scale-50": linkHovered, // or scale 125
       "mix-blend-difference": !linkHovered,
 
       "opacity-0": hidden

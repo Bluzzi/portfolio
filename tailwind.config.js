@@ -5,12 +5,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      "white": {
-        "normal": "white",
-        "smooth": "#fefefe"
-      },
-      "black": "black",
+      "white": "#ffffff",
       "gray": "rgba(142, 169, 191)",
+      "blue": "#0b1829",
+      "black": "black",
 
       "primary": {
         "normal": "rgba(28, 231, 252)",
@@ -19,15 +17,19 @@ module.exports = {
     },
 
     fontFamily: {
-      "sans": ["Roboto", "sans-serif"]
+      "sans": ["Ubuntu", "sans-serif"]
     },
 
     borderWidth: {
       DEFAULT: "2px",
     },
-
+   
     backgroundImage: {
-      "header-gradiant": "radial-gradient(ellipse at bottom, #0b1829 0%, #000000 100%)",
+      // "header": "radial-gradient(ellipse at bottom, #0b1829 0%, #000000 100%)",
+      // "header": "radial-gradient(ellipse at top, #0b1829 0%, #000000 50%)",
+      "header": "radial-gradient(ellipse at bottom right, #0b1829 0%, #000000 60%)",
+
+      "about": "radial-gradient(ellipse at top right, #0b1829 0%, #000000 60%)",
     },
 
     extend: {
