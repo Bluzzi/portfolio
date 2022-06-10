@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <main>
       <header className="h-screen bg-header relative">
-        <Particles configUrl="/particles/header.json" />
+        <Particles configUrl="/particles.json" />
 
         <div className="relative z-10 h-navbar-adjust">
           <Navbar />
