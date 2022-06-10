@@ -9,7 +9,7 @@ interface AnchorProps {
 
 const Anchor: FunctionComponent<AnchorProps> = ({ children, href }) => {
   const css = classNames(
-    "text-white cursor-pointer transition-colors",
+    "text-white transition-colors",
     "underline underline hover:text-primary-normal"
   );
 
