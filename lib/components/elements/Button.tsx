@@ -14,11 +14,12 @@ const Button: FunctionComponent<ButtonProps> = ({ children, large, href }) => {
     "rounded-full border-primary-normal border",
     "transition-all hover:bg-primary-transparent",
     {
+      "text-xl": !large,
       "text-2xl": large,
     }
   );
 
-  return <a className={css} href={href}>{children}</a>;
+  return <Link href={href}><a className={css}>{children}</a></Link>;
 };
 
 export default Button;
