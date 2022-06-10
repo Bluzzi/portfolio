@@ -5,14 +5,8 @@
 @tailwind utilities;
 
 /* Resets and defaults styles */
-#root {
-	min-height: 100%;
-}
-
 html,
 body {
-  height: 100%;
-  
   padding: 0;
   margin: 0;
 
