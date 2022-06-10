@@ -7,6 +7,7 @@ module.exports = {
     colors: {
       "white": "#ffffff",
       "gray": "rgba(142, 169, 191)",
+      
       "blue": "#0b1829",
       "black": "black",
 
@@ -14,6 +15,14 @@ module.exports = {
         "normal": "rgba(28, 231, 252)",
         "transparent": "rgba(28, 231, 252, 0.15)",
       }
+    },
+
+    fontSize: {
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": ["4.5rem", { lineHeight: 1 }]
     },
 
     fontFamily: {
