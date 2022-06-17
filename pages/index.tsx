@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
+import { ReactElement } from "react";
 import Button from "../lib/components/elements/Button";
 import Anchor from "../lib/components/elements/text/Anchor";
 import Text from "../lib/components/elements/text/Text";
 import Navbar from "../lib/components/layouts/Navbar";
 import Particles from "../lib/components/specials/Particles";
 
-const Home: NextPage = () => {
+export default function Home() : ReactElement {
   return (
     <main>
       <header className="h-screen bg-header relative">
@@ -34,5 +34,3 @@ const Home: NextPage = () => {
     </main>
   );
 };
-
-export default Home;

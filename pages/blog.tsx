@@ -1,12 +1,10 @@
-import type { NextPage } from "next";
+import { ReactElement } from "react";
 import Navbar from "../lib/components/layouts/Navbar";
 
-const Blog: NextPage = () => {
+export default function Blog() : ReactElement {
   return (
     <main className="bg-black h-screen">
       <Navbar />
     </main>
   );
 };
-
-export default Blog;

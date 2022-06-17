@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FunctionComponent, ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface TextProps {
   children: ReactNode;
@@ -14,7 +14,7 @@ interface TextProps {
   size?: "base" | "large" | "xl" | "2xl" | "3xl";
 };
 
-const Text: FunctionComponent<TextProps> = ({ children, type, color, size }) => {
+export default function Text({ children, type, color, size }: TextProps) : ReactElement {
   const css = classNames({
     // Text color :
     "text-white": !color || color === "white",
@@ -33,5 +33,3 @@ const Text: FunctionComponent<TextProps> = ({ children, type, color, size }) => 
 
   return <Tag className={css}>{children}</Tag>;
 };
-
-export default Text;

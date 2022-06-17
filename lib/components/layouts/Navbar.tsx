@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import Button from "../elements/Button";
 import Link from "next/link";
 import Line from "../elements/geometry/Line";
@@ -9,19 +9,21 @@ interface NavElementProps {
   href: string;
 }
 
-const NavElement: FunctionComponent<NavElementProps> = ({ children, href }) => (
-  <Link href={href}>
-    <a 
-      className="text-base text-white transition-colors 
-      hover:underline hover:text-primary-normal"
-    >
-      {children}
-    </a>
-  </Link>
-);
+function NavElement({ children, href }: NavElementProps) : ReactElement {
+  return (
+    <Link href={href}>
+      <a 
+        className="text-base text-white transition-colors 
+        hover:underline hover:text-primary-normal"
+      >
+        {children}
+      </a>
+    </Link>
+  );
+};
 
 // Navbar component :
-const Navbar: FunctionComponent = () => {
+export default function Navbar() : ReactElement {
   return (
     <div className="h-navbar flex flex-col justify-between">
       <Line />
@@ -41,5 +43,3 @@ const Navbar: FunctionComponent = () => {
     </div>
   );
 };
-
-export default Navbar;

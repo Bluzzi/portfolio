@@ -2,6 +2,10 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "quotes": ["error", "double"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+
+    "eol-last": ["error", "never"]
   }
 }

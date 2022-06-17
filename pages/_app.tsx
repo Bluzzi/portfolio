@@ -2,8 +2,9 @@ import "../lib/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Cursor from "../lib/components/specials/Cursor";
+import { ReactElement } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) : ReactElement {
   return (
     <div>
       <Head>
@@ -21,5 +22,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </div>
   );
 }
-
-export default MyApp;

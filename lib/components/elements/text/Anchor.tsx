@@ -1,13 +1,13 @@
 import classNames from "classnames";
 import Link from "next/link";
-import { FunctionComponent, ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface AnchorProps {
   children: ReactNode;
   href: string;
 };
 
-const Anchor: FunctionComponent<AnchorProps> = ({ children, href }) => {
+export default function Anchor({ children, href }: AnchorProps) : ReactElement {
   const css = classNames(
     "text-white transition-colors",
     "underline underline hover:text-primary-normal"
@@ -15,5 +15,3 @@ const Anchor: FunctionComponent<AnchorProps> = ({ children, href }) => {
 
   return <Link href={href}><a className={css}>{children}</a></Link>;
 };
-
-export default Anchor;

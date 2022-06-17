@@ -1,8 +1,8 @@
 import classNames from "classnames";
-import React, { useState, useEffect, FunctionComponent, useRef } from "react";
+import React, { useState, useEffect, useRef, ReactElement } from "react";
 import { isMobile } from "../../utils/Device";
 
-const Cursor: FunctionComponent = () => {
+export default function Cursor() : ReactElement | null {
   const cursor = useRef<HTMLSpanElement>(null);
 
   const [clicked, setClicked] = useState(false);
@@ -33,7 +33,7 @@ const Cursor: FunctionComponent = () => {
         link.removeEventListener("mouseout", () => onLinkMouseOut);
       });
     };
-  });
+  }, []);
 
   if(typeof navigator !== "undefined" && isMobile()) return null;
 
@@ -72,5 +72,3 @@ const Cursor: FunctionComponent = () => {
   // Element :
   return <span className={css} ref={cursor} />;
 };
-
-export default Cursor;
