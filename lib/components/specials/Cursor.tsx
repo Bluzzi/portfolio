@@ -71,4 +71,4 @@ export default function Cursor() : ReactElement | null {
 
   // Element :
   return <span className={css} ref={cursor} />;
-};
+}

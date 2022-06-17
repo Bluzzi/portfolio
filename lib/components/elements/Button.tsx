@@ -6,7 +6,7 @@ interface ButtonProps {
   children: ReactNode;
   large?: boolean;
   href: string;
-};
+}
 
 export default function Button({ children, large, href }: ButtonProps) : ReactElement {
   const css = classNames(
@@ -20,4 +20,4 @@ export default function Button({ children, large, href }: ButtonProps) : ReactEl
   );
 
   return <Link href={href}><a className={css}>{children}</a></Link>;
-};
+}

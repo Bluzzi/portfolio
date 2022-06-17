@@ -12,7 +12,7 @@ interface TextProps {
   
   // base = default
   size?: "base" | "large" | "xl" | "2xl" | "3xl";
-};
+}
 
 export default function Text({ children, type, color, size }: TextProps) : ReactElement {
   const css = classNames({
@@ -32,4 +32,4 @@ export default function Text({ children, type, color, size }: TextProps) : React
   const Tag = type ?? "p";
 
   return <Tag className={css}>{children}</Tag>;
-};
+}

@@ -5,7 +5,7 @@ import { ReactElement, ReactNode } from "react";
 interface AnchorProps {
   children: ReactNode;
   href: string;
-};
+}
 
 export default function Anchor({ children, href }: AnchorProps) : ReactElement {
   const css = classNames(
@@ -14,4 +14,4 @@ export default function Anchor({ children, href }: AnchorProps) : ReactElement {
   );
 
   return <Link href={href}><a className={css}>{children}</a></Link>;
-};
+}

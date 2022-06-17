@@ -7,4 +7,4 @@ export default function Blog() : ReactElement {
       <Navbar />
     </main>
   );
-};
+}
