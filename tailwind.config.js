@@ -41,6 +41,14 @@ module.exports = {
       "about": "radial-gradient(ellipse at top right, #0b1829 0%, #000000 60%)",
     },
 
+    screens: {
+      "2xl": { "max": "1535px" },
+      "xl": { "max": "1279px" },
+      "lg": { "max": "1023px" },
+      "md": { "max": "767px" },
+      "sm": { "max": "639px" }
+    },
+
     extend: {
       height: {
         "navbar": "4.5rem",
