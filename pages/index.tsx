@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import Button from "../lib/components/elements/Button";
 import Anchor from "../lib/components/elements/text/Anchor";
 import Text from "../lib/components/elements/text/Text";
-import Navbar from "../lib/components/layouts/Navbar";
+import Navbar from "../lib/components/layouts/navbar/Navbar";
 import Particles from "../lib/components/specials/Particles";
 
 export default function Home() : ReactElement {
