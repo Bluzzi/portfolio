@@ -1,7 +1,7 @@
 import { ReactElement, useState } from "react";
 import Button from "../../elements/Button";
 import Line from "../../elements/geometry/Line";
-import classNames from "classnames";
+import classNames from "clsx";
 import BurgerButton from "./BurgerButton";
 import NavLink from "./NavLink";
 

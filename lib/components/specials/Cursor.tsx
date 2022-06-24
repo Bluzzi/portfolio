@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classNames from "clsx";
 import React, { useState, useEffect, useRef, ReactElement } from "react";
 import { isMobile } from "../../utils/Device";
 

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classNames from "clsx";
 import { ReactElement, ReactNode } from "react";
 
 interface TextProps {

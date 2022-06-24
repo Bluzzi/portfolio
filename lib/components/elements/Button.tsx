@@ -1,6 +1,6 @@
-import classNames from "classnames";
+import classNames from "clsx";
 import Link from "next/link";
-import { FunctionComponent, ReactElement, ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface ButtonProps {
   children: ReactNode;
