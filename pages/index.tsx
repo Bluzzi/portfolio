@@ -5,7 +5,7 @@ import Text from "../lib/components/elements/text/Text";
 import Navbar from "../lib/components/layouts/navbar/Navbar";
 import Particles from "../lib/components/specials/Particles";
 import Image from "next/image";
-import CircleMenu from "../lib/components/elements/CircleMenu";
+// import CircleMenu from "../lib/components/elements/CircleMenu";
 
 export default function Home() : ReactElement {
   return (
@@ -46,7 +46,7 @@ export default function Home() : ReactElement {
         </div>
       </section>
 
-      <CircleMenu/>
+      {/* <CircleMenu/> */}
     </main>
   );
 }
