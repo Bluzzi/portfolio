@@ -31,7 +31,8 @@ export default function Home() : ReactElement {
       </header>
 
       <section id="about" className="h-screen bg-about flex items-center justify-center flex-col">
-        <Text size="3xl" type="h2">Who I am ?</Text>
+        <Text size="2xl">My portfolio is in development...</Text>
+        {/* <Text size="3xl" type="h2">Who I am ?</Text>
 
         <div className="w-3/4 flex">
           <div>
@@ -43,7 +44,7 @@ export default function Home() : ReactElement {
           </div>
 
           <Image src="/images/profile-picture.jpg" alt="profile picture" height={400} width={400} className="rounded-full" />
-        </div>
+        </div> */}
       </section>
 
       {/* <CircleMenu/> */}

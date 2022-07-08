@@ -26,7 +26,8 @@ export default function Navbar() : ReactElement {
           </nav>
 
           <div className="mr-16 lg:m-0">
-            <Button href="/#contact">Contact</Button>
+            {/* <Button href="/#contact">Contact</Button> */}
+            <Button href="mailto://camilledugas.pro@gmail.com">Contact</Button>
           </div>
         </div>
       </div>
