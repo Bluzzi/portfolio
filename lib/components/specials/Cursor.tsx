@@ -35,7 +35,7 @@ export default function Cursor() : ReactElement | null {
     };
   }, []);
 
-  if(typeof navigator !== "undefined" && isMobile()) return null;
+  if (typeof navigator !== "undefined" && isMobile()) return null;
 
   // Basic events functions :
   const onMouseMove = (event: MouseEvent) => {

@@ -8,8 +8,8 @@ interface ParticlesProps {
 }
 
 export default function Particles({ configUrl }: ParticlesProps) : ReactElement {
-  return <ParticlesJS 
-    init={async (engine: Engine) => await loadFull(engine)} 
-    url={configUrl} style={{ "position": "absolute" }} 
+  return <ParticlesJS
+    init={async(engine: Engine) => await loadFull(engine)}
+    url={configUrl} style={{ "position": "absolute" }}
   />;
 }

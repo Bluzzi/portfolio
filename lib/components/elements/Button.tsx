@@ -15,7 +15,7 @@ export default function Button({ children, large, href }: ButtonProps) : ReactEl
     "transition-all hover:bg-primary-transparent",
     {
       "text-xl": !large,
-      "text-2xl": large,
+      "text-2xl": large
     }
   );
 

@@ -9,7 +9,7 @@ interface TextProps {
 
   // white = default, primary is only for links
   color?: "white" | "black" | "gray" | "primary";
-  
+
   // base = default
   size?: "base" | "large" | "xl" | "2xl" | "3xl";
 }

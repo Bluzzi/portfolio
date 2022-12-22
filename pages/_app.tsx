@@ -9,9 +9,9 @@ export default function MyApp({ Component, pageProps }: AppProps) : ReactElement
     <div>
       <Head>
         <title>Camille Dugas - Portfolio</title>
-        
+
         <meta name="description" content="I'm a passionate full-stack web developer since 2016. I mainly work with the technologies proposed by the NodeJS universe to create modern web applications." />
-        
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
