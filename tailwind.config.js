@@ -5,9 +5,10 @@ module.exports = {
   ],
   theme: {
     colors: {
+      "transparent": "transparent",
       "white": "#ffffff",
       "black": "#000000",
-      "gray": "#333333"
+      "gray": "#888888"
     },
 
     fontSize: {
