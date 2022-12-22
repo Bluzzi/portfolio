@@ -1,20 +1,13 @@
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     colors: {
       "white": "#ffffff",
-      "gray": "rgba(142, 169, 191)",
-
-      "blue": "#0b1829",
-      "black": "black",
-
-      "primary": {
-        "normal": "rgba(28, 231, 252)",
-        "transparent": "rgba(28, 231, 252, 0.15)"
-      }
+      "black": "#000000",
+      "gray": "#333333"
     },
 
     fontSize: {
@@ -29,18 +22,6 @@ module.exports = {
       "sans": ["Ubuntu", "sans-serif"]
     },
 
-    borderWidth: {
-      DEFAULT: "2px"
-    },
-
-    backgroundImage: {
-      // "header": "radial-gradient(ellipse at bottom, #0b1829 0%, #000000 100%)",
-      // "header": "radial-gradient(ellipse at top, #0b1829 0%, #000000 50%)",
-      "header": "radial-gradient(ellipse at bottom right, #0b1829 0%, #000000 60%)",
-
-      "about": "radial-gradient(ellipse at top right, #0b1829 0%, #000000 60%)"
-    },
-
     screens: {
       "2xl": { "max": "1535px" },
       "xl": { "max": "1279px" },
@@ -49,17 +30,7 @@ module.exports = {
       "sm": { "max": "639px" }
     },
 
-    extend: {
-      height: {
-        "navbar": "4.5rem",
-        "navbar-adjust": "calc(100% - 4.5rem)",
-        "0.5": "2px"
-      },
-
-      transitionProperty: {
-        "cursor": "background-color, opacity, transform, mix-blend-mode"
-      }
-    }
+    extend: {}
   },
   plugins: []
 };
