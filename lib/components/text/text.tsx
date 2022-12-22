@@ -14,7 +14,7 @@ interface TextProps {
   size?: "base" | "large" | "xl" | "2xl" | "3xl";
 }
 
-export default function Text({ children, type, color, size }: TextProps) : ReactElement {
+export function Text({ children, type, color, size }: TextProps) : ReactElement {
   const css = classNames({
     // Text color :
     "text-white": !color || color === "white",
