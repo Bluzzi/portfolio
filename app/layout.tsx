@@ -8,7 +8,7 @@ export default function Layout({ children }: PropsWithChildren): ReactElement {
     <html>
       <head />
 
-      <body className="scroll-smooth bg-black">
+      <body className="scroll-smooth bg-black min-h-screen">
         {children}
       </body>
     </html>
