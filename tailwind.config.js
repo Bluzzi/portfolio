@@ -8,10 +8,14 @@ module.exports = {
       "transparent": "transparent",
       "white": "#ffffff",
       "black": "#000000",
-      "gray": "#888888"
+      "gray": {
+        DEFAULT: "#888",
+        1: "#111"
+      }
     },
 
     fontSize: {
+      "sm": "0.8rem",
       "base": "1rem",
       "lg": "1.125rem",
       "xl": "1.25rem",
