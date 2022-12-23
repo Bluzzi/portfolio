@@ -15,5 +15,32 @@
       "Développement d'un système de génération de fichier OpenAPI via le backend pour pouvoir générer le support de l'API pour le frontend",
       "Développement d'un package de composants pour notre design système avec ReactJS, Storybook et Tailwind"
     ]
+  },
+  {
+    "date": {
+      "start": "2022-05-01",
+      "end": "2022-06-30"
+    },
+    "company": "Dugas", 
+    "title": "Développement full-stack d’un site de gestion de commande", 
+    "description": [
+      "Développement d’un site internet pour prendre et gérer des commandes avec ReactJS et NextJS",
+      "Développement d’une API REST avec le framework NestJS et la BDD PostgreSQL"
+    ]
+  },
+  {
+    "date": {
+      "start": "2018-09-01",
+      "end": "2022-04-30"
+    },
+    "company": "Symphonia", 
+    "title": "Développement full-stack et gestion de serveur", 
+    "description": [
+      "Développement de plugin via le software PocketMine-MP",
+      "Développement d’un serveur socket (TCP) pour la synchronisation des serveurs",
+      "Développement d’un backend (API REST) avec le framework NestJS et la BDD PostgreSQL",
+      "Développement d’un panel proposant divers outils de gestion avec ReactJS et NextJS",
+      "Gestion et maintenance des serveurs sur Ubuntu"
+    ]
   }
 ]

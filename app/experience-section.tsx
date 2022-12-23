@@ -16,6 +16,8 @@ export function ExperienceSection(): ReactElement {
   // Sort experiences by start date:
   experiences.sort((a, b) => a.date.start.isAfter(b.date.start) ? 1 : -1);
 
+  // TODO : add experience time
+
   // Component content:
   return (
     <div>
@@ -25,7 +27,7 @@ export function ExperienceSection(): ReactElement {
         return (
           <div key={index} className="my-3">
             <Text className="mb-1">
-              {experience.date.start.format("DD/MM/YYYY")} - {experience.date.end ? experience.date.end.format("DD/MM/YYYY") : "présent"} (5 mois)
+              {experience.date.start.format("DD/MM/YYYY")} - {experience.date.end ? experience.date.end.format("DD/MM/YYYY") : "présent"}
             </Text>
 
             <Text>{experience.company.toUpperCase()} - {experience.title}</Text>
