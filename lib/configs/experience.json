@@ -1,0 +1,19 @@
+[
+  { 
+    "date": {
+      "start": "2022-07-11",
+      "end": "present"
+    },
+    "company": "Essential Tooth Box", 
+    "title": "Développement full-stack d'un site e-commerce", 
+    "description": [
+      "Développement d'un système pour synchroniser les produits et commandes de Shopify et PrestaShop avec le backend",
+      "Développement de divers scripts d'écriture et lecture de fichier Excel et Google Sheet",
+      "Développement d'un site internet pour l'espace distributeur avec ReactJS et NextJS",
+      "Développement d'un site internet e-commerce avec ReactJS et NextJS",
+      "Développement d'un backend (API REST) avec le framework KoaJS et la BDD MongoDB",
+      "Développement d'un système de génération de fichier OpenAPI via le backend pour pouvoir générer le support de l'API pour le frontend",
+      "Développement d'un package de composants pour notre design système avec ReactJS, Storybook et Tailwind"
+    ]
+  }
+]
