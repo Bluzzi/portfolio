@@ -1,16 +1,31 @@
-import { LinkButton } from "$lib/components/link-button";
+import { Text } from "$lib/components/text";
 import { ReactElement } from "react";
+import Image from "next/image";
 
 export default function Home(): ReactElement {
   return (
-    <div className="grid place-content-center gap-2 h-screen">
-      <p className="text-white">Mon portfolio est en création...</p>
+    <>
+      <div className="mx-auto w-1/2 flex flex-col mt-24">
+        {/* Name and profile picture */}
+        <div className="flex justify-between gap-16">
+          <div className="space-y-3">
+            <Text size="3xl">Camille Dugas</Text>
 
-      <div className="flex gap-3 flex-wrap">
-        <LinkButton href="https://github.com/Bluzzi">GitHub</LinkButton>
-        <LinkButton href="https://www.malt.fr/profile/camilledugas">Malt</LinkButton>
-        <LinkButton href="https://www.linkedin.com/in/camille-dugas/">LinkedIn</LinkButton>
+            <Text size="large" color="gray">Développeur front-end • React • NextJS • TypeScript</Text>
+
+            <Text color="gray">
+              I{"'"}m a passionate front-end developer since 2016.
+              I mainly work with the technologies proposed by the NodeJS universe to create modern web applications.
+            </Text>
+          </div>
+
+          <div className="border-2 border-white rounded-full h-40 w-40 relative flex-shrink-0">
+            <Image src="/bluzzi.jpg" alt="Profile picture" fill className="rounded-full border-2" />
+          </div>
+        </div>
+
+        {/* ... */}
       </div>
-    </div>
+    </>
   );
 }
