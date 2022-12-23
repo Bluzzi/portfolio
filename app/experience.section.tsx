@@ -1,24 +1,10 @@
 import { Text } from "$lib/components/text";
+import { getExperiences } from "$lib/services/experience";
 import { ReactElement } from "react";
-import experienceConfig from "$lib/configs/experience.json";
-import dayjs from "dayjs";
 
 export function ExperienceSection(): ReactElement {
-  // Parse experiences dates:
-  const experiences = experienceConfig.map(experience => ({
-    ...experience,
-    date: {
-      start: dayjs(experience.date.start),
-      end: experience.date.end ? dayjs(experience.date.end) : null
-    }
-  }));
+  const experiences = getExperiences();
 
-  // Sort experiences by start date:
-  experiences.sort((a, b) => a.date.start.isBefore(b.date.start) ? 1 : -1);
-
-  // TODO : add experience time
-
-  // Component content:
   return (
     <>
       {experiences.map((experience, index) => (
@@ -27,7 +13,7 @@ export function ExperienceSection(): ReactElement {
             <Text size="large" className="uppercase">{experience.company}</Text>
 
             <Text color="gray">
-              {experience.date.start.format("DD/MM/YYYY")} - {experience.date.end ? experience.date.end.format("DD/MM/YYYY") : "présent"}
+              {experience.dateFormat.start} - {experience.dateFormat.end} ({experience.duration})
             </Text>
           </div>
 
