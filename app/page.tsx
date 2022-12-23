@@ -4,6 +4,7 @@ import { Line } from "$lib/components/line";
 import { SkillSection } from "./skill-section";
 import { ExperienceSection } from "./experience-section";
 import { AboutSection } from "./about-section";
+import { ContactSection } from "./contact-section";
 
 export default function Home(): ReactElement {
   return (
@@ -16,6 +17,9 @@ export default function Home(): ReactElement {
         <Line className="my-7" />
 
         <ExperienceSection />
+        <Line className="my-7" />
+
+        <ContactSection />
       </div>
     </>
   );
