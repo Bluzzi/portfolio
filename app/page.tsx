@@ -3,7 +3,7 @@ import { Line } from "$lib/components/line";
 import { SkillSection } from "./skill.section";
 import { ExperienceSection } from "./experience.section";
 import { AboutSection } from "./about.section";
-import { ContactSection } from "./contact.section";
+import { LinkSection } from "./link.section";
 
 export default function Home(): ReactElement {
   return (
@@ -18,7 +18,7 @@ export default function Home(): ReactElement {
         <ExperienceSection />
         <Line className="my-7" />
 
-        <ContactSection />
+        <LinkSection />
       </div>
     </>
   );
