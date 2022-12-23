@@ -20,22 +20,24 @@ export function ExperienceSection(): ReactElement {
 
   // Component content:
   return (
-    <div>
-      <Text size="2xl">Mes expériences professionnelles</Text>
+    <>
+      {experiences.map((experience, index) => (
+        <div key={index} className="my-5">
+          <div className="flex gap-2 justify-between">
+            <Text size="large" className="uppercase">{experience.company}</Text>
 
-      {experiences.map((experience, index) => {
-        return (
-          <div key={index} className="my-3">
-            <Text className="mb-1">
+            <Text color="gray">
               {experience.date.start.format("DD/MM/YYYY")} - {experience.date.end ? experience.date.end.format("DD/MM/YYYY") : "présent"}
             </Text>
-
-            <Text>{experience.company.toUpperCase()} - {experience.title}</Text>
-
-            {experience.description.map(line => <Text key={line} color="gray" size="small" className="ml-1">● {line}</Text>)}
           </div>
-        );
-      })}
-    </div>
+
+          <Text className="mb-1">{experience.title}</Text>
+
+          {experience.description.map(line => <Text key={line} color="gray" size="small" className="ml-1">● {line}</Text>)}
+
+          <Text size="small" color="gray" className="mt-1"><span className="text-white">Technologies :</span> {experience.skills.join(" • ")}</Text>
+        </div>
+      ))}
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import { Text } from "$lib/components/text";
 import { ReactElement } from "react";
 import { Line } from "$lib/components/line";
 import { SkillSection } from "./skill-section";
