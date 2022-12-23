@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 import { Line } from "$lib/components/line";
-import { SkillSection } from "./skill-section";
-import { ExperienceSection } from "./experience-section";
-import { AboutSection } from "./about-section";
-import { ContactSection } from "./contact-section";
+import { SkillSection } from "./skill.section";
+import { ExperienceSection } from "./experience.section";
+import { AboutSection } from "./about.section";
+import { ContactSection } from "./contact.section";
 
 export default function Home(): ReactElement {
   return (
