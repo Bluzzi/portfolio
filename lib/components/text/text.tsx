@@ -10,6 +10,7 @@ export function Text({ children, type, color, size, className, ...props }: TextP
     "text-gray": color === "gray",
 
     // Font size :
+    "text-sm": size === "small",
     "text-base": !size || size === "base",
     "text-lg": size === "large",
     "text-xl": size === "xl",
