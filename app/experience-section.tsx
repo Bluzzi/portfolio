@@ -14,7 +14,7 @@ export function ExperienceSection(): ReactElement {
   }));
 
   // Sort experiences by start date:
-  experiences.sort((a, b) => a.date.start.isAfter(b.date.start) ? 1 : -1);
+  experiences.sort((a, b) => a.date.start.isBefore(b.date.start) ? 1 : -1);
 
   // TODO : add experience time
 
