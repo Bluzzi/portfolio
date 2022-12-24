@@ -1,9 +1,7 @@
 import { Experience } from "./experience.type";
+import { pluralize } from "$lib/utils/string";
 import experienceConfig from "$lib/configs/experience.json";
 import dayjs from "dayjs";
-import { pluralize } from "$lib/utils/string";
-
-// TODO : clean this, hook ?
 
 export function getExperiences(): Experience[] {
   // Parse experiences dates:
@@ -26,6 +24,7 @@ export function getExperiences(): Experience[] {
 
     const duration = years > 0 ? `${years} ${pluralize("an", years)} et ${months} mois` : `${months} mois`;
 
+    // Format the experience :
     return {
       ...experience,
       dateFormat: {
