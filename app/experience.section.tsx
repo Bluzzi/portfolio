@@ -9,7 +9,7 @@ export function ExperienceSection(): ReactElement {
     <>
       {experiences.map((experience, index) => (
         <div key={index} className="my-5">
-          <div className="flex gap-2 justify-between">
+          <div className="flex justify-between flex-wrap">
             <Text size="large" className="uppercase">{experience.company}</Text>
 
             <Text color="gray">
