@@ -3,9 +3,11 @@
   { "title": "React", "logo": "/skills/react.png", "link": "https://fr.reactjs.org" },
   { "title": "Next", "logo": "/skills/next-js.svg", "link": "https://nextjs.org" },
   { "title": "CSS", "logo": "/skills/css.png", "link": "https://developer.mozilla.org/fr/docs/Web/CSS" },
-  { "title": "SASS/SCSS", "logo": "/skills/sass.png", "link": "https://sass-lang.com/" },
-  { "title": "Tailwind", "logo": "/skills/tailwind.svg", "link": "https://tailwindcss.com/" },
-  { "title": "Jotai/Zustand", "logo": "/skills/jotai.png", "link": "https://jotai.org/" },
+  { "title": "SASS/SCSS", "logo": "/skills/sass.png", "link": "https://sass-lang.com" },
+  { "title": "Tailwind", "logo": "/skills/tailwind.svg", "link": "https://tailwindcss.com" },
+  { "title": "Jotai/Zustand", "logo": "/skills/jotai.png", "link": "https://jotai.org" },
   { "title": "Testing Library", "logo": "/skills/testing-library.png", "link": "https://testing-library.com" },
-  { "title": "Storybook", "logo": "/skills/storybook.png", "link": "https://storybook.js.org/" }
+  { "title": "Storybook", "logo": "/skills/storybook.png", "link": "https://storybook.js.org" },
+  { "title": "React Query", "logo": "/skills/react-query.png", "link": "https://tanstack.com/query/v4" },
+  { "title": "React Hook Form", "logo": "/skills/react-hook-form.svg", "link": "https://react-hook-form.com" }
 ]
