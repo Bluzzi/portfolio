@@ -5,6 +5,7 @@
   { "title": "CSS", "logo": "/skills/css.png", "link": "https://developer.mozilla.org/fr/docs/Web/CSS" },
   { "title": "SASS/SCSS", "logo": "/skills/sass.png", "link": "https://sass-lang.com" },
   { "title": "Tailwind", "logo": "/skills/tailwind.svg", "link": "https://tailwindcss.com" },
+  { "title": "Vanilla Extract", "logo": "/skills/vanilla-extract.svg", "link": "https://vanilla-extract.style" },
   { "title": "Mantine", "logo": "/skills/mantine.svg", "link": "https://mantine.dev" },
   { "title": "Jotai/Zustand", "logo": "/skills/jotai.png", "link": "https://jotai.org" },
   { "title": "Testing Library", "logo": "/skills/testing-library.png", "link": "https://testing-library.com" },
