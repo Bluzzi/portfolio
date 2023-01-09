@@ -5,8 +5,11 @@
   { "title": "CSS", "logo": "/skills/css.png", "link": "https://developer.mozilla.org/fr/docs/Web/CSS" },
   { "title": "SASS/SCSS", "logo": "/skills/sass.png", "link": "https://sass-lang.com" },
   { "title": "Tailwind", "logo": "/skills/tailwind.svg", "link": "https://tailwindcss.com" },
+  { "title": "Mantine", "logo": "/skills/mantine.svg", "link": "https://mantine.dev" },
   { "title": "Jotai/Zustand", "logo": "/skills/jotai.png", "link": "https://jotai.org" },
   { "title": "Testing Library", "logo": "/skills/testing-library.png", "link": "https://testing-library.com" },
+  { "title": "Vitest", "logo": "/skills/vitest.svg", "link": "https://vitest.dev" },
+  { "title": "Playwright", "logo": "/skills/playwright.svg", "link": "https://playwright.dev" },
   { "title": "Storybook", "logo": "/skills/storybook.png", "link": "https://storybook.js.org" },
   { "title": "React Query", "logo": "/skills/react-query.png", "link": "https://tanstack.com/query/v4" },
   { "title": "React Hook Form", "logo": "/skills/react-hook-form.svg", "link": "https://react-hook-form.com" }
