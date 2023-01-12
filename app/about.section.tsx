@@ -10,7 +10,7 @@ export function AboutSection(): ReactElement {
 
         <Text color="gray">
           Développeur frontend depuis 2016.
-          Spécialiser dans l{"'"}écosystème du JavaScript, je travaille principalement avec les frameworks React et Next.
+          Spécialiser dans l{"'"}écosystème JavaScript, je travaille principalement avec les frameworks React et Next.
         </Text>
       </div>
 
