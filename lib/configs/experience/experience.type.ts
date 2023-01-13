@@ -15,6 +15,7 @@ export type Experience = {
   duration: string;
   company: string;
   title: string;
+  link: string | null;
   description: string[];
   skills: string[];
 }

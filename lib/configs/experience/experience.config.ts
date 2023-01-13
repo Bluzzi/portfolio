@@ -11,6 +11,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Essential Tooth Box",
     title: "Développement full-stack d'un site e-commerce",
+    link: null,
     description: [
       "Création d'un système pour synchroniser des produits et commandes de Shopify et PrestaShop avec le backend",
       "Élaboration de divers scripts d'écriture et lecture de fichier Excel et Google Sheet",
@@ -30,6 +31,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Poissonnerie Dugas",
     title: "Développement full-stack d'un site de gestion de commande",
+    link: null,
     description: [
       "Construction d'un site internet pour prendre et gérer des commandes avec ReactJS et NextJS",
       "Création d'une API REST avec le framework NestJS et la BDD PostgreSQL"
@@ -44,6 +46,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Royaume",
     title: "...",
+    link: "https://github.com/Virtual-Royaume",
     description: [],
     skills: []
   },
@@ -55,6 +58,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Symphonia",
     title: "Développement full-stack et gestion de serveur",
+    link: null,
     description: [
       "Création de plugin via le software PocketMine-MP",
       "Élaboration d'un serveur socket (TCP) pour la synchronisation des serveurs",
