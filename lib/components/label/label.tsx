@@ -8,7 +8,7 @@ export function Label({ text, color }: LabelProps): ReactElement {
     <span>
       <Text
         size="small"
-        className={clsx("rounded px-1", {
+        className={clsx("rounded uppercase px-1", {
           "bg-blue text-white": color === "blue",
           "bg-green text-white": color === "green"
         })}
