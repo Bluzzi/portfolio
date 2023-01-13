@@ -3,7 +3,7 @@ import { Text } from "$lib/components/text";
 import { LabelProps } from "./label.type";
 import { clsx } from "clsx";
 
-export function Label({ children, color }: LabelProps): ReactElement {
+export function Label({ text, color }: LabelProps): ReactElement {
   return (
     <span>
       <Text
@@ -13,7 +13,7 @@ export function Label({ children, color }: LabelProps): ReactElement {
           "bg-green text-white": color === "green"
         })}
       >
-        {children}
+        {text}
       </Text>
     </span>
   );

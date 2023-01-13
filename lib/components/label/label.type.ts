@@ -1,5 +1,6 @@
-import { PropsWithChildren } from "react";
+export type LabelColor = "blue" | "green";
 
-export type LabelProps = PropsWithChildren & {
-  color: "blue" | "green";
+export type LabelProps = {
+  color: LabelColor;
+  text: string;
 };
