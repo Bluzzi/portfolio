@@ -8,7 +8,7 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
   const Tag = link ? "a" : "span";
 
   return (
-    <Tag href={link} target="_blank">
+    <Tag href={link} target="_blank" rel="noreferrer">
       <Text
         size="small"
         className={clsx("rounded uppercase px-1", {
@@ -18,7 +18,7 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
           "bg-green text-white": color === "green"
         })}
       >
-        <p>{text}</p>
+        <span>{text}</span>
 
         {link && <FiExternalLink />}
       </Text>
