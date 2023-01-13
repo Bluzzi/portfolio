@@ -8,6 +8,8 @@ module.exports = {
       "transparent": "transparent",
       "white": "#ffffff",
       "black": "#000000",
+      "blue": "#1d4ed8",
+      "green": "#15803d",
       "gray": {
         DEFAULT: "#888",
         1: "#111"
