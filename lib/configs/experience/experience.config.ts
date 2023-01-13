@@ -15,13 +15,13 @@ const experienceBase: ExperienceBase[] = [
     description: [
       "Mise en place d'un système de synchronisation des produits et commandes entre Shopify et PrestaShop avec le backend",
       "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
-      "Création d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
-      "Création d'un site internet e-commerce utilisant ReactJS et NextJS",
+      "Développement d'un site internet e-commerce utilisant ReactJS et NextJS",
+      "Création et développement d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
       "Développement d'une API REST avec le framework KoaJS et la BDD MongoDB",
       "Élaboration d'un système de génération de fichier OpenAPI pour générer le support de l'API pour le frontend",
-      "Mise en place d'un package de composants pour notre design système avec ReactJS, Storybook et Tailwind"
+      "Mise en place d'un package de composants pour notre design système avec ReactJS"
     ],
-    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind", "Storybook", "KoaJS", "MongoDB", "OpenAPI"]
+    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind", "Storybook", "Vitest", "Testing Library", "KoaJS", "MongoDB", "OpenAPI"]
   },
   {
     type: "pro",
@@ -36,7 +36,7 @@ const experienceBase: ExperienceBase[] = [
       "Conception et développement d'un site internet permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
       "Mise en place d'une API REST utilisant le framework NestJS et la BDD PostgreSQL"
     ],
-    skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker"]
+    skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker", "Playwright"]
   },
   {
     type: "open-source",
