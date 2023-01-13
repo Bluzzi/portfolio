@@ -10,7 +10,7 @@ const experienceBase: ExperienceBase[] = [
       end: null
     },
     company: "Essential Tooth Box",
-    title: "Développement full-stack d'un site e-commerce",
+    title: "Développeur full-stack d'un site e-commerce",
     link: null,
     description: [
       "Mise en place d'un système de synchronisation des produits et commandes entre Shopify et PrestaShop avec le backend",
@@ -30,7 +30,7 @@ const experienceBase: ExperienceBase[] = [
       end: date(30, 6, 2022)
     },
     company: "Poissonnerie Dugas",
-    title: "Développement full-stack d'un site de gestion de commande",
+    title: "Développeur full-stack d'un site de gestion de commande",
     link: null,
     description: [
       "Conception et développement d'un site internet permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
@@ -65,7 +65,7 @@ const experienceBase: ExperienceBase[] = [
       end: date(30, 4, 2022)
     },
     company: "Symphonia",
-    title: "Développement full-stack et gestion de serveur",
+    title: "Développeur full-stack et administrateur serveur",
     link: null,
     description: [
       "Création de plugin via le software PocketMine-MP",
