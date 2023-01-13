@@ -1,11 +1,11 @@
 import { ReactElement } from "react";
-import { Skill } from "$lib/components/skill";
-import skillConfig from "$lib/configs/skill.json";
+import { SkillButton } from "$lib/components/skill-button";
+import { skills } from "$lib/configs/skill";
 
 export function SkillSection(): ReactElement {
   return (
     <div className="flex flex-wrap gap-2">
-      {skillConfig.map(skill => <Skill key={skill.title} title={skill.title} logoSrc={skill.logo} link={skill.link} />)}
+      {skills.map(skill => <SkillButton key={skill.title} title={skill.title} logoSrc={skill.logo} link={skill.link} />)}
     </div>
   );
 }
