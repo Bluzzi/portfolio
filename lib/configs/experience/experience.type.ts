@@ -1,13 +1,14 @@
 import { Dayjs } from "dayjs";
 
 export type Experience = {
+  type: "open-source" | "pro";
+  date: {
+    start: Dayjs;
+    end: Dayjs | null;
+  },
   dateFormat: {
     start: string;
     end: string;
-  },
-  dateInstance: {
-    start: Dayjs;
-    end: Dayjs | null;
   },
   duration: string;
   company: string;
@@ -15,3 +16,5 @@ export type Experience = {
   description: string[];
   skills: string[];
 }
+
+export type ExperienceBase = Omit<Experience, "duration" | "dateFormat">;

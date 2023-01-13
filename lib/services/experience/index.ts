@@ -1,1 +1,0 @@
-export { getExperiences } from "./experience";
