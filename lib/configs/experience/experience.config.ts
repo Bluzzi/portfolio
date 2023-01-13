@@ -41,14 +41,22 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "open-source",
     date: {
-      start: date(11, 4, 2021),
+      start: date(12, 7, 2020),
       end: null
     },
-    company: "Royaume",
-    title: "...",
+    company: "Virtual Royaume",
+    title: "Mainteneur de projets open-source communautaires",
     link: "https://github.com/Virtual-Royaume",
-    description: [],
-    skills: []
+    description: [
+      "Participation active à la communauté de développeurs pour offrir et recevoir de l'entraide",
+      "Review des contributions de la communauté",
+      "Mise en place d'un backend (API GraphQL) utilisant le framework NestJS et la BDD MongoDB",
+      "Conception et développement d'un blog et d'une landing page pour présenter la communauté",
+      "Développement d'un bot Discord à l'aide de l'API DiscordJS",
+      "Gestion et maintenance des environnements de développement et de production, ainsi que mise en ligne des services",
+      "Mise en place d'actions GitHub pour effectuer des tests et des vérifications ESLint"
+    ],
+    skills: ["TypeScript", "NestJS", "GraphQL", "MongoDB", "Svelte", "SvelteKit", "Tailwind", "Storybook", "Vitest", "Playwright"]
   },
   {
     type: "pro",
