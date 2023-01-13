@@ -25,7 +25,7 @@ export function dateDiffUnits(dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] {
 
   return [
     {
-      name: "année",
+      name: "an",
       suffix: "s",
       value: diff.years()
     },
