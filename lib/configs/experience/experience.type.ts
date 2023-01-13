@@ -1,7 +1,9 @@
 import { Dayjs } from "dayjs";
 
+export type ExperienceType = "open-source" | "pro";
+
 export type Experience = {
-  type: "open-source" | "pro";
+  type: ExperienceType;
   date: {
     start: Dayjs;
     end: Dayjs | null;
