@@ -13,7 +13,7 @@ export function ExperienceInfo({ experience, ...props }: ExperienceProps): React
         <div className="flex items-center gap-2 flex-wrap">
           <Text size="large" className="uppercase">{experience.company}</Text>
 
-          <Label color={experienceTypeLabel.color} text={experienceTypeLabel.text} />
+          <Label color={experienceTypeLabel.color} text={experienceTypeLabel.text} link={experience.link ?? undefined} />
         </div>
 
         <Text color="gray">
