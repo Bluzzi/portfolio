@@ -13,13 +13,13 @@ const experienceBase: ExperienceBase[] = [
     title: "Développement full-stack d'un site e-commerce",
     link: null,
     description: [
-      "Création d'un système pour synchroniser des produits et commandes de Shopify et PrestaShop avec le backend",
-      "Élaboration de divers scripts d'écriture et lecture de fichier Excel et Google Sheet",
-      "Construction d'un site internet pour l'espace distributeur avec ReactJS et NextJS",
-      "Construction d'un site internet e-commerce avec ReactJS et NextJS",
-      "Création d'un backend (API REST) avec le framework KoaJS et la BDD MongoDB",
-      "Création d'un système de génération de fichier OpenAPI via le backend pour pouvoir générer le support de l'API pour le frontend",
-      "Élaboration d'un package de composants pour notre design système avec ReactJS, Storybook et Tailwind"
+      "Mise en place d'un système de synchronisation des produits et commandes entre Shopify et PrestaShop avec le backend",
+      "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
+      "Création d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
+      "Création d'un site internet e-commerce utilisant ReactJS et NextJS",
+      "Développement d'une API REST avec le framework KoaJS et la BDD MongoDB",
+      "Élaboration d'un système de génération de fichier OpenAPI pour générer le support de l'API pour le frontend",
+      "Mise en place d'un package de composants pour notre design système avec ReactJS, Storybook et Tailwind"
     ],
     skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind", "Storybook", "KoaJS", "MongoDB", "OpenAPI"]
   },
@@ -33,8 +33,8 @@ const experienceBase: ExperienceBase[] = [
     title: "Développement full-stack d'un site de gestion de commande",
     link: null,
     description: [
-      "Construction d'un site internet pour prendre et gérer des commandes avec ReactJS et NextJS",
-      "Création d'une API REST avec le framework NestJS et la BDD PostgreSQL"
+      "Conception et développement d'un site internet permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
+      "Mise en place d'une API REST utilisant le framework NestJS et la BDD PostgreSQL"
     ],
     skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker"]
   },
@@ -61,9 +61,9 @@ const experienceBase: ExperienceBase[] = [
     link: null,
     description: [
       "Création de plugin via le software PocketMine-MP",
-      "Élaboration d'un serveur socket (TCP) pour la synchronisation des serveurs",
-      "Construction d'un backend (API REST) avec le framework NestJS et la BDD PostgreSQL",
-      "Construction d'un panel proposant divers outils de gestion avec ReactJS et NextJS",
+      "Mise en place d'un serveur socket (TCP) pour synchroniser les serveurs",
+      "Développement d'un backend (API REST) utilisant le framework NestJS et la BDD PostgreSQL",
+      "Construction d'un panel proposant divers outils de gestion à l'aide de ReactJS et NextJS",
       "Gestion et maintenance des serveurs sur Ubuntu"
     ],
     skills: ["NodeJS", "TypeScript", "PHP", "PostgreSQL", "NestJS", "ReactJS", "NextJS", "SCSS", "Socket (TCP)", "Docker", "Ubuntu"]
