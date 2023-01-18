@@ -7,9 +7,9 @@ const experienceBase: ExperienceBase[] = [
     type: "pro",
     date: {
       start: date(11, 7, 2022),
-      end: null
+      end: date(18, 1, 2023)
     },
-    company: "Essential Tooth Box",
+    company: "Okosmo",
     title: "Développeur full-stack d'un site e-commerce",
     link: null,
     description: [
