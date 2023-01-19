@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 export default function Head(): ReactElement {
   const metatags = {
     title: "Camille Dugas | Développeur Frontend",
+    siteName: "Camille Dugas | Portfolio",
     description: "Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript,"
       + "je travaille principalement avec les frameworks React et Next.",
     url: "https://camilledugas.me",
@@ -23,8 +24,8 @@ export default function Head(): ReactElement {
       <meta name="description" content={metatags.description} />
 
       {/* Facebook metatags */}
-      <meta property="og:title" content={metatags.title} />
       <meta property="og:site_name" content={metatags.title} />
+      <meta property="og:title" content={metatags.title} />
       <meta property="og:description" content={metatags.description} />
       <meta property="og:url" content={metatags.url} />
       <meta property="og:image" content={metatags.image} />
