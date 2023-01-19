@@ -7,8 +7,8 @@ export default function Head(): ReactElement {
       + "je travaille principalement avec les frameworks React et Next.",
     url: "https://camilledugas.me",
     domain: "camilledugas.me",
-    image: "https://camilledugas.me/bg-metatag.png",
-    color: "#1D4ED8"
+    image: "https://camilledugas.me/meta-tag-image.png",
+    color: "#FFFFFF"
   };
 
   return (
