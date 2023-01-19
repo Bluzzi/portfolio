@@ -1,1 +1,1 @@
-export { SkillButton } from "./skill";
+export { SkillButton } from "./skill-button";
