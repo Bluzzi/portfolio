@@ -8,7 +8,7 @@ export default function Head(): ReactElement {
     url: "https://camilledugas.me",
     domain: "camilledugas.me",
     image: "https://camilledugas.me/meta-tag.png",
-    color: "#FFFFFF"
+    color: "#888"
   };
 
   return (
