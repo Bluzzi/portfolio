@@ -4,7 +4,7 @@ export default function Head(): ReactElement {
   const metatags = {
     title: "Camille Dugas | Développeur Frontend",
     description: "Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript,"
-    + "je travaille principalement avec les frameworks React et Next.",
+      + "je travaille principalement avec les frameworks React et Next.",
     url: "https://camilledugas.me",
     domain: "camilledugas.me",
     image: "https://camilledugas.me/meta-tag.png",
