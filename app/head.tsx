@@ -8,7 +8,7 @@ export default function Head(): ReactElement {
     url: "https://camilledugas.me",
     domain: "camilledugas.me",
     image: "https://camilledugas.me/meta-tag.png",
-    color: "#000000"
+    color: "#FFFFFF"
   };
 
   return (
@@ -24,6 +24,7 @@ export default function Head(): ReactElement {
 
       {/* Facebook metatags */}
       <meta property="og:title" content={metatags.title} />
+      <meta property="og:site_name" content={metatags.title} />
       <meta property="og:description" content={metatags.description} />
       <meta property="og:url" content={metatags.url} />
       <meta property="og:image" content={metatags.image} />
