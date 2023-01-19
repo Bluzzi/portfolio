@@ -8,7 +8,8 @@ export default function Head(): ReactElement {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="I'm Camille Dugas, a passionate full-stack developer since 2016. I maintly work with React, Next and NestJS."
+        content="Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript,
+          je travaille principalement avec les frameworks React et Next."
       />
 
       <link rel="icon" href="/favicon.ico" />
