@@ -24,7 +24,7 @@ export default function Head(): ReactElement {
       <meta name="description" content={metatags.description} />
 
       {/* Facebook metatags */}
-      <meta property="og:site_name" content={metatags.title} />
+      <meta property="og:site_name" content={metatags.siteName} />
       <meta property="og:title" content={metatags.title} />
       <meta property="og:description" content={metatags.description} />
       <meta property="og:url" content={metatags.url} />
