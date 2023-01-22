@@ -10,7 +10,6 @@ export const skills: Skill[] = [
   { title: "Vanilla Extract", logo: "/skills/vanilla-extract.svg", link: "https://vanilla-extract.style" },
   { title: "Mantine", logo: "/skills/mantine.svg", link: "https://mantine.dev" },
   { title: "Radix", logo: "/skills/radix.svg", link: "https://www.radix-ui.com" },
-  { title: "Jotai", logo: "/skills/jotai.png", link: "https://jotai.org" },
   { title: "Zustand", logo: "/skills/zustand.png", link: "https://zustand-demo.pmnd.rs" },
   { title: "Testing Library", logo: "/skills/testing-library.png", link: "https://testing-library.com" },
   { title: "Vitest", logo: "/skills/vitest.svg", link: "https://vitest.dev" },
