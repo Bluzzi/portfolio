@@ -13,7 +13,7 @@ const experienceBase: ExperienceBase[] = [
     title: "Développeur full-stack d'un site e-commerce",
     link: null,
     description: [
-      "Mise en place d'un système de synchronisation des produits et commandes entre Shopify et PrestaShop avec le backend",
+      "Mise en place d'un système de synchronisation des produits et commandes de Shopify et PrestaShop avec le backend",
       "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
       "Développement d'un site internet e-commerce utilisant ReactJS et NextJS",
       "Création et développement d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
