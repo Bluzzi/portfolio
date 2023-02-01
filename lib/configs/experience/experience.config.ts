@@ -6,6 +6,21 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
+      start: date(24, 1, 2023),
+      end: date(1, 2, 2023)
+    },
+    company: "Dynamic Process",
+    title: "Développeur full-stack d'un site de facturation",
+    link: null,
+    description: [
+      "Développement d'une API GraphQL avec Prisma et PostgreSQL",
+      "Intégration d'une fonctionnalité sur le site utilisant Svelte, SvelteKit et Tailwind"
+    ],
+    skills: ["Svelte", "SvelteKit", "GraphQL", "PostgreSQL", "Prisma", "Tailwind"]
+  },
+  {
+    type: "pro",
+    date: {
       start: date(11, 7, 2022),
       end: date(18, 1, 2023)
     },
