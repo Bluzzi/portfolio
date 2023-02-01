@@ -8,7 +8,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
+    "classix": "^2.1.21",
     "dayjs": "^1.11.7",
     "next": "^13.1.6",
     "react": "^18.2.0",
