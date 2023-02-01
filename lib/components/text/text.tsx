@@ -1,22 +1,24 @@
-import { clsx } from "clsx";
+import { cx } from "classix";
 import { ReactElement } from "react";
 import { TextProps } from "./text.type";
 
 export function Text({ children, type, color, size, className, ...props }: TextProps): ReactElement {
-  const style = clsx(className, {
+  const style = cx(
+    className,
+
     // Text color:
-    "text-white": !color || color === "white",
-    "text-black": color === "black",
-    "text-gray": color === "gray",
+    (!color || color === "white") && "text-white",
+    color === "black" && "text-black",
+    color === "gray" && "text-gray",
 
     // Font size:
-    "text-sm": size === "small",
-    "text-base": !size || size === "base",
-    "text-lg": size === "large",
-    "text-xl": size === "xl",
-    "text-2xl": size === "2xl",
-    "text-3xl": size === "3xl"
-  });
+    size === "small" && "text-sm",
+    !size || size === "base" && "text-base",
+    size === "large" && "text-lg",
+    size === "xl" && "text-xl",
+    size === "2xl" && "text-2xl",
+    size === "3xl" && "text-3xl"
+  );
 
   const Tag = type ?? "p";
 
