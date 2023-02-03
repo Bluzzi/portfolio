@@ -8,7 +8,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "classix": "^2.1.21",
+    "classix": "^2.1.22",
     "dayjs": "^1.11.7",
     "next": "^13.1.6",
     "react": "^18.2.0",
@@ -17,7 +17,7 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
-    "@bluzzi/eslint-config": "^0.8.3",
+    "@bluzzi/eslint-config": "^0.8.5",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
