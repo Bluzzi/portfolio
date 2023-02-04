@@ -6,7 +6,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "test:unit": "vitest"
+    "test:unit": "vitest --ui"
   },
   "dependencies": {
     "classix": "^2.1.22",
@@ -24,6 +24,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/ui": "^0.28.4",
     "autoprefixer": "^10.4.13",
     "eslint": "8.33.0",
     "eslint-config-next": "^13.1.6",
