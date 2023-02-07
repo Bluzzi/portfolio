@@ -18,9 +18,9 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
-    "@bluzzi/eslint-config": "^0.8.5",
+    "@bluzzi/eslint-config": "^0.8.6",
     "@testing-library/react": "^13.4.0",
-    "@types/node": "18.11.18",
+    "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
