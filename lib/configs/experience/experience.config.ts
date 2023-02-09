@@ -6,8 +6,8 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
-      start: date(24, 1, 2023),
-      end: date(1, 2, 2023)
+      start: date(23, 1, 2023),
+      end: date(3, 2, 2023)
     },
     company: "Dynamic Process",
     title: "Développeur full-stack d'un site de facturation",
