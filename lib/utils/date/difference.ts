@@ -38,11 +38,6 @@ export function dateDiffUnits(dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] {
       name: "semaine",
       suffix: "s",
       value: Math.round(diff.days() / 7)
-    },
-    {
-      name: "jour",
-      suffix: "s",
-      value: diff.days() % 7
     }
   ] satisfies DateUnit[];
 }
