@@ -4,7 +4,7 @@ export const skills: Skill[] = [
   { title: "TypeScript", logo: "/skills/typescript.svg", link: "https://www.typescriptlang.org" },
   { title: "React", logo: "/skills/react.png", link: "https://fr.reactjs.org" },
   { title: "Next", logo: "/skills/next-js.svg", link: "https://nextjs.org" },
-  { title: "CSS", logo: "/skills/css.png", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
+  // { title: "CSS", logo: "/skills/css.png", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
   { title: "SASS", logo: "/skills/sass.png", link: "https://sass-lang.com" },
   { title: "Tailwind", logo: "/skills/tailwind.svg", link: "https://tailwindcss.com" },
   { title: "Vanilla Extract", logo: "/skills/vanilla-extract.svg", link: "https://vanilla-extract.style" },
