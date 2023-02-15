@@ -7,7 +7,7 @@ export const skills: Skill[] = [
   // { title: "CSS", logo: "/skills/css.png", link: "https://developer.mozilla.org/fr/docs/Web/CSS" },
   // { title: "SASS", logo: "/skills/sass.png", link: "https://sass-lang.com" },
   { title: "Tailwind", logo: "/skills/tailwind.svg", link: "https://tailwindcss.com" },
-  { title: "Vanilla Extract", logo: "/skills/vanilla-extract.svg", link: "https://vanilla-extract.style" },
+  // { title: "Vanilla Extract", logo: "/skills/vanilla-extract.svg", link: "https://vanilla-extract.style" },
   // { title: "Mantine", logo: "/skills/mantine.svg", link: "https://mantine.dev" },
   // { title: "NextUI", logo: "/skills/next-ui.svg", link: "https://nextui.org" },
   { title: "Radix", logo: "/skills/radix.svg", link: "https://www.radix-ui.com" },
