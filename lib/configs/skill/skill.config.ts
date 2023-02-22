@@ -21,6 +21,7 @@ export const skills: Skill[] = [
   { title: "React Hook Form", logo: "/skills/react-hook-form.svg", link: "https://react-hook-form.com" },
   { title: "React Email", logo: "/skills/react-email.svg", link: "https://react.email" },
   { title: "DayJS", logo: "/skills/dayjs-emoji.png", link: "https://day.js.org" },
-  { title: "ESLint", logo: "/skills/eslint.png", link: "https://eslint.org/" }
+  { title: "ESLint", logo: "/skills/eslint.png", link: "https://eslint.org/" },
+  // { title: "GitHub Actions", logo: "/skills/github-actions.svg", link: "https://github.com/features/actions" }
   // { title: "GraphQL", logo: "/skills/graphql.png", link: "https://graphql.org" }
 ];
