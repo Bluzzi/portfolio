@@ -4,10 +4,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "tw:gen": "typewind generate",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "test:unit": "vitest --ui"
+    "test:unit": "vitest --ui",
+    "tw:gen": "typewind generate",
+    "postinstall": "typewind generate"
   },
   "dependencies": {
     "classix": "^2.1.22",
