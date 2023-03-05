@@ -3,6 +3,7 @@ import { Text } from "$lib/components/text";
 import { LabelProps } from "./label.type";
 import { FiExternalLink } from "react-icons/fi";
 import { cx } from "classix";
+import { tw } from "typewind";
 
 export function Label({ text, color, link }: LabelProps): ReactElement {
   const Tag = link ? "a" : "span";
@@ -12,12 +13,12 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
       <Text
         size="small"
         className={cx(
-          "rounded uppercase px-1",
+          tw.rounded.uppercase.px_1,
 
-          link && "flex gap-1 items-center hover:brightness-110",
+          link && tw.flex.gap_1.items_center.hover(tw.brightness_110),
 
-          color === "blue" && "bg-blue text-white",
-          color === "green" && "bg-green text-white"
+          color === "blue" && tw.bg_blue.text_white,
+          color === "green" && tw.bg_green.text_white,
         )}
       >
         <span>{text}</span>

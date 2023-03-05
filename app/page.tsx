@@ -4,18 +4,19 @@ import { SkillSection } from "./skill.section";
 import { ExperienceSection } from "./experience.section";
 import { AboutSection } from "./about.section";
 import { LinkSection } from "./link.section";
+import { tw } from "typewind";
 
 export default function Home(): ReactElement {
   return (
     <>
       <AboutSection />
-      <Line className="my-7" />
+      <Line className={tw.my_7} />
 
       <SkillSection />
-      <Line className="my-7" />
+      <Line className={tw.my_7} />
 
       <ExperienceSection />
-      <Line className="my-7" />
+      <Line className={tw.my_7} />
 
       <LinkSection />
     </>
