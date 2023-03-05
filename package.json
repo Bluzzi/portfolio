@@ -11,7 +11,7 @@
     "postinstall": "typewind generate"
   },
   "dependencies": {
-    "classix": "^2.1.22",
+    "clsx": "^1.2.1",
     "dayjs": "^1.11.7",
     "next": "^13.2.3",
     "react": "^18.2.0",
