@@ -14,7 +14,7 @@ jobs:
       - name: Run ESLint
         run: npm run lint
   typecheck:
-    name: Typecheck (TS)
+    name: TS Typecheck
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
