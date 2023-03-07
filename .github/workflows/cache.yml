@@ -31,8 +31,6 @@ jobs:
           ln -s ${{ needs.setup.outputs.node-modules }} .
       - name: Verify code
         with:
-          ref: main
-          fetch-depth: 0
           tty: true
         run: npm run lint
   build:
