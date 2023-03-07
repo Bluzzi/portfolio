@@ -1,0 +1,49 @@
+name: NodeJS workflow
+
+on: push
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      code-location: ${{ steps.checkout.outputs.path }}
+      node-modules: ${{ steps.install-deps.outputs.node-modules }}
+    steps:
+      - name: Checkout code
+        id: checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        id: install-deps
+        run: |
+          npm install
+          echo "::set-output name=node-modules::node_modules"
+      - name: Verify code
+        run: npm run lint
+  build:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.setup.outputs.code-location }}
+      - name: Restore node_modules
+        run: |
+          rm -rf node_modules
+          ln -s ${{ needs.setup.outputs.node-modules }} .
+      - name: Build TypeScript
+        run: npm run build
+  test:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.setup.outputs.code-location }}
+      - name: Restore node_modules
+        run: |
+          rm -rf node_modules
+          ln -s ${{ needs.setup.outputs.node-modules }} .
+      - name: Run unit tests
+        run: npm run test:unit
