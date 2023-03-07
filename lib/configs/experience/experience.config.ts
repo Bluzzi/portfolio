@@ -6,6 +6,22 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
+      start: date(20, 2, 2023),
+      end: null
+    },
+    company: "Seedext",
+    title: "Développeur full-stack",
+    link: null,
+    description: [
+      "work in progress...",
+      "work in progress...",
+      "work in progress..."
+    ],
+    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI"]
+  },
+  {
+    type: "pro",
+    date: {
       start: date(23, 1, 2023),
       end: date(3, 2, 2023)
     },
