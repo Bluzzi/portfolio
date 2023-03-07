@@ -17,6 +17,18 @@ jobs:
         run: |
           npm install
           echo "::set-output name=node-modules::node_modules"
+  lint:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.setup.outputs.code-location }}
+      - name: Restore node_modules
+        run: |
+          rm -rf node_modules
+          ln -s ${{ needs.setup.outputs.node-modules }} .
       - name: Verify code
         run: npm run lint
   build:
