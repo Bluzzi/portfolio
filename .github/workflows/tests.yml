@@ -1,0 +1,36 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses:  actions/setup-node@v3
+      - name: Code checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run ESLint
+        run: npm run lint
+  typecheck:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run typecheck
+        run: npx tsc -b .
+  unit-test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Vitest
+        run: npm run test:unit
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: npm run build
