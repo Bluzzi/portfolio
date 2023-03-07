@@ -1,4 +1,4 @@
-name: Code checks
+name: Code check
 
 on: [push, pull_request]
 
@@ -41,5 +41,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
-      - name: Build
+      - name: Build app
         run: npm run build
