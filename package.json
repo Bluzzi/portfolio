@@ -44,5 +44,10 @@
       "next/core-web-vitals",
       "@bluzzi"
     ]
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@babel/*"]
+    }
   }
 }
