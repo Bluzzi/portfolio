@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run typecheck
-        run: npx tsc -b .
+        run: npx tsc --noEmit
   unit-test:
     name: Unit tests
     runs-on: ubuntu-latest
