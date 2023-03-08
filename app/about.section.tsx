@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Text } from "$lib/components/text";
-import Image from "next/image";
 import { tw } from "typewind";
+import Image from "next/image";
 
 export function AboutSection(): ReactElement {
   return (
