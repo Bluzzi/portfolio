@@ -15,7 +15,7 @@ export function AboutSection(): ReactElement {
         </Text>
       </div>
 
-      <div className={tw.relative.h_32.w_32.shrink_0.rounded_full.border_2.border_white.sm(tw.hidden)}>
+      <div className={tw.relative.h_32.w_32.shrink_0.rounded_full.sm(tw.hidden)}>
         <Image src="/bluzzi.jpg" alt="Profile picture" fill className={tw.rounded_full.border_2} />
       </div>
     </div>
