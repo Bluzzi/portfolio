@@ -10,12 +10,14 @@ const experienceBase: ExperienceBase[] = [
       end: null
     },
     company: "Seedext",
-    title: "Développeur full-stack",
+    title: "CTO & Développeur frontend",
     link: null,
     description: [
-      "work in progress...",
-      "work in progress...",
-      "work in progress..."
+      "Recrutement de développeurs à travers des tests techniques et des entretiens vocaux",
+      "Review du code des équipes de développeurs frontend et backend",
+      "Organisation de la roadmap technique et des différents sprints",
+      "Création d'un design système accessible avec ReactJS et Tailwind",
+      "Développement du site internet avec les frameworks ReactJS et NextJS"
     ],
     skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI"]
   },
@@ -26,11 +28,11 @@ const experienceBase: ExperienceBase[] = [
       end: date(3, 2, 2023)
     },
     company: "Dynamic Process",
-    title: "Développeur full-stack d'un site de facturation",
+    title: "Développeur full-stack",
     link: null,
     description: [
       "Développement d'une API GraphQL avec Prisma et PostgreSQL",
-      "Intégration d'une fonctionnalité sur le site utilisant Svelte, SvelteKit et Tailwind"
+      "Intégration d'une fonctionnalité sur le site de facturation utilisant Svelte, SvelteKit et Tailwind"
     ],
     skills: ["Svelte", "SvelteKit", "GraphQL", "PostgreSQL", "Prisma", "Tailwind"]
   },
@@ -41,7 +43,7 @@ const experienceBase: ExperienceBase[] = [
       end: date(18, 1, 2023)
     },
     company: "Okosmo",
-    title: "Développeur full-stack d'un site e-commerce",
+    title: "Développeur full-stack",
     link: null,
     description: [
       "Mise en place d'un système de synchronisation des produits et commandes de Shopify et PrestaShop avec le backend",
@@ -61,7 +63,7 @@ const experienceBase: ExperienceBase[] = [
       end: date(30, 6, 2022)
     },
     company: "Poissonnerie Dugas",
-    title: "Développeur full-stack d'un site de gestion de commande",
+    title: "Développeur full-stack",
     link: null,
     description: [
       "Conception et développement d'un site internet permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
@@ -96,7 +98,7 @@ const experienceBase: ExperienceBase[] = [
       end: date(30, 4, 2022)
     },
     company: "Symphonia",
-    title: "Développeur full-stack et administrateur serveur",
+    title: "Développeur full-stack & Administrateur serveur",
     link: null,
     description: [
       "Création de plugin via le software PocketMine-MP",
