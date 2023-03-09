@@ -19,7 +19,7 @@ const experienceBase: ExperienceBase[] = [
       "Création d'un design système accessible avec ReactJS et Tailwind",
       "Développement du site internet avec les frameworks ReactJS et NextJS"
     ],
-    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI"]
+    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI", "Golang"]
   },
   {
     type: "pro",
