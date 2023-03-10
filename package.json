@@ -13,7 +13,7 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "dayjs": "^1.11.7",
-    "next": "^13.2.3",
+    "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -24,14 +24,14 @@
     "@babel/preset-typescript": "^7.21.0",
     "@bluzzi/eslint-config": "^0.8.8",
     "@testing-library/react": "^14.0.0",
-    "@types/node": "18.14.6",
+    "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/ui": "^0.29.2",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "eslint": "8.35.0",
-    "eslint-config-next": "^13.2.3",
+    "eslint-config-next": "^13.2.4",
     "happy-dom": "^8.9.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
@@ -47,7 +47,9 @@
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["@babel/*"]
+      "ignoreMissing": [
+        "@babel/*"
+      ]
     }
   }
 }
