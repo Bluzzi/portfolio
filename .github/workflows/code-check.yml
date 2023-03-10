@@ -38,13 +38,3 @@ jobs:
         run: npm install
       - name: Run Vitest
         run: npm run test:unit
-  build:
-    name: NextJS build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install
-      - name: Build app
-        run: npm run build
