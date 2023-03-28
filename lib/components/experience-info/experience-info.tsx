@@ -3,16 +3,15 @@ import { ExperienceProps } from "./experience-info.type";
 import { Text } from "$lib/components/text";
 import { Label } from "$lib/components/label";
 import { getLabelInfoByExperienceType } from "./experience-info.util";
-import { tw } from "typewind";
 
 export function ExperienceInfo({ experience, ...props }: ExperienceProps): ReactElement {
   const experienceTypeLabel = getLabelInfoByExperienceType(experience.type);
 
   return (
     <div {...props}>
-      <div className={tw.flex.flex_wrap.justify_between}>
-        <div className={tw.flex.flex_wrap.items_center.gap_2}>
-          <Text size="large" className={tw.uppercase}>{experience.company}</Text>
+      <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap items-center gap-2">
+          <Text size="large" className="uppercase">{experience.company}</Text>
 
           <Label color={experienceTypeLabel.color} text={experienceTypeLabel.text} link={experience.link ?? undefined} />
         </div>
@@ -22,12 +21,12 @@ export function ExperienceInfo({ experience, ...props }: ExperienceProps): React
         </Text>
       </div>
 
-      <Text className={tw.mb_1}>{experience.title}</Text>
+      <Text className="mb-1">{experience.title}</Text>
 
-      {experience.description.map(line => <Text key={line} color="gray" size="small" className={tw.ml_1}>● {line}</Text>)}
+      {experience.description.map(line => <Text key={line} color="gray" size="small" className="ml-1">● {line}</Text>)}
 
-      <Text size="small" color="gray" className={tw.mt_1}>
-        <span className={tw.text_white}>Technologies :</span> {experience.skills.join(" • ")}
+      <Text size="small" color="gray" className="mt-1">
+        <span className="text-white">Technologies :</span> {experience.skills.join(" • ")}
       </Text>
     </div>
   );

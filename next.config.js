@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
-    swcPlugins: [["typewind/swc", {}]]
+    appDir: true
   }
 };
 
