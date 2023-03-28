@@ -1,14 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { typewindTransforms } = require("typewind/transform");
+import type { Config } from "tailwindcss";
 
-/** @type {import("tailwindcss").Config} */
-module.exports = {
+export default {
   content: {
     files: [
       "./app/**/*.{js,ts,jsx,tsx}",
       "./lib/**/*.{js,ts,jsx,tsx}"
-    ],
-    transform: typewindTransforms
+    ]
   },
   theme: {
     colors: {
@@ -29,7 +26,7 @@ module.exports = {
       "lg": "1.125rem",
       "xl": "1.25rem",
       "2xl": "1.5rem",
-      "3xl": ["2rem", { lineHeight: 1 }]
+      "3xl": ["2rem", { lineHeight: "1" }]
     },
 
     fontFamily: {
@@ -60,4 +57,4 @@ module.exports = {
     }
   },
   plugins: []
-};
+} satisfies Config;
