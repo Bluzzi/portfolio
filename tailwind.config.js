@@ -44,7 +44,11 @@ module.exports = {
       "sm": { "max": "639px" }
     },
 
-    extend: {}
+    extend: {
+      height: {
+        "0.5": "1px"
+      }
+    }
   },
   plugins: []
 };
