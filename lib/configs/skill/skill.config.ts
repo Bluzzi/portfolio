@@ -18,7 +18,7 @@ export const skills: Skill[] = [
   { title: "Testing Library", logo: "/skills/testing-library.png", link: "https://testing-library.com" },
   { title: "Playwright", logo: "/skills/playwright.svg", link: "https://playwright.dev" },
   { title: "Storybook", logo: "/skills/storybook.png", link: "https://storybook.js.org" },
-  { title: "React Query", logo: "/skills/react-query.png", link: "https://tanstack.com/query/v4" },
+  { title: "TanStack Query", logo: "/skills/tanstack-query.png", link: "https://tanstack.com/query/v4" },
   { title: "React Hook Form", logo: "/skills/react-hook-form.svg", link: "https://react-hook-form.com" },
   { title: "React Email", logo: "/skills/react-email.svg", link: "https://react.email" },
   { title: "DayJS", logo: "/skills/dayjs-emoji.png", link: "https://day.js.org" },
