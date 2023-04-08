@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import { SkillButton } from "$lib/components/skill-button";
-import { skills } from "$lib/configs/skill";
+import { SkillButton } from "#/components/skill-button";
+import { skills } from "#/configs/skill";
 
 export function SkillSection(): ReactElement {
   return (

@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/server";
-import { metadata } from "$lib/configs/metadata";
+import { metadata } from "#/configs/metadata";
 
 export const size = { height: 300, width: 600 };
 export const alt = metadata.title;

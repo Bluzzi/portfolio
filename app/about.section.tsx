@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Text } from "$lib/components/text";
+import { Text } from "#/components/text";
 import Image from "next/image";
 
 export function AboutSection(): ReactElement {

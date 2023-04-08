@@ -1,5 +1,5 @@
-import { dayJS, Dayjs } from "$lib/utils/day-js";
-import { pluralize } from "$lib/utils/string";
+import { dayJS, Dayjs } from "#/utils/day-js";
+import { pluralize } from "#/utils/string";
 import type { DateUnit } from "./difference.type";
 
 export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Text } from "$lib/components/text";
+import { Text } from "#/components/text";
 import { LabelProps } from "./label.type";
 import { FiExternalLink } from "react-icons/fi";
 import { clsx } from "clsx";

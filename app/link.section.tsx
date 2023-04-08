@@ -1,4 +1,4 @@
-import { LinkButton } from "$lib/components/link-button";
+import { LinkButton } from "#/components/link-button";
 import { ReactElement } from "react";
 
 export function LinkSection(): ReactElement {

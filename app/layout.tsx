@@ -1,8 +1,8 @@
 import type { PropsWithChildren, ReactElement } from "react";
-import "$lib/styles/tailwind.css";
-import "$lib/styles/reset.css";
-import "$lib/styles/font.css";
-import { metadata } from "$lib/configs/metadata";
+import "#/styles/tailwind.css";
+import "#/styles/reset.css";
+import "#/styles/font.css";
+import { metadata } from "#/configs/metadata";
 
 // Metadata :
 export { metadata };

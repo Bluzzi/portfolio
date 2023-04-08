@@ -9,8 +9,9 @@ export default defineConfig({
     setupFiles: "./vitest.setup.ts"
   },
   resolve: {
-    alias: [
-      { find: /\$(.*)/, replacement: "./$1" }
-    ]
+    alias: {
+      "#/": "./lib/",
+      "~/": "./public/"
+    }
   }
 });

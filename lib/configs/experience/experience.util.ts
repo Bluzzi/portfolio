@@ -1,6 +1,6 @@
 import { Experience, ExperienceBase } from "./experience.type";
-import { humanizeDateDiff } from "$lib/utils/date/difference";
-import { dayJS } from "$lib/utils/day-js";
+import { humanizeDateDiff } from "#/utils/date/difference";
+import { dayJS } from "#/utils/day-js";
 
 export function populateExperience(experienceBase: ExperienceBase[]): Experience[] {
   return experienceBase.map(exp => {
