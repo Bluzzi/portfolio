@@ -1,6 +1,6 @@
+import type { ReactElement } from "react";
+import type { TextProps } from "./text.type";
 import { clsx } from "clsx";
-import { ReactElement } from "react";
-import { TextProps } from "./text.type";
 
 export function Text({ children, type, color, size, className, ...props }: TextProps): ReactElement {
   const style = clsx(

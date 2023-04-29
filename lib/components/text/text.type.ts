@@ -1,4 +1,4 @@
-import { HTMLAttributes, PropsWithChildren } from "react";
+import type { HTMLAttributes, PropsWithChildren } from "react";
 
 export type TextProps = PropsWithChildren & HTMLAttributes<HTMLParagraphElement> & {
   type?: "p" | "h3" | "h2" | "h1";

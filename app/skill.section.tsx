@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { SkillButton } from "#/components/skill-button";
 import { skills } from "#/configs/skill";
 

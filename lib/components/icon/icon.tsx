@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { IconProps } from "./icon.type";
+import type { ReactElement } from "react";
+import type { IconProps } from "./icon.type";
 import Image from "next/image";
 
 export function Icon({ src, alt, size = 22, ...props }: IconProps): ReactElement {

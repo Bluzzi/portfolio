@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Line } from "#/components/line";
 import { SkillSection } from "./skill.section";
 import { ExperienceSection } from "./experience.section";

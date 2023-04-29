@@ -1,4 +1,4 @@
-import { ExperienceBase } from "./experience.type";
+import type { ExperienceBase } from "./experience.type";
 import { populateExperience } from "./experience.util";
 import { date } from "#/utils/date/parser";
 

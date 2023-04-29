@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import { ExperienceProps } from "./experience-info.type";
+import type { ReactElement } from "react";
+import type { ExperienceProps } from "./experience-info.type";
 import { Text } from "#/components/text";
 import { Label } from "#/components/label";
 import { getLabelInfoByExperienceType } from "./experience-info.util";

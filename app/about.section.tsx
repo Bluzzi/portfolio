@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Text } from "#/components/text";
 import Image from "next/image";
 

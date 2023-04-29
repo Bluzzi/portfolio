@@ -1,4 +1,4 @@
-import { Experience, ExperienceBase } from "./experience.type";
+import type { Experience, ExperienceBase } from "./experience.type";
 import { humanizeDateDiff } from "#/utils/date/difference";
 import { dayJS } from "#/utils/day-js";
 

@@ -1,4 +1,4 @@
-import { Skill } from "./skill.type";
+import type { Skill } from "./skill.type";
 
 export const skills: Skill[] = [
   { title: "TypeScript", logo: "/skills/typescript.svg", link: "https://www.typescriptlang.org" },

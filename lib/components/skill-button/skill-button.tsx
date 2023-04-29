@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
+import type { SkillButtonProps } from "./skill-button.type";
 import { Text } from "#/components/text";
-import { SkillButtonProps } from "./skill-button.type";
 import { Icon } from "#/components/icon";
 import Link from "next/link";
 
