@@ -2,7 +2,7 @@ import type { Skill } from "./skill.type";
 
 export const skills: Skill[] = [
   { title: "TypeScript", logo: "/skills/typescript.svg", link: "https://www.typescriptlang.org" },
-  { title: "React", logo: "/skills/react.png", link: "https://fr.reactjs.org" },
+  { title: "React", logo: "/skills/react.png", link: "https://react.dev" },
   { title: "Next", logo: "/skills/next-js.svg", link: "https://nextjs.org" },
   // { title: "CSS", logo: "/skills/css.png", link: "https://github.com/css-modules/css-modules },
   // { title: "SASS", logo: "/skills/sass.png", link: "https://sass-lang.com" },
