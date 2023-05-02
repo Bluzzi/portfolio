@@ -94,7 +94,7 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
-      start: date(1, 9, 2018),
+      start: date(16, 5, 2016),
       end: date(30, 4, 2022)
     },
     company: "Symphonia",
