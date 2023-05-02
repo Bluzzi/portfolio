@@ -3,6 +3,22 @@ import { populateExperience } from "./experience.util";
 import { date } from "#/utils/date/parser";
 
 const experienceBase: ExperienceBase[] = [
+  // {
+  //   type: "pro",
+  //   date: {
+  //     start: date(3, 5, 2023),
+  //     end: null
+  //   },
+  //   company: "Pelico",
+  //   title: "QA & Développeur front-end",
+  //   link: null,
+  //   description: [
+  //     "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
+  //     "Écriture de test end-to-end pour le frontend avec Playwright",
+  //     "Développement de nouvelles fonctionnalités sur le site en ReactJS"
+  //   ],
+  //   skills: ["TypeScript", "ReactJS", "Playwright", "GraphQL"]
+  // },
   {
     type: "pro",
     date: {
@@ -13,11 +29,11 @@ const experienceBase: ExperienceBase[] = [
     title: "CTO & Développeur frontend",
     link: null,
     description: [
-      "Recrutement de développeurs à travers des tests techniques et des entretiens vocaux",
-      "Review du code des équipes de développeurs frontend et backend",
-      "Organisation de la roadmap technique et des différents sprints",
       "Création d'un design système accessible avec ReactJS et Tailwind",
-      "Développement du site internet avec les frameworks ReactJS et NextJS"
+      "Développement du site internet avec les frameworks ReactJS et NextJS",
+      "Organisation de la roadmap technique et des différents sprints",
+      "Recrutement de développeurs à travers des tests techniques et des entretiens vocaux",
+      "Review du code des équipes de développeurs frontend et backend"
     ],
     skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI", "Golang"]
   },
