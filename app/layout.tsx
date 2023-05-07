@@ -2,10 +2,9 @@ import type { PropsWithChildren, ReactElement } from "react";
 import "#/styles/tailwind.css";
 import "#/styles/reset.css";
 import "#/styles/font.css";
-import { metadata } from "#/configs/metadata";
 
 // Metadata :
-export { metadata };
+export { metadata } from "#/configs/metadata";
 
 // Layout:
 export default function Layout({ children }: PropsWithChildren): ReactElement {
