@@ -3,22 +3,23 @@ import { populateExperience } from "./experience.util";
 import { date } from "#/utils/date/parser";
 
 const experienceBase: ExperienceBase[] = [
-  // {
-  //   type: "pro",
-  //   date: {
-  //     start: date(3, 5, 2023),
-  //     end: null
-  //   },
-  //   company: "Pelico",
-  //   title: "QA & Développeur front-end",
-  //   link: null,
-  //   description: [
-  //     "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
-  //     "Écriture de test end-to-end pour le frontend avec Playwright",
-  //     "Développement de nouvelles fonctionnalités sur le site en ReactJS"
-  //   ],
-  //   skills: ["TypeScript", "ReactJS", "Playwright", "GraphQL"]
-  // },
+  {
+    type: "pro",
+    date: {
+      start: date(3, 5, 2023),
+      end: null
+    },
+    company: "Pelico",
+    title: "QA & Développeur front-end",
+    link: null,
+    description: [
+      "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
+      "Écriture de test end-to-end pour le frontend avec Playwright",
+      "Mise en place de CI/CD GitLab pour l'exécution des tests",
+      "Développement de nouvelles fonctionnalités sur le site en ReactJS"
+    ],
+    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD"]
+  },
   {
     type: "pro",
     date: {
@@ -33,9 +34,10 @@ const experienceBase: ExperienceBase[] = [
       "Développement du site internet avec les frameworks ReactJS et NextJS",
       "Organisation de la roadmap technique et des différents sprints",
       "Recrutement de développeurs à travers des tests techniques et des entretiens vocaux",
-      "Review du code des équipes de développeurs frontend et backend"
+      "Review du code des équipes de développeurs frontend et backend",
+      "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements"
     ],
-    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI", "Golang"]
+    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI", "Golang", "GitHub Actions"]
   },
   {
     type: "pro",
@@ -68,9 +70,14 @@ const experienceBase: ExperienceBase[] = [
       "Création et développement d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
       "Développement d'une API REST avec le framework KoaJS et la BDD MongoDB",
       "Élaboration d'un système de génération de fichier OpenAPI pour générer le support de l'API pour le frontend",
-      "Mise en place d'un package de composants pour notre design système avec ReactJS"
+      "Mise en place d'un package de composants pour notre design système avec ReactJS",
+      "Mise en place de GitHub Actions pour vérifier les builds, le linting et les tests"
     ],
-    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind", "Storybook", "Vitest", "Testing Library", "KoaJS", "MongoDB", "OpenAPI"]
+    skills: [
+      "NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind",
+      "Storybook", "Vitest", "Testing Library",
+      "KoaJS", "MongoDB", "OpenAPI", "GitHub Actions"
+    ]
   },
   {
     type: "pro",
@@ -103,9 +110,9 @@ const experienceBase: ExperienceBase[] = [
       "Conception et développement d'un blog et d'une landing page pour présenter la communauté",
       "Développement d'un bot Discord à l'aide de l'API DiscordJS",
       "Gestion et maintenance des environnements de développement et de production, ainsi que mise en ligne des services",
-      "Mise en place d'actions GitHub pour effectuer des tests et des vérifications ESLint"
+      "Mise en place de GitHub Actions pour vérifier les builds, le linting et les tests"
     ],
-    skills: ["TypeScript", "NestJS", "GraphQL", "MongoDB", "Svelte", "SvelteKit", "Tailwind", "Storybook", "Vitest", "Playwright"]
+    skills: ["TypeScript", "NestJS", "GraphQL", "MongoDB", "Svelte", "SvelteKit", "Tailwind", "Storybook", "Vitest", "Playwright", "GitHub Actions"]
   },
   {
     type: "pro",
