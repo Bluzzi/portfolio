@@ -9,7 +9,7 @@ export function ExperienceInfo({ experience, ...props }: ExperienceProps): React
 
   return (
     <div {...props}>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex justify-between sm:flex-col">
         <div className="flex flex-wrap items-center gap-2">
           <Text size="large" className="uppercase">{experience.company}</Text>
 
