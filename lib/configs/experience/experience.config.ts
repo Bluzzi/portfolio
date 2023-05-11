@@ -10,7 +10,7 @@ const experienceBase: ExperienceBase[] = [
       end: null
     },
     company: "Pelico",
-    title: "QA & Développeur front-end",
+    title: "QA & Développeur frontend",
     link: null,
     description: [
       "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
