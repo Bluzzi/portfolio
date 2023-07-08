@@ -18,7 +18,7 @@ const experienceBase: ExperienceBase[] = [
       "Mise en place de CI/CD GitLab pour l'exécution des tests",
       "Développement de nouvelles fonctionnalités sur le site en ReactJS"
     ],
-    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD"]
+    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell"]
   },
   {
     type: "pro",
@@ -27,17 +27,17 @@ const experienceBase: ExperienceBase[] = [
       end: null
     },
     company: "Seedext",
-    title: "CTO & Développeur frontend",
+    title: "CTO",
     link: null,
     description: [
       "Création d'un design système accessible avec ReactJS et Tailwind",
       "Développement du site internet avec les frameworks ReactJS et NextJS",
-      "Organisation de la roadmap technique et des différents sprints",
-      "Recrutement de développeurs à travers des tests techniques et des entretiens vocaux",
+      "Organisation de la roadmap de l'équipe technique",
+      "Recrutement et onboarding d'un total de 6 personnes pour l'équipe technique",
       "Review du code des équipes de développeurs frontend et backend",
       "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements"
     ],
-    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Testing Library", "Storybook", "OpenAPI", "Golang", "GitHub Actions"]
+    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Playwright", "Testing Library", "Storybook", "OpenAPI", "Golang", "GitHub Actions"]
   },
   {
     type: "pro",
@@ -68,7 +68,7 @@ const experienceBase: ExperienceBase[] = [
       "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
       "Développement d'un site internet e-commerce utilisant ReactJS et NextJS",
       "Création et développement d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
-      "Développement d'une API REST avec le framework KoaJS et la BDD MongoDB",
+      "Développement d'une API REST avec le framework ExpressJS et la BDD MongoDB",
       "Élaboration d'un système de génération de fichier OpenAPI pour générer le support de l'API pour le frontend",
       "Mise en place d'un package de composants pour notre design système avec ReactJS",
       "Mise en place de GitHub Actions pour vérifier les builds, le linting et les tests"
@@ -76,7 +76,7 @@ const experienceBase: ExperienceBase[] = [
     skills: [
       "NodeJS", "TypeScript", "ReactJS", "NextJS", "Tailwind",
       "Storybook", "Vitest", "Testing Library",
-      "KoaJS", "MongoDB", "OpenAPI", "GitHub Actions"
+      "ExpressJS", "MongoDB", "OpenAPI", "GitHub Actions"
     ]
   },
   {
