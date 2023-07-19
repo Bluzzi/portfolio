@@ -9,30 +9,30 @@
     "test:unit": "vitest --ui"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.9",
-    "next": "^13.4.9",
+    "next": "^13.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "sharp": "^0.32.1"
+    "sharp": "^0.32.3"
   },
   "devDependencies": {
     "@bluzzi/eslint-config": "^1.1.0",
     "@testing-library/react": "^14.0.0",
-    "@types/node": "20.4.1",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "@vitejs/plugin-react": "^4.0.2",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
     "@vitest/ui": "^0.33.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "8.44.0",
-    "eslint-config-next": "^13.4.9",
-    "happy-dom": "^10.0.3",
-    "postcss": "^8.4.25",
-    "tailwindcss": "^3.3.2",
+    "eslint": "8.45.0",
+    "eslint-config-next": "^13.4.10",
+    "happy-dom": "^10.5.2",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3",
     "typescript": "5.1.6",
-    "vite": "^4.4.2",
+    "vite": "^4.4.4",
     "vitest": "^0.33.0"
   },
   "eslintConfig": {
