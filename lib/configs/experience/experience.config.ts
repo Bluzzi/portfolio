@@ -11,12 +11,13 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Pelico",
     title: "QA & Développeur frontend",
-    link: null,
+    link: "https://www.pelico.ai",
     description: [
       "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
       "Écriture de test end-to-end pour le frontend avec Playwright",
       "Mise en place de CI/CD GitLab pour l'exécution des tests",
-      "Développement de nouvelles fonctionnalités sur le site en ReactJS"
+      "Développement de nouvelles fonctionnalités sur le site en ReactJS",
+      "Collaboration avec l'équipe produit en vue de la maintenance des spécifications des tests"
     ],
     skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell"]
   },
@@ -28,7 +29,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Seedext",
     title: "CTO",
-    link: null,
+    link: "https://www.seedext.com",
     description: [
       "Création d'un design système accessible avec ReactJS et Tailwind",
       "Développement du site internet avec les frameworks ReactJS et NextJS",
@@ -47,7 +48,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Dynamic Process",
     title: "Développeur full-stack",
-    link: null,
+    link: "https://dynamicprocess.io",
     description: [
       "Développement d'une API GraphQL avec Prisma et PostgreSQL",
       "Intégration d'une fonctionnalité sur le site de facturation utilisant Svelte, SvelteKit et Tailwind"
@@ -62,7 +63,7 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Okosmo",
     title: "Développeur full-stack",
-    link: null,
+    link: "https://okosmo.io",
     description: [
       "Mise en place d'un système de synchronisation des produits et commandes de Shopify et PrestaShop avec le backend",
       "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
