@@ -31,14 +31,21 @@ const experienceBase: ExperienceBase[] = [
     title: "CTO",
     link: "https://www.seedext.com",
     description: [
-      "Création d'un design système accessible avec ReactJS et Tailwind",
-      "Développement du site internet avec les frameworks ReactJS et NextJS",
-      "Organisation de la roadmap de l'équipe technique",
+      "Création et évolution d'un design système accessible avec ReactJS, Tailwind et Storybook",
+      "Développement d'une web app avec les frameworks ReactJS et NextJS",
+      "Gestion et coordination de l'équipe technique, regroupant des développeurs, des experts en IA et des DevOps",
       "Recrutement et onboarding d'un total de 6 personnes pour l'équipe technique",
-      "Review du code des équipes de développeurs frontend et backend",
-      "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements"
+      "Review de code de l'équipe technique sur GitHub et en pair coding",
+      "Conception, déploiement et gestion d'un micro-service dédié à la gestion des intelligences artificielles",
+      "Élaboration et mise en place du dashboard administrateur en utilisant Retool",
+      "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements",
+      "Maintenance et mise en place de nos différents services sur Google Cloud Platform",
+      "Rédaction de diverses documentations techniques et de documents juridiques"
     ],
-    skills: ["TypeScript", "ReactJS", "NextJS", "Tailwind", "Playwright", "Testing Library", "Storybook", "OpenAPI", "Golang", "GitHub Actions"]
+    skills: [
+      "TypeScript", "ReactJS", "NextJS", "Tailwind", "Playwright", "Testing Library", "Storybook",
+      "OpenAPI", "Golang", "Python", "IA", "Transformers", "Google Cloud Platform", "Retool", "GitHub Actions"
+    ]
   },
   {
     type: "pro",
@@ -68,7 +75,7 @@ const experienceBase: ExperienceBase[] = [
       "Mise en place d'un système de synchronisation des produits et commandes de Shopify et PrestaShop avec le backend",
       "Écriture et lecture de fichier Excel et Google Sheet via des scripts développés",
       "Développement d'un site internet e-commerce utilisant ReactJS et NextJS",
-      "Création et développement d'un site internet pour l'espace distributeur utilisant ReactJS et NextJS",
+      "Création et développement d'un dashboard pour l'espace distributeur utilisant ReactJS et NextJS",
       "Développement d'une API REST avec le framework ExpressJS et la BDD MongoDB",
       "Élaboration d'un système de génération de fichier OpenAPI pour générer le support de l'API pour le frontend",
       "Mise en place d'un package de composants pour notre design système avec ReactJS",
