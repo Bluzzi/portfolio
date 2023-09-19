@@ -1,4 +1,5 @@
 import type { PropsWithChildren, ReactElement } from "react";
+import { CallButton } from "#/components/call-button";
 import "#/styles/tailwind.css";
 import "#/styles/reset.css";
 import "#/styles/font.css";
@@ -17,6 +18,8 @@ export default function Layout({ children }: PropsWithChildren): ReactElement {
           {children}
         </main>
       </body>
+
+      <CallButton />
     </html>
   );
 }
