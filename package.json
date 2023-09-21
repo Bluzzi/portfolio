@@ -25,16 +25,16 @@
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
-    "@vitest/ui": "^0.34.4",
-    "autoprefixer": "^10.4.15",
+    "@vitest/ui": "^0.34.5",
+    "autoprefixer": "^10.4.16",
     "eslint": "8.49.0",
     "eslint-config-next": "^13.5.2",
-    "happy-dom": "^12.1.2",
+    "happy-dom": "^12.1.5",
     "postcss": "^8.4.30",
     "tailwindcss": "^3.3.3",
     "typescript": "5.2.2",
     "vite": "^4.4.9",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.5"
   },
   "eslintConfig": {
     "extends": [
