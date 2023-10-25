@@ -9,8 +9,7 @@ export function AboutSection(): ReactElement {
         <Text size="3xl">Camille Dugas</Text>
 
         <Text color="gray">
-          Développeur frontend depuis 2016.
-          Spécialisé dans l{"'"}écosystème JavaScript, je travaille principalement avec les frameworks React et Next.
+          Développeur full-stack depuis 2016, spécialisé dans l{"'"}écosystème TypeScript.
         </Text>
       </div>
 
