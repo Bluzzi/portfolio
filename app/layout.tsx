@@ -1,13 +1,16 @@
 import type { PropsWithChildren, ReactElement } from "react";
+import type { Viewport } from "next";
 import { CallButton } from "#/components/call-button";
 import "#/styles/tailwind.css";
 import "#/styles/reset.css";
 import "#/styles/font.css";
 
-// Metadata :
 export { metadata } from "#/configs/metadata";
 
-// Layout:
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF"
+};
+
 export default function Layout({ children }: PropsWithChildren): ReactElement {
   return (
     <html lang="fr">

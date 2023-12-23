@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const data = {
-  title: "Camille Dugas | Développeur Frontend",
+  title: "Camille Dugas | Développeur Full-Stack",
   description: [
     "Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript,",
     "je travaille principalement avec les frameworks React et Next."
@@ -9,12 +9,12 @@ const data = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
+
   icons: "/favicon.ico",
 
   title: data.title,
   description: data.description,
-
-  themeColor: "#FFFFFF",
 
   openGraph: {
     title: data.title,
