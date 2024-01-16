@@ -7,19 +7,19 @@ const experienceBase: ExperienceBase[] = [
     type: "pro",
     date: {
       start: date(3, 5, 2023),
-      end: null
+      end: date(26, 1, 2024)
     },
     company: "Pelico",
     title: "QA & Développeur frontend",
     link: "https://www.pelico.ai",
     description: [
       "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
-      "Écriture de test end-to-end pour le frontend avec Playwright",
+      "Écriture et maintenance de plus de 500 tests end-to-end pour le frontend avec Playwright",
       "Mise en place de CI/CD GitLab pour l'exécution des tests",
-      "Développement de nouvelles fonctionnalités sur le site en ReactJS",
-      "Collaboration avec l'équipe produit en vue de la maintenance des spécifications des tests"
+      "Amélioration de l'accessibilité de l'application web",
+      "Écriture de documentation complète sur tout l'environnement de test pour l'équipe QA"
     ],
-    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell"]
+    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell", "Notion"]
   },
   {
     type: "pro",
