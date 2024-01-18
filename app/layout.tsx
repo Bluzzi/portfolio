@@ -22,7 +22,7 @@ export default function Layout({ children }: PropsWithChildren): ReactElement {
         </main>
       </body>
 
-      <CallButton />
+      {/* <CallButton /> */}
     </html>
   );
 }
