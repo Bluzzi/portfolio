@@ -31,16 +31,15 @@ const experienceBase: ExperienceBase[] = [
     title: "CTO",
     link: "https://www.seedext.com",
     description: [
-      "Création et évolution d'un design système accessible avec ReactJS, Tailwind et Storybook",
-      "Développement d'une web app avec les frameworks ReactJS et NextJS",
-      "Gestion et coordination de l'équipe technique, regroupant des développeurs, des experts en IA et des DevOps",
-      "Recrutement et onboarding d'un total de 6 personnes pour l'équipe technique",
+      "Développement d'une web app moderne et accessible",
+      "Gestion et coordination de l'équipe technique",
+      "Recrutement et onboarding d'un total de 7 personnes pour l'équipe technique",
       "Review de code de l'équipe technique sur GitHub et en pair coding",
       "Conception, déploiement et gestion d'un micro-service dédié à la gestion des intelligences artificielles",
-      "Élaboration et mise en place du dashboard administrateur en utilisant Retool",
+      "Élaboration et mise en place d'un dashboard administrateur en utilisant Retool",
       "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements",
       "Maintenance et mise en place de nos différents services sur Google Cloud Platform",
-      "Rédaction de diverses documentations techniques et de documents juridiques"
+      "Rédaction de diverses documentations techniques"
     ],
     skills: [
       "TypeScript", "ReactJS", "NextJS", "Tailwind", "Playwright", "Testing Library", "Storybook",
@@ -97,7 +96,7 @@ const experienceBase: ExperienceBase[] = [
     title: "Développeur full-stack",
     link: null,
     description: [
-      "Conception et développement d'un site internet permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
+      "Conception et développement d'une web app permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
       "Mise en place d'une API REST utilisant le framework NestJS et la BDD PostgreSQL"
     ],
     skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker", "Playwright"]
@@ -130,9 +129,9 @@ const experienceBase: ExperienceBase[] = [
     },
     company: "Symphonia",
     title: "Développeur full-stack & Administrateur serveur",
-    link: null,
+    link: "https://github.com/Symphonia-Team",
     description: [
-      "Création de plugin via le software PocketMine-MP",
+      "Conception de serveurs de jeux vidéo, accueillant quotidiennement des milliers de joueurs",
       "Mise en place d'un serveur socket (TCP) pour synchroniser les serveurs",
       "Développement d'un backend (API REST) utilisant le framework NestJS et la BDD PostgreSQL",
       "Construction d'un panel proposant divers outils de gestion à l'aide de ReactJS et NextJS",
