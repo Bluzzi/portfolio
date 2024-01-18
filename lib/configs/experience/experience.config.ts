@@ -31,19 +31,18 @@ const experienceBase: ExperienceBase[] = [
     title: "CTO",
     link: "https://www.seedext.com",
     description: [
-      "Développement d'une web app moderne et accessible",
-      "Gestion et coordination de l'équipe technique",
-      "Recrutement et onboarding d'un total de 7 personnes pour l'équipe technique",
-      "Review de code de l'équipe technique sur GitHub et en pair coding",
+      "Développement d'une web app accessible proposant une UI et UX futuriste",
+      "Recrutement, onboarding et management de l'équipe technique",
+      "Review de code sur GitHub, en live ainsi que pendant des sessions de pair coding",
       "Conception, déploiement et gestion d'un micro-service dédié à la gestion des intelligences artificielles",
       "Élaboration et mise en place d'un dashboard administrateur en utilisant Retool",
-      "Mise en place de GitHub Actions pour vérifier les build, lint, tests et effectuer les déploiements",
+      "Automatisation de nos déploiements, tests et check de qualité de code via des GitHub Actions",
       "Maintenance et mise en place de nos différents services sur Google Cloud Platform",
-      "Rédaction de diverses documentations techniques"
+      "Rédaction de diverses documentations techniques sur Notion"
     ],
     skills: [
-      "TypeScript", "ReactJS", "NextJS", "Tailwind", "Playwright", "Testing Library", "Storybook",
-      "OpenAPI", "Golang", "Python", "IA", "Transformers", "Google Cloud Platform", "Retool", "GitHub Actions"
+      "TypeScript", "Fastify", "ReactJS", "NextJS", "Tailwind", "Playwright", "Vitest", "Storybook",
+      "OpenAPI", "Python", "AI (LLM, STT)", "Google Cloud Platform", "Retool", "GitHub Actions", "Notion"
     ]
   },
   {
