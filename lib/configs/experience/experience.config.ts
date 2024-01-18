@@ -13,8 +13,8 @@ const experienceBase: ExperienceBase[] = [
     title: "QA & Développeur frontend",
     link: "https://www.pelico.ai",
     description: [
-      "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
       "Écriture et maintenance de plus de 500 tests end-to-end pour le frontend avec Playwright",
+      "Développement d'un framework de test pour répondre aux besoins des tests à implémenter",
       "Mise en place de CI/CD GitLab pour l'exécution des tests",
       "Amélioration de l'accessibilité de l'application web",
       "Écriture de documentation complète sur tout l'environnement de test pour l'équipe QA"
@@ -106,7 +106,7 @@ const experienceBase: ExperienceBase[] = [
     type: "open-source",
     date: {
       start: date(12, 7, 2020),
-      end: null
+      end: date(29, 9, 2023)
     },
     company: "Virtual Royaume",
     title: "Mainteneur de projets open-source communautaires",
