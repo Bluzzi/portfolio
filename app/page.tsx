@@ -5,6 +5,8 @@ import { ExperienceSection } from "./experience.section";
 import { AboutSection } from "./about.section";
 import { LinkSection } from "./link.section";
 
+export const revalidate = 3600;
+
 export default function Home(): ReactElement {
   return (
     <>
