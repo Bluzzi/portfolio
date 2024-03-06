@@ -7,7 +7,7 @@ const experienceBase: ExperienceBase[] = [
     type: "pro",
     date: {
       start: date(3, 5, 2023),
-      end: date(26, 1, 2024)
+      end: date(8, 3, 2024)
     },
     company: "Pelico",
     title: "QA & Développeur frontend",
