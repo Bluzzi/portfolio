@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { metadata } from "#/configs/metadata";
+import { metadata } from "#source/lib/configs/metadata";
 
 export function MetadataImage(): ImageResponse {
   return new ImageResponse(

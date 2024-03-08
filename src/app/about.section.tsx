@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { Text } from "#/components/text";
+import { Text } from "#source/lib/components/text";
 import Image from "next/image";
 
 export function AboutSection(): ReactElement {

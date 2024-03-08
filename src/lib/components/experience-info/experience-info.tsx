@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import type { ExperienceProps } from "./experience-info.type";
-import { Text } from "#/components/text";
-import { Label } from "#/components/label";
+import { Text } from "#source/lib/components/text";
+import { Label } from "#source/lib/components/label";
 import { getLabelInfoByExperienceType } from "./experience-info.util";
 
 export function ExperienceInfo({ experience, ...props }: ExperienceProps): ReactElement {

@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { LinkButton } from "#/components/link-button";
+import { LinkButton } from "#source/lib/components/link-button";
 
 export function LinkSection(): ReactElement {
   return (

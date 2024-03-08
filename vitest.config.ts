@@ -10,7 +10,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "#/": "./lib/",
+      "#source/lib/": "./lib/",
       "~/": "./public/"
     }
   }

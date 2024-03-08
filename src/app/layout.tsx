@@ -1,10 +1,10 @@
 import type { PropsWithChildren, ReactElement } from "react";
 import type { Viewport } from "next";
-import "#/styles/tailwind.css";
-import "#/styles/reset.css";
-import "#/styles/font.css";
+import "#source/styles/tailwind.css";
+import "#source/styles/reset.css";
+import "#source/styles/font.css";
 
-export { metadata } from "#/configs/metadata";
+export { metadata } from "#source/lib/configs/metadata";
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF"

@@ -1,7 +1,7 @@
-import type { Dayjs } from "#/utils/day-js";
+import type { Dayjs } from "#source/lib/utils/day-js";
 import type { DateUnit } from "./difference.type";
-import { dayJS } from "#/utils/day-js";
-import { pluralize } from "#/utils/string";
+import { dayJS } from "#source/lib/utils/day-js";
+import { pluralize } from "#source/lib/utils/string";
 
 export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {
   const dateUnits = dateDiffUnits(dateOne, dateTwo);

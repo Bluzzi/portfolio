@@ -1,4 +1,4 @@
-import type { ExperienceType } from "#/configs/experience";
+import type { ExperienceType } from "#source/lib/configs/experience";
 import type { ExperienceTypeLabelInfo } from "./experience-info.type";
 
 export function getLabelInfoByExperienceType(type: ExperienceType): ExperienceTypeLabelInfo {
