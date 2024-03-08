@@ -10,8 +10,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "#source/lib/": "./lib/",
-      "~/": "./public/"
+      "#source/lib/": "./src/lib/",
+      "#public/": "./public/"
     }
   }
 });
