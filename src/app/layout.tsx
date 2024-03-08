@@ -1,8 +1,8 @@
 import type { PropsWithChildren, ReactElement } from "react";
 import type { Viewport } from "next";
-import "#source/styles/tailwind.css";
-import "#source/styles/reset.css";
-import "#source/styles/font.css";
+import "#source/lib/styles/tailwind.css";
+import "#source/lib/styles/reset.css";
+import "#source/lib/styles/font.css";
 
 export { metadata } from "#source/lib/configs/metadata";
 
