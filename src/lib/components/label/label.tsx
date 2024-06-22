@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import type { LabelProps } from "./label.type";
 import { Text } from "#source/lib/components/text";
-import { FiExternalLink } from "react-icons/fi";
+import { ExternalLinkIcon } from "lucide-react";
 import { clsx } from "clsx";
 
 export function Label({ text, color, link }: LabelProps): ReactElement {
@@ -24,7 +24,7 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
       >
         <span>{text}</span>
 
-        {link && <FiExternalLink />}
+        {link && <ExternalLinkIcon />}
       </Text>
     </Tag>
   );
