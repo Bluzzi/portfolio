@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
   typecheck:
     name: Type Check
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run ts:check
   build:
     name: Build
@@ -47,5 +47,5 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run build
