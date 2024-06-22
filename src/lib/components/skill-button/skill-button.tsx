@@ -7,7 +7,7 @@ import Link from "next/link";
 export function SkillButton({ title, logoSrc, link }: SkillButtonProps): ReactElement {
   return (
     <Link href={link} target="_blank">
-      <span className="flex items-center gap-2 w-fit rounded border border-gray py-1 px-2 hover:border-white">
+      <span className="flex items-center gap-2 w-fit rounded border border-gray-500 py-1 px-2 hover:border-white">
         <Icon src={logoSrc} alt={title} size={22} />
         <Text>{title}</Text>
       </span>
