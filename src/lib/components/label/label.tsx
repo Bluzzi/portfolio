@@ -24,7 +24,7 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
       >
         <span>{text}</span>
 
-        {link && <ExternalLinkIcon />}
+        {link && <ExternalLinkIcon size={12} />}
       </Text>
     </Tag>
   );
