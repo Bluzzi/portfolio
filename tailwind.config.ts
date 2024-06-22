@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { neutral } from "tailwindcss/colors";
 
 export default {
   content: {
@@ -11,10 +12,7 @@ export default {
       "black": "#000000",
       "blue": "#1d4ed8",
       "green": "#15803d",
-      "gray": {
-        DEFAULT: "#888",
-        1: "#111"
-      }
+      "gray": neutral
     },
 
     fontSize: {
@@ -45,12 +43,6 @@ export default {
     borderRadius: {
       DEFAULT: "0.25rem",
       "full": "9999px"
-    },
-
-    extend: {
-      height: {
-        "0.5": "1px"
-      }
     }
   },
   plugins: []
