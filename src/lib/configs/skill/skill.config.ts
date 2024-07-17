@@ -10,7 +10,8 @@ export const skills: Skill[] = [
   { title: "Vitest", logo: "/skills/vitest.svg", link: "https://vitest.dev" },
   { title: "Playwright", logo: "/skills/playwright.svg", link: "https://playwright.dev" },
   { title: "ESLint", logo: "/skills/eslint.svg", link: "https://eslint.org" },
-  { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
+  { title: "Railway", logo: "/skills/railway.svg", link: "https://railway.app" },
+  // { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
   { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" }
   // { title: "CSS", logo: "/skills/css.png", link: "https://github.com/css-modules/css-modules },
   // { title: "SASS", logo: "/skills/sass.png", link: "https://sass-lang.com" },
