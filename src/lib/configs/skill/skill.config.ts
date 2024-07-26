@@ -11,8 +11,11 @@ export const skills: Skill[] = [
   { title: "Playwright", logo: "/skills/playwright.svg", link: "https://playwright.dev" },
   { title: "ESLint", logo: "/skills/eslint.svg", link: "https://eslint.org" },
   { title: "Railway", logo: "/skills/railway.svg", link: "https://railway.app" },
-  // { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
+  { title: "VSCode", logo: "/skills/vscode.svg", link: "https://code.visualstudio.com" },
   { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" }
+  // { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
+  // { title: "PNPM", logo: "/skills/pnpm.svg", link: "https://pnpm.io" },
+  // { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
   // { title: "CSS", logo: "/skills/css.png", link: "https://github.com/css-modules/css-modules },
   // { title: "SASS", logo: "/skills/sass.png", link: "https://sass-lang.com" },
   // { title: "Redux", logo: "/skills/redux.webp", link: "https://redux.js.org" },
