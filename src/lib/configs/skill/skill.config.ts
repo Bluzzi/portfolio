@@ -14,7 +14,8 @@ export const skills: Skill[] = [
   { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
   { title: "VSCode", logo: "/skills/vscode.svg", link: "https://code.visualstudio.com" },
   { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" },
-  { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" }
+  { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
+  { title: "RabbitMQ", logo: "/skills/rabbitmq.svg", link: "https://www.rabbitmq.com" }
   // { title: "Meilisearch", logo: "/skills/meilisearch.svg", link: "https://www.meilisearch.com" },
   // { title: "PNPM", logo: "/skills/pnpm.svg", link: "https://pnpm.io" },
   // { title: "CSS", logo: "/skills/css.png", link: "https://github.com/css-modules/css-modules },
