@@ -5,6 +5,20 @@ import { date } from "#source/lib/utils/date/parser";
 const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
+    date: { start: date(12, 8, 2024), end: null },
+    company: "Melcad",
+    title: "Co-fondateur & CTO",
+    link: "https://melcad.app", // TODO: update link
+    description: [
+      "Création d'une webapp proposant divers modules de gestion à destination des entreprises"
+    ],
+    skills: [
+      "TypeScript", "Fastify", "ReactJS", "NextJS", "Tailwind", "Playwright",
+      "PostgreSQL", "Prisma", "OpenAPI", "Google Cloud Platform", "Railway", "GitHub Actions"
+    ]
+  },
+  {
+    type: "pro",
     date: {
       start: date(3, 5, 2023),
       end: date(8, 3, 2024)
