@@ -56,7 +56,7 @@ const experienceBase: ExperienceBase[] = [
     ],
     skills: [
       "TypeScript", "Fastify", "ReactJS", "NextJS", "Tailwind", "Playwright", "Vitest", "Storybook",
-      "OpenAPI", "Python", "AI (LLM, STT)", "Google Cloud Platform", "Retool", "GitHub Actions", "Notion"
+      "OpenAPI", "Python", "AI (LLM, STT)", "Google Cloud Platform", "Retool", "GitHub Actions", "Notion", "RabbitMQ"
     ]
   },
   {
