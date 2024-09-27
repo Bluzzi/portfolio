@@ -59,21 +59,21 @@ const experienceBase: ExperienceBase[] = [
       "OpenAPI", "Python", "AI (LLM, STT)", "Google Cloud Platform", "Retool", "GitHub Actions", "Notion", "RabbitMQ"
     ]
   },
-  {
-    type: "pro",
-    date: {
-      start: date(23, 1, 2023),
-      end: date(3, 2, 2023)
-    },
-    company: "Dynamic Process",
-    title: "Développeur full-stack",
-    link: "https://dynamicprocess.io",
-    description: [
-      "Développement d'une API GraphQL avec Prisma et PostgreSQL",
-      "Intégration d'une fonctionnalité sur le site de facturation utilisant Svelte, SvelteKit et Tailwind"
-    ],
-    skills: ["Svelte", "SvelteKit", "GraphQL", "PostgreSQL", "Prisma", "Tailwind"]
-  },
+  // {
+  //   type: "pro",
+  //   date: {
+  //     start: date(23, 1, 2023),
+  //     end: date(3, 2, 2023)
+  //   },
+  //   company: "Dynamic Process",
+  //   title: "Développeur full-stack",
+  //   link: "https://dynamicprocess.io",
+  //   description: [
+  //     "Développement d'une API GraphQL avec Prisma et PostgreSQL",
+  //     "Intégration d'une fonctionnalité sur le site de facturation utilisant Svelte, SvelteKit et Tailwind"
+  //   ],
+  //   skills: ["Svelte", "SvelteKit", "GraphQL", "PostgreSQL", "Prisma", "Tailwind"]
+  // },
   {
     type: "pro",
     date: {
@@ -99,41 +99,41 @@ const experienceBase: ExperienceBase[] = [
       "ExpressJS", "MongoDB", "OpenAPI", "GitHub Actions"
     ]
   },
-  {
-    type: "pro",
-    date: {
-      start: date(1, 5, 2022),
-      end: date(30, 6, 2022)
-    },
-    company: "Poissonnerie Dugas",
-    title: "Développeur full-stack",
-    link: null,
-    description: [
-      "Conception et développement d'une web app permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
-      "Mise en place d'une API REST utilisant le framework NestJS et la BDD PostgreSQL"
-    ],
-    skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker", "Playwright"]
-  },
-  {
-    type: "open-source",
-    date: {
-      start: date(12, 7, 2020),
-      end: date(29, 9, 2023)
-    },
-    company: "Virtual Royaume",
-    title: "Mainteneur de projets open-source communautaires",
-    link: "https://github.com/Virtual-Royaume",
-    description: [
-      "Participation active à la communauté de développeurs pour offrir et recevoir de l'entraide",
-      "Review des contributions de la communauté",
-      "Mise en place d'un backend (API GraphQL) utilisant le framework NestJS et la BDD MongoDB",
-      "Conception et développement d'un blog et d'une landing page pour présenter la communauté",
-      "Développement d'un bot Discord à l'aide de l'API DiscordJS",
-      "Gestion et maintenance des environnements de développement et de production, ainsi que mise en ligne des services",
-      "Mise en place de GitHub Actions pour vérifier les builds, le linting et les tests"
-    ],
-    skills: ["TypeScript", "NestJS", "GraphQL", "MongoDB", "Svelte", "SvelteKit", "Tailwind", "Storybook", "Vitest", "Playwright", "GitHub Actions"]
-  },
+  // {
+  //   type: "pro",
+  //   date: {
+  //     start: date(1, 5, 2022),
+  //     end: date(30, 6, 2022)
+  //   },
+  //   company: "Poissonnerie Dugas",
+  //   title: "Développeur full-stack",
+  //   link: null,
+  //   description: [
+  //     "Conception et développement d'une web app permettant de prendre et gérer des commandes à l'aide de ReactJS et NextJS",
+  //     "Mise en place d'une API REST utilisant le framework NestJS et la BDD PostgreSQL"
+  //   ],
+  //   skills: ["NodeJS", "ReactJS", "NextJS", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Docker", "Playwright"]
+  // },
+  // {
+  //   type: "open-source",
+  //   date: {
+  //     start: date(12, 7, 2020),
+  //     end: date(29, 9, 2023)
+  //   },
+  //   company: "Virtual Royaume",
+  //   title: "Mainteneur de projets open-source communautaires",
+  //   link: "https://github.com/Virtual-Royaume",
+  //   description: [
+  //     "Participation active à la communauté de développeurs pour offrir et recevoir de l'entraide",
+  //     "Review des contributions de la communauté",
+  //     "Mise en place d'un backend (API GraphQL) utilisant le framework NestJS et la BDD MongoDB",
+  //     "Conception et développement d'un blog et d'une landing page pour présenter la communauté",
+  //     "Développement d'un bot Discord à l'aide de l'API DiscordJS",
+  //     "Gestion et maintenance des environnements de développement et de production, ainsi que mise en ligne des services",
+  //     "Mise en place de GitHub Actions pour vérifier les builds, le linting et les tests"
+  //   ],
+  //   skills: ["TypeScript", "NestJS", "GraphQL", "MongoDB", "Svelte", "SvelteKit", "Tailwind", "Storybook", "Vitest", "Playwright", "GitHub Actions"]
+  // },
   {
     type: "pro",
     date: {
