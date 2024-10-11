@@ -11,28 +11,31 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "lucide-react": "^0.446.0",
-    "next": "^14.2.13",
+    "lucide-react": "^0.451.0",
+    "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@bluzzi/eslint-config": "^1.2.1",
-    "@types/node": "22.7.4",
-    "@types/react": "18.3.10",
+    "@types/node": "22.7.5",
+    "@types/react": "18.3.11",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "^10.4.20",
     "eslint": "8.57.0",
-    "eslint-config-next": "^14.2.13",
+    "eslint-config-next": "^14.2.15",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
   "eslintConfig": {
     "extends": [
       "next/core-web-vitals",
       "@bluzzi"
-    ]
+    ],
+    "rules": {
+      "max-len": "off"
+    }
   }
 }
