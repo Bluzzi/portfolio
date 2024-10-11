@@ -34,11 +34,11 @@ export function dateDiffUnits(dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] {
       name: "mois",
       suffix: null,
       value: diff.months()
-    },
-    {
-      name: "semaine",
-      suffix: "s",
-      value: Math.round(diff.days() / 7)
     }
+    // {
+    //   name: "semaine",
+    //   suffix: "s",
+    //   value: Math.round(diff.days() / 7)
+    // }
   ] satisfies DateUnit[];
 }
