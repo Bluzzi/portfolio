@@ -1,2 +1,2 @@
-export { experiences } from "./experience.config";
-export type { Experience, ExperienceType } from "./experience.type";
+export { experiences } from "./config";
+export type { Experience } from "./type";
