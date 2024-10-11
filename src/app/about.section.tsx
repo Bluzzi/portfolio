@@ -20,8 +20,8 @@ export function AboutSection(): ReactElement {
         </div>
       </div>
 
-      <div className="relative h-32 w-32 shrink-0 rounded-full sm:hidden">
-        <Image src="/bluzzi.jpg" alt="Profile picture" fill className="rounded-full" />
+      <div className="relative h-32 w-32 rounded-lg rotate-3 hover:-rotate-2 transition-transform hover:border border-white cursor-crosshair shrink-0 sm:hidden">
+        <Image src="/camille.jpg" alt="Profile picture" fill className="rounded-lg" />
       </div>
     </div>
   );
