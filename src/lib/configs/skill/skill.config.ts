@@ -1,22 +1,22 @@
 import type { Skill } from "./skill.type";
 
 export const skills: Skill[] = [
+  { title: "NodeJS", logo: "/skills/nodejs.svg", link: "https://nodejs.org" },
   { title: "TypeScript", logo: "/skills/typescript.svg", link: "https://www.typescriptlang.org" },
   { title: "React", logo: "/skills/react.svg", link: "https://react.dev" },
   { title: "Next", logo: "/skills/next-js.svg", link: "https://nextjs.org" },
   { title: "Tailwind", logo: "/skills/tailwind.svg", link: "https://tailwindcss.com" },
   { title: "Fastify", logo: "/skills/fastify.svg", link: "https://fastify.dev" },
   { title: "PostgreSQL", logo: "/skills/postgresql.svg", link: "https://www.postgresql.org" },
+  { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
+  { title: "RabbitMQ", logo: "/skills/rabbitmq.svg", link: "https://www.rabbitmq.com" },
   { title: "Vitest", logo: "/skills/vitest.svg", link: "https://vitest.dev" },
   { title: "Playwright", logo: "/skills/playwright.svg", link: "https://playwright.dev" },
   { title: "ESLint", logo: "/skills/eslint.svg", link: "https://eslint.org" },
   { title: "Railway", logo: "/skills/railway.svg", link: "https://railway.app" },
   { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
   { title: "VSCode", logo: "/skills/vscode.svg", link: "https://code.visualstudio.com" },
-  { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" },
-  { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
-  { title: "NodeJS", logo: "/skills/nodejs.svg", link: "https://nodejs.org" }
-  // { title: "RabbitMQ", logo: "/skills/rabbitmq.svg", link: "https://www.rabbitmq.com" },
+  { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" }
   // { title: "Meilisearch", logo: "/skills/meilisearch.svg", link: "https://www.meilisearch.com" },
   // { title: "PNPM", logo: "/skills/pnpm.svg", link: "https://pnpm.io" },
   // { title: "CSS", logo: "/skills/css.png", link: "https://github.com/css-modules/css-modules },
