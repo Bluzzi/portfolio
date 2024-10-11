@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 const data = {
   title: "Camille Dugas | Développeur Full-Stack",
   description: [
-    "Développeur frontend depuis 2016. Spécialisé dans l'écosystème JavaScript,",
-    "je travaille principalement avec les frameworks React et Next."
+    "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript,",
+    "je travaille principalement avec NodeJS, ReactJS et NextJS."
   ].join(" ")
 };
 
