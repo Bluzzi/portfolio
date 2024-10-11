@@ -10,7 +10,7 @@ export function AboutSection(): ReactElement {
         <Text size="3xl">Camille Dugas</Text>
 
         <Text color="gray">
-          Développeur full-stack depuis 2016, spécialisé dans l{"'"}écosystème TypeScript.
+          Développeur Full-Stack depuis 2016, spécialisé dans l{"'"}écosystème TypeScript.
         </Text>
 
         <div className="flex items-center gap-4">
