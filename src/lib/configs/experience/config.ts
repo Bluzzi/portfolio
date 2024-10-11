@@ -43,7 +43,7 @@ const experienceBase: ExperienceBase[] = [
       end: null
     },
     description: [
-      "Sécurisation de services répondant aux exigences rigoureuses de grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
+      "Sécurisation des services répondant aux exigences rigoureuses de grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
       "Supervision du développement d'une webapp, d'une application Microsoft Teams ainsi que d'un panel admin",
       "Gestion de projets en intelligence artificielle, incluant Speech to Text, Diarization et LLM",
       "Définition et priorisation de la roadmap produit et des spécifications techniques qui lui sont associées",
