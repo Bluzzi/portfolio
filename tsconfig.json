@@ -1,38 +1,46 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "#source/*": ["./src/*"],
-      "#public/*": ["./public/*"]
+      "#source/*": [
+        "./src/*"
+      ],
+      "#public/*": [
+        "./public/*"
+      ]
     },
-
-    "plugins": [
-      { "name": "next" }
-    ]
+    "target": "ES2017"
   },
-
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "eslint.config.js"  ],
-  
+    ".next/types/**/*.ts",
+    "lang.d.ts",
+    "eslint.config.js",
+    "postcss.config.js"
+  ],
   "exclude": [
     "node_modules"
   ]
