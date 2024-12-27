@@ -4,7 +4,7 @@ import { Text } from "#source/lib/components/text";
 import { ExternalLinkIcon } from "lucide-react";
 import { clsx } from "clsx";
 
-export function Label({ text, color, link }: LabelProps): ReactElement {
+export const Label = ({ text, color, link }: LabelProps): ReactElement => {
   const Tag = link ? "a" : "span";
 
   return (
@@ -18,8 +18,8 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
             "flex gap-1 items-center hover:brightness-110": link,
 
             "bg-blue text-white": color === "blue",
-            "bg-green text-white": color === "green"
-          }
+            "bg-green text-white": color === "green",
+          },
         )}
       >
         <span>{text}</span>
@@ -28,4 +28,4 @@ export function Label({ text, color, link }: LabelProps): ReactElement {
       </Text>
     </Tag>
   );
-}
+};

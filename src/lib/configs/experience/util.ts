@@ -2,21 +2,21 @@ import type { Experience, ExperienceBase } from "./type";
 import { humanizeDateDiff } from "#source/lib/utils/date/difference";
 import { dayJS } from "#source/lib/utils/day-js";
 
-export function populateExperience(experienceBase: ExperienceBase[]): Experience[] {
-  const populated = experienceBase.map(exp => {
+export const populateExperience = (experienceBase: ExperienceBase[]): Experience[] => {
+  const populated = experienceBase.map((exp) => {
     const dateFormat = {
       start: exp.date.start.format("DD/MM/YYYY"),
-      end: exp.date.end ? exp.date.end.format("DD/MM/YYYY") : "présent"
+      end: exp.date.end ? exp.date.end.format("DD/MM/YYYY") : "présent",
     };
 
     return {
       ...exp,
       duration: humanizeDateDiff(exp.date.start, exp.date.end ?? dayJS()),
-      dateFormat
+      dateFormat,
     };
   });
 
-  populated.sort((a, b) =>  {
+  populated.sort((a, b) => {
     // Check if either experience is ongoing (end date is null) and prioritize it:
     if (a.date.end === null && b.date.end === null) {
       // Compare start dates to find the more recent one:
@@ -41,4 +41,4 @@ export function populateExperience(experienceBase: ExperienceBase[]): Experience
   });
 
   return populated;
-}
+};

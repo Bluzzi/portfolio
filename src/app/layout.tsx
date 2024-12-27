@@ -7,10 +7,10 @@ import "#source/lib/styles/font.css";
 export { metadata } from "#source/lib/configs/metadata";
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF"
+  themeColor: "#FFFFFF",
 };
 
-export default function Layout({ children }: PropsWithChildren): ReactElement {
+const Layout = ({ children }: PropsWithChildren): ReactElement => {
   return (
     <html lang="fr">
       <head />
@@ -22,4 +22,6 @@ export default function Layout({ children }: PropsWithChildren): ReactElement {
       </body>
     </html>
   );
-}
+};
+
+export default Layout;

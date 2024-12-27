@@ -9,4 +9,4 @@ export type ExperienceProps = HTMLAttributes<HTMLDivElement> & {
 export type ExperienceTypeLabelInfo = {
   text: string;
   color: LabelColor;
-}
+};

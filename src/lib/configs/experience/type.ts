@@ -25,6 +25,6 @@ export type Experience = {
   link: string | null;
   description: string[];
   skills: Skill[];
-}
+};
 
 export type ExperienceBase = Omit<Experience, "duration" | "dateFormat">;

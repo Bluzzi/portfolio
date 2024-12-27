@@ -6,7 +6,7 @@ import { AboutSection } from "./about.section";
 
 export const revalidate = 3600;
 
-export default function Home(): ReactElement {
+const Home = (): ReactElement => {
   return (
     <>
       <AboutSection />
@@ -18,4 +18,6 @@ export default function Home(): ReactElement {
       <ExperienceSection />
     </>
   );
-}
+};
+
+export default Home;

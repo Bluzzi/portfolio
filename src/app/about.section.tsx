@@ -3,14 +3,16 @@ import { Text } from "#source/lib/components/text";
 import { SocialButton } from "#source/lib/components/social-button";
 import Image from "next/image";
 
-export function AboutSection(): ReactElement {
+export const AboutSection = (): ReactElement => {
   return (
     <div className="flex justify-between gap-16">
       <div className="space-y-5">
         <Text size="3xl">Camille Dugas</Text>
 
         <Text color="gray">
-          Développeur Full-Stack depuis 2016, spécialisé dans l{"'"}écosystème TypeScript.
+          Développeur Full-Stack depuis 2016, spécialisé dans l
+          '
+          écosystème TypeScript.
         </Text>
 
         <div className="flex items-center gap-4">
@@ -25,4 +27,4 @@ export function AboutSection(): ReactElement {
       </div>
     </div>
   );
-}
+};

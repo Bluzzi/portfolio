@@ -3,7 +3,7 @@ import type { ExperienceProps } from "./experience-info.type";
 import { Text } from "#source/lib/components/text";
 import { Label } from "#source/lib/components/label";
 
-export function ExperienceInfo({ experience, ...props }: ExperienceProps): ReactElement {
+export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): ReactElement => {
   return (
     <div {...props}>
       <div className="flex justify-between sm:flex-col">
@@ -14,17 +14,31 @@ export function ExperienceInfo({ experience, ...props }: ExperienceProps): React
         </div>
 
         <Text color="gray">
-          {experience.dateFormat.start} - {experience.dateFormat.end} ({experience.duration})
+          {experience.dateFormat.start}
+          {" "}
+          -
+          {experience.dateFormat.end}
+          {" "}
+          (
+          {experience.duration}
+          )
         </Text>
       </div>
 
       <Text className="mb-1">{experience.title}</Text>
 
-      {experience.description.map(line => <Text key={line} color="gray" size="small" className="ml-1">● {line}</Text>)}
+      {experience.description.map(line => (
+        <Text key={line} color="gray" size="small" className="ml-1">
+          ●
+          {line}
+        </Text>
+      ))}
 
       <Text size="small" color="gray" className="mt-1">
-        <span className="text-white">Technologies :</span> {experience.skills.join(" • ")}
+        <span className="text-white">Technologies :</span>
+        {" "}
+        {experience.skills.join(" • ")}
       </Text>
     </div>
   );
-}
+};

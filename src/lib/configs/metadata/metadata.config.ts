@@ -4,8 +4,8 @@ const data = {
   title: "Camille Dugas | Développeur Full-Stack",
   description: [
     "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript,",
-    "je travaille principalement avec NodeJS, ReactJS et NextJS."
-  ].join(" ")
+    "je travaille principalement avec NodeJS, ReactJS et NextJS.",
+  ].join(" "),
 };
 
 export const metadata: Metadata = {
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     description: data.description,
     siteName: "Camille Dugas | Portfolio",
     url: "https://camilledugas.me",
-    type: "website"
+    type: "website",
   },
 
   twitter: {
     title: data.title,
-    description: data.description
-  }
+    description: data.description,
+  },
 };

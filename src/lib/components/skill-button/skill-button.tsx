@@ -4,7 +4,7 @@ import { Text } from "#source/lib/components/text";
 import { Icon } from "#source/lib/components/icon";
 import Link from "next/link";
 
-export function SkillButton({ title, logoSrc, link }: SkillButtonProps): ReactElement {
+export const SkillButton = ({ title, logoSrc, link }: SkillButtonProps): ReactElement => {
   return (
     <Link href={link} target="_blank">
       <span className="flex items-center gap-2 w-fit rounded border border-gray-500 py-1 px-2 hover:border-white">
@@ -13,4 +13,4 @@ export function SkillButton({ title, logoSrc, link }: SkillButtonProps): ReactEl
       </span>
     </Link>
   );
-}
+};
