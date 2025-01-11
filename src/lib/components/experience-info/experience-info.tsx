@@ -17,6 +17,7 @@ export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): React
           {experience.dateFormat.start}
           {" "}
           -
+          {" "}
           {experience.dateFormat.end}
           {" "}
           (
