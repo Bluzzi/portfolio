@@ -31,7 +31,7 @@ export const humanizeDateDiff = (dateOne: Dayjs, dateTwo: Dayjs): string => {
   for (let index = 0; index < dateUnits.length; index += 1) {
     const current = dateUnits.at(index);
 
-    if (current?.value === undefined) continue;
+    if (current?.value === undefined || current.value === 0) continue;
 
     const next = dateUnits.at(index + 1);
 
