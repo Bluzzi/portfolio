@@ -36,7 +36,7 @@ const experienceBase: ExperienceBase[] = [
   },
   {
     company: "Seedext",
-    title: "CTO",
+    title: "Co-Fondateur & CTO",
     link: "https://www.seedext.com",
     date: {
       start: date(20, 2, 2023),
