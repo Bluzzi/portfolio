@@ -37,7 +37,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lang.d.ts",
     "eslint.config.js",
     "postcss.config.js"
   ],
