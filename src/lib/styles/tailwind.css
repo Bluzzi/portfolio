@@ -1,3 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Custom font: */
+  --font-sans: "Ubuntu", "sans-serif";
+
+  /* Font sizes: */
+  --text-*: initial;
+
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 1;
+
+  /* Colors: */
+  --color-*: initial;
+
+  --color-transparent: transparent;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  --color-blue: #1d4ed8;
+  --color-green: #15803d;
+
+  --color-gray-400: oklch(0.707 0.022 261.325);
+  --color-gray-500: oklch(0.551 0.027 264.364);
+
+  /* Breakpoints: */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  /* Box shadow: */
+  --shadow-*: initial;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+  /* Border radius: */
+  --radius-*: initial;
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+}

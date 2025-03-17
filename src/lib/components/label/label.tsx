@@ -1,8 +1,8 @@
-import type { ReactElement } from "react";
 import type { LabelProps } from "./label.type";
+import type { ReactElement } from "react";
 import { Text } from "#source/lib/components/text";
-import { ExternalLinkIcon } from "lucide-react";
 import { clsx } from "clsx";
+import { ExternalLinkIcon } from "lucide-react";
 
 export const Label = ({ text, color, link }: LabelProps): ReactElement => {
   const Tag = link ? "a" : "span";

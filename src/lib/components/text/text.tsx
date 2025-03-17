@@ -1,5 +1,5 @@
-import type { ReactElement } from "react";
 import type { TextProps } from "./text.type";
+import type { ReactElement } from "react";
 import { clsx } from "clsx";
 
 export const Text = ({ children, type, color, size, className, ...props }: TextProps): ReactElement => {

@@ -1,12 +1,12 @@
-import type { ReactElement } from "react";
 import type { ExperienceProps } from "./experience-info.type";
-import { Text } from "#source/lib/components/text";
+import type { ReactElement } from "react";
 import { Label } from "#source/lib/components/label";
+import { Text } from "#source/lib/components/text";
 
 export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): ReactElement => {
   return (
     <div {...props}>
-      <div className="flex justify-between sm:flex-col">
+      <div className="flex justify-between max-sm:flex-col">
         <div className="flex flex-wrap items-center gap-2">
           <Text size="large" className="uppercase">{experience.company}</Text>
 
@@ -28,9 +28,10 @@ export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): React
 
       <Text className="mb-1">{experience.title}</Text>
 
-      {experience.description.map(line => (
+      {experience.description.map((line) => (
         <Text key={line} color="gray" size="small" className="ml-1">
           ●
+          {" "}
           {line}
         </Text>
       ))}

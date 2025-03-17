@@ -1,7 +1,7 @@
-import type { ReactElement } from "react";
 import type { SkillButtonProps } from "./skill-button.type";
-import { Text } from "#source/lib/components/text";
+import type { ReactElement } from "react";
 import { Icon } from "#source/lib/components/icon";
+import { Text } from "#source/lib/components/text";
 import Link from "next/link";
 
 export const SkillButton = ({ title, logoSrc, link }: SkillButtonProps): ReactElement => {

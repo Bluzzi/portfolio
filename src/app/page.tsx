@@ -1,8 +1,8 @@
 import type { ReactElement } from "react";
-import { Line } from "#source/lib/components/line";
-import { SkillSection } from "./skill.section";
-import { ExperienceSection } from "./experience.section";
 import { AboutSection } from "./about.section";
+import { ExperienceSection } from "./experience.section";
+import { SkillSection } from "./skill.section";
+import { Line } from "#source/lib/components/line";
 
 export const revalidate = 3600;
 

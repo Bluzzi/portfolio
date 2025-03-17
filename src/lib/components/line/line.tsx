@@ -1,5 +1,5 @@
-import type { ReactElement } from "react";
 import type { LineProps } from "./line.type";
+import type { ReactElement } from "react";
 import { clsx } from "clsx";
 
 export const Line = ({ className, ...props }: LineProps): ReactElement => {

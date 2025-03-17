@@ -1,5 +1,5 @@
-import type { ReactElement } from "react";
 import type { SocialButtonProps } from "./social-buton.type";
+import type { ReactElement } from "react";
 import { Icon } from "#source/lib/components/icon";
 
 export const SocialButton = ({ logoSrc, alt, ...props }: SocialButtonProps): ReactElement => {

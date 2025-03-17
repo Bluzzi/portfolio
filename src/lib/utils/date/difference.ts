@@ -1,5 +1,5 @@
-import type { Dayjs } from "#source/lib/utils/day-js";
 import type { DateUnit } from "./difference.type";
+import type { Dayjs } from "#source/lib/utils/day-js";
 import { dayJS } from "#source/lib/utils/day-js";
 import { pluralize } from "#source/lib/utils/string";
 
@@ -35,7 +35,9 @@ export const humanizeDateDiff = (dateOne: Dayjs, dateTwo: Dayjs): string => {
 
     const next = dateUnits.at(index + 1);
 
-    return [current, next].filter((element): element is NonNullable<typeof element> => element?.value !== undefined).map((element) => {
+    return [current, next].filter((element): element is NonNullable<typeof element> => {
+      return element?.value !== undefined && element.value !== 0;
+    }).map((element) => {
       return element.suffix ? `${String(element.value)} ${pluralize(element.name, element.value, element.suffix)}` : `${String(element.value)} ${element.name}`;
     }).join(" et ");
   }

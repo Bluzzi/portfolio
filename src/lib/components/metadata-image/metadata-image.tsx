@@ -1,5 +1,5 @@
-import { ImageResponse } from "next/og";
 import { metadata } from "#source/lib/configs/metadata";
+import { ImageResponse } from "next/og";
 
 export const MetadataImage = (): ImageResponse => {
   return new ImageResponse(

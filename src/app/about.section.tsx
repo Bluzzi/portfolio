@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { Text } from "#source/lib/components/text";
 import { SocialButton } from "#source/lib/components/social-button";
+import { Text } from "#source/lib/components/text";
 import Image from "next/image";
 
 export const AboutSection = (): ReactElement => {
@@ -10,9 +10,7 @@ export const AboutSection = (): ReactElement => {
         <Text size="3xl">Camille Dugas</Text>
 
         <Text color="gray">
-          Développeur Full-Stack depuis 2016, spécialisé dans l
-          '
-          écosystème TypeScript.
+          Développeur Full-Stack depuis 2016, spécialisé dans l'écosystème TypeScript.
         </Text>
 
         <div className="flex items-center gap-4">
@@ -22,7 +20,7 @@ export const AboutSection = (): ReactElement => {
         </div>
       </div>
 
-      <div className="relative h-32 w-32 rounded-lg rotate-3 hover:-rotate-2 transition-transform hover:border border-white cursor-crosshair shrink-0 sm:hidden">
+      <div className="relative h-32 w-32 rounded-lg rotate-3 hover:-rotate-2 transition-transform hover:border border-white cursor-crosshair shrink-0 max-sm:hidden">
         <Image src="/camille.jpg" alt="Profile picture" fill className="rounded-lg" />
       </div>
     </div>
