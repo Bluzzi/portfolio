@@ -2,7 +2,7 @@ import { metadata } from "#source/lib/configs/metadata";
 import { ImageResponse } from "next/og";
 
 export const MetadataImage = (): ImageResponse => {
-  return new ImageResponse(
+  const imageJSX = (
     <div style={{
       backgroundColor: "black",
       height: "100%",
@@ -17,6 +17,8 @@ export const MetadataImage = (): ImageResponse => {
       <p style={{ fontSize: "60px", color: "white", margin: 0 }}>Camille Dugas</p>
 
       <p style={{ fontSize: "35px", color: "white", margin: 0 }}>{metadata.description}</p>
-    </div>,
+    </div>
   );
+
+  return new ImageResponse(imageJSX);
 };
