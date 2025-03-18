@@ -9,6 +9,8 @@ const data = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://camilledugas.me"),
+
   icons: "/favicon.ico",
 
   title: data.title,
