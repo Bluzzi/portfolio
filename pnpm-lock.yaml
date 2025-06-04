@@ -15,8 +15,8 @@ importers:
         specifier: ^1.11.13
         version: 1.11.13
       lucide-react:
-        specifier: ^0.511.0
-        version: 0.511.0(react@19.1.0)
+        specifier: ^0.513.0
+        version: 0.513.0(react@19.1.0)
       next:
         specifier: 15.3.3
         version: 15.3.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -40,8 +40,8 @@ importers:
         specifier: ^19.1.6
         version: 19.1.6
       '@types/react-dom':
-        specifier: ^19.1.5
-        version: 19.1.5(@types/react@19.1.6)
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.6)
       eslint:
         specifier: 9.28.0
         version: 9.28.0(jiti@2.4.2)
@@ -488,8 +488,8 @@ packages:
   '@types/node@22.15.29':
     resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
-  '@types/react-dom@19.1.5':
-    resolution: {integrity: sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==}
+  '@types/react-dom@19.1.6':
+    resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
     peerDependencies:
       '@types/react': ^19.0.0
 
@@ -1021,8 +1021,8 @@ packages:
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
-  lucide-react@0.511.0:
-    resolution: {integrity: sha512-VK5a2ydJ7xm8GvBeKLS9mu1pVK6ucef9780JVUjw6bAjJL/QXnd4Y0p7SPeOUMC27YhzNCZvm5d/QX0Tp3rc0w==}
+  lucide-react@0.513.0:
+    resolution: {integrity: sha512-CJZKq2g8Y8yN4Aq002GahSXbG2JpFv9kXwyiOAMvUBv7pxeOFHUWKB0mO7MiY4ZVFCV4aNjv2BJFq/z3DgKPQg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -1741,7 +1741,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/react-dom@19.1.5(@types/react@19.1.6)':
+  '@types/react-dom@19.1.6(@types/react@19.1.6)':
     dependencies:
       '@types/react': 19.1.6
 
@@ -2344,7 +2344,7 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
-  lucide-react@0.511.0(react@19.1.0):
+  lucide-react@0.513.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
