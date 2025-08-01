@@ -3,20 +3,20 @@ import { populateExperience } from "./util";
 import { date } from "#source/lib/utils/date/parser";
 
 const experienceBase: ExperienceBase[] = [
-  {
-    company: "Melcad",
-    title: "Co-Fondateur & CTO",
-    link: "https://melcad.com",
-    date: {
-      start: date(12, 8, 2024),
-      end: null,
-    },
-    description: [
-      "Création d'une webapp proposant divers modules de gestion à destination des commerces et restaurants",
-      "... en cours !",
-    ],
-    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "GCP", "GitHub Actions"],
-  },
+  // {
+  //   company: "Melcad",
+  //   title: "Co-Fondateur & CTO",
+  //   link: "https://melcad.com",
+  //   date: {
+  //     start: date(1, 8, 2025),
+  //     end: null,
+  //   },
+  //   description: [
+  //     "Création d'une webapp proposant divers modules de gestion à destination des commerces et restaurants",
+  //     "... en cours !",
+  //   ],
+  //   skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "GCP", "GitHub Actions"],
+  // },
   {
     company: "Pelico",
     title: "Ingénieur QA",
@@ -40,7 +40,7 @@ const experienceBase: ExperienceBase[] = [
     link: "https://www.seedext.com",
     date: {
       start: date(20, 2, 2023),
-      end: null,
+      end: date(31, 7, 2025),
     },
     description: [
       "Sécurisation des services pour répondre aux exigences rigoureuses des grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
