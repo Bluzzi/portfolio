@@ -21,7 +21,7 @@
     "@bluzzi/eslint-config": "^2.1.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "24.10.1",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "eslint": "9.39.1",
     "postcss": "^8.5.6",
