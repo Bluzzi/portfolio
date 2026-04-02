@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import { SocialButton } from "#source/lib/components/social-button";
+import { BreakablePhoto } from "#source/lib/components/breakable-photo";
 import { Text } from "#source/lib/components/text";
-import Image from "next/image";
 
 export const AboutSection = (): ReactElement => {
   return (
@@ -20,9 +20,7 @@ export const AboutSection = (): ReactElement => {
         </div>
       </div>
 
-      <div className="relative h-32 w-32 rounded-lg rotate-3 hover:-rotate-2 transition-transform hover:border border-white cursor-crosshair shrink-0 max-sm:hidden">
-        <Image src="/camille.jpg" alt="Profile picture" fill className="rounded-lg" />
-      </div>
+      <BreakablePhoto src="/camille.jpg" brokenSrc="/pixelbluzzi.png" alt="Profile picture" />
     </div>
   );
 };
