@@ -11,22 +11,22 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "dayjs": "^1.11.19",
-    "lucide-react": "^0.577.0",
-    "next": "16.1.6",
+    "dayjs": "^1.11.20",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@bluzzi/eslint-config": "^2.2.1",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "25.4.0",
+    "@bluzzi/eslint-config": "^2.2.3",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "eslint": "10.0.3",
+    "eslint": "10.1.0",
     "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.1",
-    "typescript": "5.9.3"
+    "tailwindcss": "^4.2.2",
+    "typescript": "6.0.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
