@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { SocialButton } from "#source/lib/components/social-button";
 import { BreakablePhoto } from "#source/lib/components/breakable-photo";
+import { SocialButton } from "#source/lib/components/social-button";
 import { Text } from "#source/lib/components/text";
 
 export const AboutSection = (): ReactElement => {
