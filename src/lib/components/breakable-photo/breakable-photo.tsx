@@ -145,7 +145,7 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
       onTouchStart={startBreaking}
       onTouchEnd={cancelBreaking}
     >
-      <div className="relative h-full w-full rounded-lg rotate-3 hover:-rotate-2 transition-transform hover:border border-white cursor-crosshair overflow-hidden">
+      <div className={`relative h-full w-full rounded-lg rotate-3 hover:-rotate-2 transition-transform cursor-crosshair overflow-hidden ${!isBroken ? "hover:border border-white" : ""}`}>
         <Image
           src={isBroken ? brokenSrc : src}
           alt={alt}
