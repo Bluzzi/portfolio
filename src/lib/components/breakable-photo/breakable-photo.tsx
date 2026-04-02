@@ -12,15 +12,25 @@ const EXPLOSION_FRAME_MS = 35;
 const SOUND_VOLUME = 0.15;
 const ORB_VOLUME = 0.2;
 
-const BREAK_SOUNDS = [
+const BREAK_SOUND_PATHS = [
   "/breaking-sound/Rooted_Dirt_break1.ogg.mp3",
   "/breaking-sound/Rooted_Dirt_break2.ogg.mp3",
   "/breaking-sound/Rooted_Dirt_break3.ogg.mp3",
   "/breaking-sound/Rooted_Dirt_break4.ogg.mp3",
 ];
 
-const pickRandomSound = (): string => {
-  return BREAK_SOUNDS[Math.floor(Math.random() * BREAK_SOUNDS.length)];
+const BREAKING_IMAGE_PATHS = Array.from({ length: TOTAL_STAGES }, (_, i) => `/breaking/destroy_stage_${i}.png`);
+const EXPLOSION_IMAGE_PATHS = Array.from({ length: EXPLOSION_FRAMES }, (_, i) => `/explosion/${i + 1}.png`);
+
+const preloadImage = (src: string): void => {
+  const img = new globalThis.Image();
+  img.src = src;
+};
+
+const preloadAudio = (src: string): HTMLAudioElement => {
+  const audio = new Audio(src);
+  audio.load();
+  return audio;
 };
 
 export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): ReactElement => {
@@ -30,13 +40,27 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const stageRef = useRef(0);
+  const breakSoundsRef = useRef<HTMLAudioElement[]>([]);
+  const orbSoundRef = useRef<HTMLAudioElement | null>(null);
+
+  // --- Preload all assets on mount ---
+
+  useEffect(() => {
+    breakSoundsRef.current = BREAK_SOUND_PATHS.map(preloadAudio);
+    orbSoundRef.current = preloadAudio("/breaking-sound/orb.mp3");
+
+    BREAKING_IMAGE_PATHS.forEach(preloadImage);
+    EXPLOSION_IMAGE_PATHS.forEach(preloadImage);
+    preloadImage(brokenSrc);
+  }, [brokenSrc]);
 
   // --- Sound ---
 
   const playBreakSound = useCallback(() => {
-    const audio = new Audio(pickRandomSound());
-    audio.volume = SOUND_VOLUME;
-    audio.play().catch(() => {});
+    const source = breakSoundsRef.current[Math.floor(Math.random() * breakSoundsRef.current.length)];
+    const clone = source.cloneNode() as HTMLAudioElement;
+    clone.volume = SOUND_VOLUME;
+    clone.play().catch(() => {});
   }, []);
 
   // --- Explosion ---
@@ -73,9 +97,11 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
     setIsBroken(true);
     setStage(0);
 
-    const orb = new Audio("/breaking-sound/orb.mp3");
-    orb.volume = ORB_VOLUME;
-    orb.play().catch(() => {});
+    if (orbSoundRef.current) {
+      const orb = orbSoundRef.current.cloneNode() as HTMLAudioElement;
+      orb.volume = ORB_VOLUME;
+      orb.play().catch(() => {});
+    }
   }, [stopInterval, playExplosion]);
 
   const startBreaking = useCallback(() => {
