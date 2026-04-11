@@ -12,6 +12,7 @@ export const skills: Skill[] = [
   { title: "Tailwind", logo: "/skills/tailwind.svg", link: "https://tailwindcss.com" },
   { title: "Fastify", logo: "/skills/fastify.svg", link: "https://fastify.dev" },
   { title: "Drizzle", logo: "/skills/drizzle.svg", link: "https://orm.drizzle.team" },
+  { title: "Zod", logo: "/skills/zod.png", link: "https://zod.dev" },
   { title: "PostgreSQL", logo: "/skills/postgresql.svg", link: "https://www.postgresql.org" },
   { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
   { title: "Playwright", logo: "/skills/playwright.svg", link: "https://playwright.dev" },
@@ -43,5 +44,4 @@ export const skills: Skill[] = [
   // { title: "PowerShell", logo: "/skills/powershell.svg", link: "https://learn.microsoft.com/en-us/powershell" },
   // { title: "Faker", logo: "/skills/faker.svg", link: "https://fakerjs.dev" },
   // { title: "Prisma", logo: "/skills/prisma.svg", link: "https://www.prisma.io" },
-  // { title: "Zod", logo: "/skills/zod.png", link: "https://zod.dev" },
 ];
