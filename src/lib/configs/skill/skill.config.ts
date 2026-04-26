@@ -11,7 +11,7 @@ export const skills: Skill[] = [
   { title: "Shadcn", logo: "/skills/shadcn.svg", link: "https://ui.shadcn.com" },
   { title: "Tailwind", logo: "/skills/tailwind.svg", link: "https://tailwindcss.com" },
   { title: "Fastify", logo: "/skills/fastify.svg", link: "https://fastify.dev" },
-  { title: "Drizzle", logo: "/skills/drizzle.svg", link: "https://orm.drizzle.team" },
+  { title: "Prisma", logo: "/skills/prisma.svg", link: "https://www.prisma.io" },
   { title: "Zod", logo: "/skills/zod.png", link: "https://zod.dev" },
   { title: "PostgreSQL", logo: "/skills/postgresql.svg", link: "https://www.postgresql.org" },
   { title: "Redis", logo: "/skills/redis.svg", link: "https://redis.io" },
@@ -22,6 +22,7 @@ export const skills: Skill[] = [
   { title: "Notion", logo: "/skills/notion.svg", link: "https://www.notion.so" },
   // { title: "Google Cloud", logo: "/skills/google-cloud.svg", link: "https://cloud.google.com" },
   // { title: "RabbitMQ", logo: "/skills/rabbitmq.svg", link: "https://www.rabbitmq.com" },
+  // { title: "Drizzle", logo: "/skills/drizzle.svg", link: "https://orm.drizzle.team" },
   // { title: "Next", logo: "/skills/next-js.svg", link: "https://nextjs.org" },
   // { title: "Vitest", logo: "/skills/vitest.svg", link: "https://vitest.dev" },
   // { title: "Meilisearch", logo: "/skills/meilisearch.svg", link: "https://www.meilisearch.com" },
@@ -43,5 +44,4 @@ export const skills: Skill[] = [
   // { title: "GraphQL", logo: "/skills/graphql.png", link: "https://graphql.org" },
   // { title: "PowerShell", logo: "/skills/powershell.svg", link: "https://learn.microsoft.com/en-us/powershell" },
   // { title: "Faker", logo: "/skills/faker.svg", link: "https://fakerjs.dev" },
-  // { title: "Prisma", logo: "/skills/prisma.svg", link: "https://www.prisma.io" },
 ];
