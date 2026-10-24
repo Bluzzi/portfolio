@@ -155,7 +155,7 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
         />
 
         {stage > 0 && !isBroken && (
-          // eslint-disable-next-line @next/next/no-img-element
+
           <img
             src={`/breaking/destroy_stage_${String(stage - 1)}.png`}
             className="absolute inset-0 h-full w-full pointer-events-none z-10"
@@ -166,7 +166,7 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
       </div>
 
       {explosionFrame !== null && (
-      // eslint-disable-next-line @next/next/no-img-element
+
         <img
           src={`/explosion/${String(explosionFrame)}.png`}
           className="absolute inset-0 h-full w-full pointer-events-none z-20 scale-200"
