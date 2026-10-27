@@ -4,8 +4,6 @@ import { ExperienceSection } from "./experience.section";
 import { SkillSection } from "./skill.section";
 import { Line } from "#source/lib/components/line";
 
-export const revalidate = 3600;
-
 const Home = (): ReactElement => {
   return (
     <>

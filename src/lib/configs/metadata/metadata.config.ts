@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 const data = {
   title: "Camille Dugas | Développeur Full-Stack",
   description: [
@@ -8,7 +6,7 @@ const data = {
   ].join(" "),
 };
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL("https://camilledugas.me"),
 
   icons: "/favicon.ico",

@@ -1,6 +1,6 @@
-import type { ImageProps } from "next/image";
+import type { ImgHTMLAttributes } from "react";
 
-export type IconProps = ImageProps & {
+export type IconProps = ImgHTMLAttributes<HTMLImageElement> & {
   src: string;
   alt: string;
 
