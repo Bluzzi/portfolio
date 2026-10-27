@@ -1,7 +1,6 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
 import { Text } from "#/lib/components/text";
-import { metadata } from "#/lib/configs/metadata";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import "#/lib/styles/tailwind.css";
 import "#/lib/styles/reset.css";
@@ -9,14 +8,14 @@ import "#/lib/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: metadata.title },
-    { name: "description", content: metadata.description },
+    { title: "Camille Dugas | Développeur Full-Stack" },
+    { name: "description", content: "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript, je travaille principalement avec NodeJS, ReactJS et NextJS." },
     { name: "theme-color", content: "#FFFFFF" },
   ];
 };
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: metadata.icons },
+  { rel: "icon", href: "/favicon.ico" },
 ];
 
 export const Layout = ({ children }: PropsWithChildren): ReactElement => {

@@ -1,7 +1,16 @@
-import type { DateUnit } from "./difference.type";
 import type { Dayjs } from "#/lib/utils/day-js";
 import { dayJS } from "#/lib/utils/day-js";
 import { pluralize } from "#/lib/utils/string";
+
+export type DateUnit = {
+  name: string;
+  suffix: string | null;
+  value: number;
+};
+
+export const date = (day: number, month: number, year: number): Dayjs => {
+  return dayJS().year(year).month(month - 1).date(day);
+};
 
 export const dateDiffUnits = (dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] => {
   const diff = dayJS.duration(dateTwo.diff(dateOne));

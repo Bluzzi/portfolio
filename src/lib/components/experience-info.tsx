@@ -1,7 +1,17 @@
-import type { ExperienceProps } from "./experience-info.type";
-import type { ReactElement } from "react";
+import type { LabelColor } from "#/lib/components/label";
+import type { Experience } from "#/lib/configs/experience";
+import type { HTMLAttributes, ReactElement } from "react";
 import { Label } from "#/lib/components/label";
 import { Text } from "#/lib/components/text";
+
+export type ExperienceProps = HTMLAttributes<HTMLDivElement> & {
+  experience: Experience;
+};
+
+export type ExperienceTypeLabelInfo = {
+  text: string;
+  color: LabelColor;
+};
 
 export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): ReactElement => {
   return (
