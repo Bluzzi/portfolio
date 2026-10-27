@@ -5,6 +5,6 @@ export default eslintConfig(
     typescript: { tsconfigPath: "./tsconfig.json" },
   },
   {
-    ignores: ["**/.react-router", "**/build"],
+    ignores: ["**/.react-router", "**/build", "**/playwright-report", "**/test-results"],
   },
 );

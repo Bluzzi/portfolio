@@ -4,7 +4,7 @@ import type { HTMLAttributes, ReactElement } from "react";
 import { Label } from "#/lib/components/label";
 import { Text } from "#/lib/components/text";
 
-export type ExperienceProps = HTMLAttributes<HTMLDivElement> & {
+export type ExperienceProps = HTMLAttributes<HTMLElement> & {
   experience: Experience;
 };
 
@@ -15,7 +15,7 @@ export type ExperienceTypeLabelInfo = {
 
 export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): ReactElement => {
   return (
-    <div {...props}>
+    <article {...props}>
       <div className="flex justify-between max-sm:flex-col">
         <div className="flex flex-wrap items-center gap-2">
           <Text size="large" className="uppercase">{experience.company}</Text>
@@ -51,6 +51,6 @@ export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): React
         {" "}
         {experience.skills.join(" • ")}
       </Text>
-    </div>
+    </article>
   );
 };

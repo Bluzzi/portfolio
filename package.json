@@ -7,7 +7,10 @@
     "start": "react-router-serve ./build/server/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "ts:check": "react-router typegen && tsc"
+    "ts:check": "react-router typegen && tsc",
+    "pw:setup": "playwright install --with-deps chromium",
+    "pw:test": "playwright test",
+    "pw:show-report": "playwright show-report"
   },
   "dependencies": {
     "@react-router/node": "^8.5.0",
@@ -22,6 +25,7 @@
   },
   "devDependencies": {
     "@bluzzi/eslint-config": "^2.2.4",
+    "@playwright/test": "^1.64.1",
     "@react-router/dev": "^8.5.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "26.6.5",
