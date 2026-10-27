@@ -1,4 +1,4 @@
-import type { Route } from "./+types/root";
+import type { Route } from "./app/+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
 import { metadata } from "#source/lib/configs/metadata";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
