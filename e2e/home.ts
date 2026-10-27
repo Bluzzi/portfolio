@@ -56,7 +56,7 @@ test("loads every image without a 404", async ({ page }): Promise<void> => {
   await page.goto("/");
 
   // Check that the page contains images:
-  const total = await page.locator("img").count();
+  const total = await page.getByRole("img").count();
   expect(total).toBeGreaterThan(0);
 
   // List broken images (after the "load" event, a broken image has naturalWidth === 0):
@@ -80,8 +80,8 @@ test("displays the exact expected number of skills", async ({ page }): Promise<v
   // Navigate to the home page:
   await page.goto("/");
 
-  // Count skill links (each skill renders as a link wrapping an <img> served from /skills/):
-  await expect(page.locator("a:has(img[src^=\"/skills/\"])")).toHaveCount(18);
+  // Count the skill links inside the labeled skills region (one link per skill):
+  await expect(page.getByRole("region", { name: "Compétences" }).getByRole("link")).toHaveCount(18);
 });
 
 /**
@@ -100,19 +100,20 @@ test("displays the expected date on the Okosmo experience", async ({ page }): Pr
 });
 
 /**
- * Ensures exactly one mailto link exists and points to the expected address:
- * a wrong email is a fully silent failure for visitors.
+ * Ensures the Email contact link exists exactly once and points to the expected
+ * address: a wrong email is a fully silent failure for visitors. Strict mode
+ * enforces uniqueness (fails if the link is missing or duplicated).
  */
 test("exposes a single correct mailto link", async ({ page }): Promise<void> => {
   // Navigate to the home page:
   await page.goto("/");
 
-  // Select every mailto link:
-  const mailtoLinks = page.locator("a[href^=\"mailto:\"]");
+  // Select the Email link by its accessible name (the link only contains an
+  // <img> with alt="Email", so its accessible name is exactly "Email"):
+  const emailLink = page.getByRole("link", { name: "Email" });
 
-  // Check that there is exactly one and it points to the expected address:
-  await expect(mailtoLinks).toHaveCount(1);
-  await expect(mailtoLinks).toHaveAttribute("href", "mailto:contact@camilledugas.me");
+  // Check its href (strict mode fails if there is no match or several):
+  await expect(emailLink).toHaveAttribute("href", "mailto:contact@camilledugas.me");
 });
 
 /**
