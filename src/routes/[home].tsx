@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
-import { AboutSection } from "./about.section";
-import { ExperienceSection } from "./experience.section";
-import { SkillSection } from "./skill.section";
+import { AboutSection } from "./[home].about";
+import { ExperienceSection } from "./[home].experience";
+import { SkillSection } from "./[home].skill";
 import { Line } from "#/lib/components/line";
 
 const Home = (): ReactElement => {

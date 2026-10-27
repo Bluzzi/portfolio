@@ -1,4 +1,8 @@
-import type { Skill } from "./skill.type";
+export type Skill = {
+  title: string;
+  logo: string;
+  link: string;
+};
 
 export const skills: Skill[] = [
   { title: "NodeJS", logo: "/skills/nodejs.svg", link: "https://nodejs.org" },

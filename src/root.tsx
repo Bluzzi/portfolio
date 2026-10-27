@@ -1,47 +1,21 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
 import { Text } from "#/lib/components/text";
-import { metadata } from "#/lib/configs/metadata";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import "#/lib/styles/tailwind.css";
 import "#/lib/styles/reset.css";
 import "#/lib/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
-  const openGraphImage = new URL("/opengraph-image", metadata.metadataBase);
-  const twitterImage = new URL("/twitter-image", metadata.metadataBase);
-
   return [
-    { title: metadata.title },
-
-    { name: "description", content: metadata.description },
-
+    { title: "Camille Dugas | Développeur Full-Stack" },
+    { name: "description", content: "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript, je travaille principalement avec NodeJS, ReactJS et NextJS." },
     { name: "theme-color", content: "#FFFFFF" },
-
-    { property: "og:title", content: metadata.openGraph.title },
-    { property: "og:description", content: metadata.openGraph.description },
-    { property: "og:url", content: metadata.openGraph.url },
-    { property: "og:site_name", content: metadata.openGraph.siteName },
-    { property: "og:type", content: metadata.openGraph.type },
-    { property: "og:image", content: openGraphImage.href },
-    { property: "og:image:type", content: "image/png" },
-    { property: "og:image:width", content: "600" },
-    { property: "og:image:height", content: "300" },
-    { property: "og:image:alt", content: metadata.title },
-
-    { name: "twitter:card", content: "summary" },
-    { name: "twitter:title", content: metadata.twitter.title },
-    { name: "twitter:description", content: metadata.twitter.description },
-    { name: "twitter:image", content: twitterImage.href },
-    { name: "twitter:image:alt", content: metadata.title },
-    { name: "twitter:image:type", content: "image/png" },
-    { name: "twitter:image:width", content: "600" },
-    { name: "twitter:image:height", content: "300" },
   ];
 };
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: metadata.icons },
+  { rel: "icon", href: "/favicon.ico" },
 ];
 
 export const Layout = ({ children }: PropsWithChildren): ReactElement => {

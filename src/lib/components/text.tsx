@@ -1,6 +1,11 @@
-import type { TextProps } from "./text.type";
-import type { ReactElement } from "react";
+import type { PropsWithChildren, HTMLAttributes, ReactElement } from "react";
 import { clsx } from "clsx";
+
+export type TextProps = PropsWithChildren & HTMLAttributes<HTMLParagraphElement> & {
+  type?: "p" | "h3" | "h2" | "h1";
+  color?: "white" | "black" | "gray";
+  size?: "small" | "base" | "large" | "xl" | "2xl" | "3xl";
+};
 
 export const Text = ({ children, type, color, size, className, ...props }: TextProps): ReactElement => {
   const style = clsx(

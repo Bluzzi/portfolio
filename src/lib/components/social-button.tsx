@@ -1,6 +1,10 @@
-import type { SocialButtonProps } from "./social-buton.type";
-import type { ReactElement } from "react";
+import type { AnchorHTMLAttributes, ReactElement } from "react";
 import { Icon } from "#/lib/components/icon";
+
+export type SocialButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  logoSrc: string;
+  alt: string;
+};
 
 export const SocialButton = ({ logoSrc, alt, ...props }: SocialButtonProps): ReactElement => {
   return (

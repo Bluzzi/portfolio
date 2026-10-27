@@ -1,6 +1,11 @@
-import type { BreakablePhotoProps } from "./breakable-photo.type";
 import type { ReactElement } from "react";
 import { useState, useRef, useCallback, useEffect } from "react";
+
+export type BreakablePhotoProps = {
+  src: string;
+  brokenSrc: string;
+  alt: string;
+};
 
 const TOTAL_STAGES = 10;
 const STAGE_INTERVAL_MS = 180;
