@@ -3,7 +3,7 @@
 ## Stack
 
 - React Router v8 framework mode with SSR (`ssr: true`, app directory is `src`, not `app`), on Vite + React 19 + Tailwind CSS v4.
-- Package manager is pnpm.
+- Package manager is pnpm. Always start by installing packages.
 - Testing is Playwright e2e only, with no unit test framework.
 
 ## Before finishing changes
