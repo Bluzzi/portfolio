@@ -1,45 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  // Default model. Auth (OpenRouter API key) is managed by the app / `opencode auth login`, never put keys in this file.
   "model": "openrouter/z-ai/glm-5.3-flash",
-  // Permission rules: the LAST matching rule wins, so broad rules come first, exceptions after.
-  "permissions": [
-    // Base: ask before any shell command...
-    { "action": "shell", "resource": "*", "effect": "ask" },
-    // ...except safe, read-only or reversible routines:
-    { "action": "shell", "resource": "pnpm run *", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm outdated *", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm list *", "effect": "allow" },
-    { "action": "shell", "resource": "git status *", "effect": "allow" },
-    { "action": "shell", "resource": "git diff *", "effect": "allow" },
-    { "action": "shell", "resource": "git log *", "effect": "allow" },
-    { "action": "shell", "resource": "git show *", "effect": "allow" },
-    { "action": "shell", "resource": "git branch *", "effect": "allow" },
-    { "action": "shell", "resource": "git add *", "effect": "allow" },
-    { "action": "shell", "resource": "git commit *", "effect": "allow" },
-    // Updating or removing dependencies is fine, only adding is protected:
-    { "action": "shell", "resource": "pnpm up *", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm update *", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm remove *", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm rm *", "effect": "allow" },
-    // Installing or adding a package always asks, keep the dependency list deliberate:
-    { "action": "shell", "resource": "pnpm install *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm add *", "effect": "ask" },
-    // Running arbitrary packages always asks (code we did not review):
-    { "action": "shell", "resource": "pnpm dlx *", "effect": "ask" },
-    { "action": "shell", "resource": "npx *", "effect": "ask" },
-    { "action": "shell", "resource": "bunx *", "effect": "ask" },
-    // Never allowed, even on explicit approval:
-    { "action": "shell", "resource": "git push --force *", "effect": "deny" },
-    { "action": "shell", "resource": "git push -f *", "effect": "deny" },
-    { "action": "shell", "resource": "git reset --hard *", "effect": "deny" },
-    { "action": "shell", "resource": "git clean *", "effect": "deny" },
-    // Exceptions to the ask above: exact bare forms that install the lockfile as-is are fine.
-    // `pnpm install <package>` behaves like `pnpm add <package>`, so no form with a package argument is allowed.
-    { "action": "shell", "resource": "pnpm install", "effect": "allow" },
-    { "action": "shell", "resource": "pnpm install --frozen-lockfile", "effect": "allow" }
-  ],
-
   "mcp": {
     "servers": {
       // Fetches up-to-date, curated library documentation:
