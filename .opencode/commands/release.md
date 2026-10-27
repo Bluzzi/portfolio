@@ -26,4 +26,4 @@ The 3 latest releases, as a structure and syntax reference:
 
 The commits since the latest tag:
 
-!`git fetch origin --tags && git log --oneline $(git describe --tags --abbrev=0)..HEAD`
+!`git fetch origin --tags && git log --oneline "$(git describe --tags --abbrev=0)..HEAD"`
