@@ -32,3 +32,6 @@
 
 # Storybook
 **/storybook-static
+
+# MacOS
+**/.DS_Store
