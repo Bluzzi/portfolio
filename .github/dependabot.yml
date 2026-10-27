@@ -13,10 +13,7 @@ updates:
     cooldown:
       default-days: 7
   - package-ecosystem: "docker"
-    directories:
-      - "/services/frontend"
-      - "/services/admin"
-      - "/services/backend"
+    directory: "/"
     schedule:
       interval: "monthly"
       timezone: "Europe/Paris"
