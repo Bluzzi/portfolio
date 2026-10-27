@@ -8,35 +8,10 @@ import "#/lib/styles/reset.css";
 import "#/lib/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
-  const openGraphImage = new URL("/opengraph-image", metadata.metadataBase);
-  const twitterImage = new URL("/twitter-image", metadata.metadataBase);
-
   return [
     { title: metadata.title },
-
     { name: "description", content: metadata.description },
-
     { name: "theme-color", content: "#FFFFFF" },
-
-    { property: "og:title", content: metadata.openGraph.title },
-    { property: "og:description", content: metadata.openGraph.description },
-    { property: "og:url", content: metadata.openGraph.url },
-    { property: "og:site_name", content: metadata.openGraph.siteName },
-    { property: "og:type", content: metadata.openGraph.type },
-    { property: "og:image", content: openGraphImage.href },
-    { property: "og:image:type", content: "image/png" },
-    { property: "og:image:width", content: "600" },
-    { property: "og:image:height", content: "300" },
-    { property: "og:image:alt", content: metadata.title },
-
-    { name: "twitter:card", content: "summary" },
-    { name: "twitter:title", content: metadata.twitter.title },
-    { name: "twitter:description", content: metadata.twitter.description },
-    { name: "twitter:image", content: twitterImage.href },
-    { name: "twitter:image:alt", content: metadata.title },
-    { name: "twitter:image:type", content: "image/png" },
-    { name: "twitter:image:width", content: "600" },
-    { name: "twitter:image:height", content: "300" },
   ];
 };
 

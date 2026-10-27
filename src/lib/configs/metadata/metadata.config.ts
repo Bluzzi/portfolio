@@ -13,17 +13,4 @@ export const metadata = {
 
   title: data.title,
   description: data.description,
-
-  openGraph: {
-    title: data.title,
-    description: data.description,
-    siteName: "Camille Dugas | Portfolio",
-    url: "https://camilledugas.me",
-    type: "website",
-  },
-
-  twitter: {
-    title: data.title,
-    description: data.description,
-  },
 };
