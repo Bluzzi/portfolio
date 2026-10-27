@@ -7,7 +7,7 @@
     "start": "react-router-serve ./build/server/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "ts:check": "react-router typegen && tsc --noEmit"
+    "ts:check": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "^8.5.0",
