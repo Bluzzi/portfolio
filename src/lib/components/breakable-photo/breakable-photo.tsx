@@ -1,8 +1,5 @@
-"use client";
-
 import type { BreakablePhotoProps } from "./breakable-photo.type";
 import type { ReactElement } from "react";
-import Image from "next/image";
 import { useState, useRef, useCallback, useEffect } from "react";
 
 const TOTAL_STAGES = 10;
@@ -146,11 +143,10 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
       onTouchEnd={cancelBreaking}
     >
       <div className={`relative h-full w-full rounded-lg rotate-3 hover:-rotate-2 transition-transform cursor-crosshair overflow-hidden ${!isBroken ? "hover:border border-white" : ""}`}>
-        <Image
+        <img
           src={isBroken ? brokenSrc : src}
           alt={alt}
-          fill
-          className="rounded-lg pointer-events-none"
+          className="absolute inset-0 h-full w-full rounded-lg pointer-events-none"
           draggable={false}
         />
 

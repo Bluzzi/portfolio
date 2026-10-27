@@ -1,0 +1,7 @@
+node_modules
+build
+dist
+.react-router
+.git
+.github
+.DS_Store

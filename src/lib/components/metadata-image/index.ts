@@ -1,1 +1,1 @@
-export { MetadataImage } from "./metadata-image";
+export { metadataImage } from "./metadata-image";

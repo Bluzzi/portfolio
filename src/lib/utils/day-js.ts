@@ -8,4 +8,4 @@ dayjs.extend(relativeTime);
 
 // Exports:
 export const dayJS = dayjs;
-export { Dayjs } from "dayjs";
+export type { Dayjs } from "dayjs";

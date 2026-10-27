@@ -5,8 +5,6 @@ export default eslintConfig(
     typescript: { tsconfigPath: "./tsconfig.json" },
   },
   {
-    rules: {
-      "@next/next/no-img-element": "off",
-    },
+    ignores: ["**/.react-router", "**/build"],
   },
 );

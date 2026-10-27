@@ -17,7 +17,7 @@
 **/.react-email
 
 # Builds:
-**/.next
+**/.react-router
 **/modules/**/dist
 **/build
 **/dist
@@ -32,3 +32,6 @@
 
 # Storybook
 **/storybook-static
+
+# MacOS
+**/.DS_Store

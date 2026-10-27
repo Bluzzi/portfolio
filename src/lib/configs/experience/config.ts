@@ -1,6 +1,6 @@
 import type { ExperienceBase } from "./type";
 import { populateExperience } from "./util";
-import { date } from "#source/lib/utils/date/parser";
+import { date } from "#/lib/utils/date/parser";
 
 const experienceBase: ExperienceBase[] = [
   // {

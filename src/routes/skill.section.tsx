@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { SkillButton } from "#source/lib/components/skill-button";
-import { skills } from "#source/lib/configs/skill";
+import { SkillButton } from "#/lib/components/skill-button";
+import { skills } from "#/lib/configs/skill";
 
 export const SkillSection = (): ReactElement => {
   return (
