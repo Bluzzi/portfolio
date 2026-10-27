@@ -1,6 +1,6 @@
 import type { LabelProps } from "./label.type";
 import type { ReactElement } from "react";
-import { Text } from "#source/lib/components/text";
+import { Text } from "#/lib/components/text";
 import { clsx } from "clsx";
 import { ExternalLinkIcon } from "lucide-react";
 

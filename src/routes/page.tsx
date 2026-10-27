@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import { AboutSection } from "./about.section";
 import { ExperienceSection } from "./experience.section";
 import { SkillSection } from "./skill.section";
-import { Line } from "#source/lib/components/line";
+import { Line } from "#/lib/components/line";
 
 const Home = (): ReactElement => {
   return (

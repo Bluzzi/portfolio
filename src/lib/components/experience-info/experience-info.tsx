@@ -1,7 +1,7 @@
 import type { ExperienceProps } from "./experience-info.type";
 import type { ReactElement } from "react";
-import { Label } from "#source/lib/components/label";
-import { Text } from "#source/lib/components/text";
+import { Label } from "#/lib/components/label";
+import { Text } from "#/lib/components/text";
 
 export const ExperienceInfo = ({ experience, ...props }: ExperienceProps): ReactElement => {
   return (

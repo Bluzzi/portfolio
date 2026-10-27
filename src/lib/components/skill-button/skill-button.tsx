@@ -1,6 +1,6 @@
 import type { SkillButtonProps } from "./skill-button.type";
 import type { ReactElement } from "react";
-import { Text } from "#source/lib/components/text";
+import { Text } from "#/lib/components/text";
 import { Link } from "react-router";
 
 export const SkillButton = ({ title, logoSrc, link }: SkillButtonProps): ReactElement => {

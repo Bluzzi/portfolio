@@ -1,5 +1,5 @@
-import type { LabelColor } from "#source/lib/components/label";
-import type { Experience } from "#source/lib/configs/experience";
+import type { LabelColor } from "#/lib/components/label";
+import type { Experience } from "#/lib/configs/experience";
 import type { HTMLAttributes } from "react";
 
 export type ExperienceProps = HTMLAttributes<HTMLDivElement> & {

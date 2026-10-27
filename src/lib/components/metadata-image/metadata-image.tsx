@@ -1,6 +1,6 @@
 import { initWasm, Resvg } from "@resvg/resvg-wasm";
-import fontDataUrl from "#source/lib/assets/fonts/Geist-Regular.ttf?inline";
-import { metadata } from "#source/lib/configs/metadata";
+import fontDataUrl from "#/lib/assets/fonts/Geist-Regular.ttf?inline";
+import { metadata } from "#/lib/configs/metadata";
 import { Buffer } from "node:buffer";
 import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";

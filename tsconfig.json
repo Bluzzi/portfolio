@@ -24,11 +24,8 @@
       "./.react-router/types"
     ],
     "paths": {
-      "#source/*": [
+      "#/*": [
         "./src/*"
-      ],
-      "#public/*": [
-        "./public/*"
       ]
     },
     "target": "ES2017"
