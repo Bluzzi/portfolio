@@ -1,6 +1,6 @@
 ---
 name: route
-description: Create or modify a page/route in this React Router v8 portfolio
+description: Create or modify a page/route in this React Router v8 portfolio, including its registration in src/routes.ts and its colocated section/component files
 ---
 
 ## Steps
