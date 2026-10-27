@@ -20,7 +20,6 @@ These three cover all four CI jobs (`.github/workflows/ci.yml`): `ts:check` runs
 
 - Load the `route` skill before creating or modifying a route, its registration in `src/routes.ts`, or its colocated components/sections/utils.
 - Load the `e2e-test` skill before writing or modifying e2e tests.
-- `/check` runs full CI-equivalent verification, `/update` handles dependency updates, `/e2e` runs or debugs e2e tests.
 
 ## Conventions
 
