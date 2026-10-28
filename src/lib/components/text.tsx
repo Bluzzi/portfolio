@@ -4,10 +4,11 @@ import { clsx } from "clsx";
 export type TextProps = PropsWithChildren & HTMLAttributes<HTMLParagraphElement> & {
   type?: "p" | "h3" | "h2" | "h1";
   color?: "white" | "black" | "gray";
-  size?: "small" | "base" | "large" | "xl" | "2xl" | "3xl";
+  font?: "sans" | "display";
+  size?: "small" | "base" | "large" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
 };
 
-export const Text = ({ children, type, color, size, className, ...props }: TextProps): ReactElement => {
+export const Text = ({ children, type, color, font, size, className, ...props }: TextProps): ReactElement => {
   const style = clsx(
     className,
 
@@ -17,6 +18,9 @@ export const Text = ({ children, type, color, size, className, ...props }: TextP
       "text-black": color === "black",
       "text-gray-400": color === "gray",
 
+      // Font family:
+      "font-display font-semibold tracking-tight": font === "display",
+
       // Font size:
       "text-sm": size === "small",
       "text-base": !size || size === "base",
@@ -24,6 +28,8 @@ export const Text = ({ children, type, color, size, className, ...props }: TextP
       "text-xl": size === "xl",
       "text-2xl": size === "2xl",
       "text-3xl": size === "3xl",
+      "text-4xl": size === "4xl",
+      "text-5xl": size === "5xl",
     },
   );
 

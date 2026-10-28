@@ -1,5 +1,6 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
+import { Backdrop } from "#/lib/components/backdrop";
 import { Text } from "#/lib/components/text";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import "#/lib/styles/tailwind.css";
@@ -10,7 +11,7 @@ export const meta: Route.MetaFunction = () => {
   return [
     { title: "Camille Dugas | Développeur Full-Stack" },
     { name: "description", content: "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript, je travaille principalement avec NodeJS, ReactJS et NextJS." },
-    { name: "theme-color", content: "#FFFFFF" },
+    { name: "theme-color", content: "#050509" },
   ];
 };
 
@@ -43,8 +44,10 @@ export const Layout = ({ children }: PropsWithChildren): ReactElement => {
 
 const App = (): ReactElement => {
   return (
-    <main className="min-h-screen scroll-smooth bg-black py-16 font-sans">
-      <div className="mx-auto w-1/2 max-xl:w-5/6 max-lg:w-3/4 max-sm:w-11/12">
+    <main className="relative min-h-screen scroll-smooth bg-night-950 py-20 font-sans text-white max-sm:py-14">
+      <Backdrop />
+
+      <div className="relative mx-auto w-11/12 max-w-4xl">
         <Outlet />
       </div>
     </main>
@@ -66,9 +69,9 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps): ReactElement
   }
 
   return (
-    <main className="min-h-screen bg-black py-16 font-sans">
-      <div className="mx-auto w-1/2 max-xl:w-5/6 max-lg:w-3/4 max-sm:w-11/12 space-y-5">
-        <Text size="3xl">{title}</Text>
+    <main className="min-h-screen bg-night-950 py-20 font-sans text-white max-sm:py-14">
+      <div className="mx-auto w-11/12 max-w-4xl space-y-5">
+        <Text size="3xl" font="display">{title}</Text>
 
         {description && <Text color="gray">{description}</Text>}
       </div>

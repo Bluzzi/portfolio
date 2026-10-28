@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom font: */
-  --font-sans: "Ubuntu", "sans-serif";
+  /* Custom fonts: */
+  --font-sans: "Inter", "sans-serif";
+  --font-display: "Space Grotesk", "sans-serif";
 
   /* Font sizes: */
   --text-*: initial;
 
+  --text-xs: 0.75rem;
   --text-sm: 0.8rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -14,6 +16,10 @@
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
   --text-3xl--line-height: 1;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.1;
+  --text-5xl: 3.25rem;
+  --text-5xl--line-height: 1.05;
 
   /* Colors: */
   --color-*: initial;
@@ -22,9 +28,15 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
-  
-  --color-blue: #1d4ed8;
-  --color-green: #15803d;
+
+  /* Deep night palette, slightly tinted towards blue: */
+  --color-night-800: #14141f;
+  --color-night-900: #0c0c14;
+  --color-night-950: #050509;
+
+  /* Accents: */
+  --color-volt: #eaff3d;
+  --color-green: #4ade80;
 
   --color-gray-400: oklch(0.707 0.022 261.325);
   --color-gray-500: oklch(0.551 0.027 264.364);
@@ -44,5 +56,103 @@
   --radius-*: initial;
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
   --radius-full: 9999px;
+}
+
+/* Subtle dot grid used by the fixed page backdrop: */
+.dot-grid {
+  background-image: radial-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Slow opacity breathing for the glow blobs: */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Pulse traveling along a line, like current in a wire: */
+@keyframes travel {
+  0% {
+    left: -6rem;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    left: calc(100% + 1rem);
+    opacity: 0;
+  }
+}
+
+/* Tiny electric shock, used by the skill pills on hover: */
+@keyframes zap {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  15% {
+    transform: translate(-2px, -1px) rotate(-0.6deg);
+  }
+
+  30% {
+    transform: translate(2px, 1px) rotate(0.6deg);
+  }
+
+  45% {
+    transform: translate(-2px, 0);
+  }
+
+  60% {
+    transform: translate(2px, 0) rotate(-0.3deg);
+  }
+
+  75% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+/* Breathing glow blob: */
+.breathe {
+  animation: breathe 9s ease-in-out infinite;
+}
+
+/* Current pulse, hidden unless the travel animation runs: */
+.travel-pulse {
+  position: absolute;
+  top: 0;
+  left: -6rem;
+  height: 1px;
+  width: 6rem;
+  opacity: 0;
+  background: linear-gradient(to right, transparent, var(--color-volt), transparent);
+}
+
+/* All electric animations are disabled for reduced motion users: */
+@media (prefers-reduced-motion: no-preference) {
+  .travel-pulse {
+    animation: travel 7s linear infinite;
+    animation-delay: var(--travel-delay, 0s);
+  }
+
+  .skill-pill:hover {
+    animation: zap 0.4s linear;
+  }
 }

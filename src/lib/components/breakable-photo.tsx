@@ -140,18 +140,22 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
 
   return (
     <div
-      className="relative h-32 w-32 shrink-0 max-sm:hidden select-none"
+      className="relative h-44 w-44 shrink-0 select-none"
       onMouseDown={startBreaking}
       onMouseUp={cancelBreaking}
       onMouseLeave={cancelBreaking}
       onTouchStart={startBreaking}
       onTouchEnd={cancelBreaking}
     >
-      <div className={`relative h-full w-full rounded-lg rotate-3 hover:-rotate-2 transition-transform cursor-crosshair overflow-hidden ${!isBroken ? "hover:border border-white" : ""}`}>
+      {/* Offset electric frame behind the intact photo, hidden when broken: */}
+      {!isBroken && <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border-2 border-volt/40" />}
+
+      {/* Frame and rounding only apply to the intact photo, the broken one displays raw: */}
+      <div className={`relative h-full w-full cursor-crosshair ${isBroken ? "" : "overflow-hidden rounded-2xl ring-1 ring-white/15 transition-all duration-200 hover:ring-volt/70"}`}>
         <img
           src={isBroken ? brokenSrc : src}
           alt={alt}
-          className="absolute inset-0 h-full w-full rounded-lg pointer-events-none"
+          className={`absolute inset-0 h-full w-full object-cover pointer-events-none ${!isBroken ? "rounded-2xl" : ""}`}
           draggable={false}
         />
 
@@ -159,7 +163,7 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
 
           <img
             src={`/breaking/destroy_stage_${String(stage - 1)}.png`}
-            className="absolute inset-0 h-full w-full pointer-events-none z-10"
+            className="absolute inset-0 h-full w-full rounded-2xl pointer-events-none z-10"
             style={{ imageRendering: "pixelated" }}
             draggable={false}
           />
@@ -167,7 +171,6 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
       </div>
 
       {explosionFrame !== null && (
-
         <img
           src={`/explosion/${String(explosionFrame)}.png`}
           className="absolute inset-0 h-full w-full pointer-events-none z-20 scale-200"
