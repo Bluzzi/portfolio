@@ -7,7 +7,7 @@ export type SectionTitleProps = {
   subtitle?: string;
 };
 
-// Section heading: gradient-accented word plus optional subtitle.
+// Section heading: italic-accented word plus optional subtitle.
 export const SectionTitle = ({ title, accent, subtitle }: SectionTitleProps): ReactElement => {
   return (
     <div className="space-y-1.5">
@@ -16,7 +16,7 @@ export const SectionTitle = ({ title, accent, subtitle }: SectionTitleProps): Re
         {accent && (
           <>
             {" "}
-            <span className="text-volt">{accent}</span>
+            <span className="text-azure italic">{accent}</span>
           </>
         )}
       </Text>

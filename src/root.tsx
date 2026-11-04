@@ -11,7 +11,7 @@ export const meta: Route.MetaFunction = () => {
   return [
     { title: "Camille Dugas | Développeur Full-Stack" },
     { name: "description", content: "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript, je travaille principalement avec NodeJS, ReactJS et NextJS." },
-    { name: "theme-color", content: "#050509" },
+    { name: "theme-color", content: "#060608" },
   ];
 };
 

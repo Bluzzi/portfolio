@@ -5,7 +5,7 @@ export type TextProps = PropsWithChildren & HTMLAttributes<HTMLParagraphElement>
   type?: "p" | "h3" | "h2" | "h1";
   color?: "white" | "black" | "gray";
   font?: "sans" | "display";
-  size?: "small" | "base" | "large" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+  size?: "small" | "base" | "large" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
 };
 
 export const Text = ({ children, type, color, font, size, className, ...props }: TextProps): ReactElement => {
@@ -19,7 +19,7 @@ export const Text = ({ children, type, color, font, size, className, ...props }:
       "text-gray-400": color === "gray",
 
       // Font family:
-      "font-display font-semibold tracking-tight": font === "display",
+      "font-display tracking-tight": font === "display",
 
       // Font size:
       "text-sm": size === "small",
@@ -30,6 +30,7 @@ export const Text = ({ children, type, color, font, size, className, ...props }:
       "text-3xl": size === "3xl",
       "text-4xl": size === "4xl",
       "text-5xl": size === "5xl",
+      "text-6xl": size === "6xl",
     },
   );
 

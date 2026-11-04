@@ -6,8 +6,8 @@ export type LineProps = HTMLAttributes<HTMLDivElement>;
 export const Line = ({ className, ...props }: LineProps): ReactElement => {
   return (
     <span aria-hidden className={clsx(className, "relative block h-px w-full overflow-hidden bg-gradient-to-r from-transparent via-white/15 to-transparent")} {...props}>
-      {/* Current pulse traveling along the wire: */}
-      <span className="travel-pulse" />
+      {/* Light pulse gliding along the hairline: */}
+      <span className="shimmer-pulse" />
     </span>
   );
 };

@@ -16,26 +16,26 @@ export const AboutSection = (): ReactElement => {
     <section aria-label="À propos" className="space-y-4">
       {/* Hero card: */}
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-night-900 p-9 max-sm:p-6">
-        <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-volt/10 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-azure/8 blur-3xl" />
 
-        {/* Current pulse traveling along the top edge: */}
-        <span aria-hidden className="travel-pulse" style={{ "--travel-delay": "1.5s" } as CSSProperties} />
+        {/* Light pulse traveling along the top edge: */}
+        <span aria-hidden className="shimmer-pulse" style={{ "--shimmer-delay": "1.5s" } as CSSProperties} />
 
         <div className="relative flex items-center justify-between gap-10 max-sm:flex-col-reverse max-sm:items-start max-sm:gap-6">
           <div className="space-y-6">
             {/* Status badge: */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-green/20 bg-green/10 px-3 py-1 text-sm text-green">
+            <div className="inline-flex items-center gap-2 rounded-full border border-azure/25 bg-azure/10 px-3 py-1 text-sm text-azure">
               <span className="relative flex size-2">
-                <span aria-hidden className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-60" />
-                <span aria-hidden className="relative inline-flex size-2 rounded-full bg-green" />
+                <span aria-hidden className="absolute inline-flex h-full w-full animate-ping rounded-full bg-azure opacity-60" />
+                <span aria-hidden className="relative inline-flex size-2 rounded-full bg-azure" />
               </span>
               Développeur Full-Stack
             </div>
 
-            <Text type="h1" size="5xl" font="display" className="max-sm:text-4xl">
+            <Text type="h1" size="6xl" font="display" className="max-sm:text-5xl">
               Camille
               {" "}
-              <span className="inline-block -rotate-1 rounded-xl bg-volt px-3 text-black">Dugas</span>
+              <span className="inline-block -rotate-1 rounded-xl bg-azure px-3 italic text-night-950">Dugas</span>
             </Text>
 
             <Text color="gray" size="large">

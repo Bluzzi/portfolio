@@ -147,11 +147,11 @@ export const BreakablePhoto = ({ src, brokenSrc, alt }: BreakablePhotoProps): Re
       onTouchStart={startBreaking}
       onTouchEnd={cancelBreaking}
     >
-      {/* Offset electric frame behind the intact photo, hidden when broken: */}
-      {!isBroken && <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border-2 border-volt/40" />}
+      {/* Offset accent frame behind the intact photo, hidden when broken: */}
+      {!isBroken && <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border-2 border-azure/35" />}
 
       {/* Frame and rounding only apply to the intact photo, the broken one displays raw: */}
-      <div className={`relative h-full w-full cursor-crosshair ${isBroken ? "" : "overflow-hidden rounded-2xl ring-1 ring-white/15 transition-all duration-200 hover:ring-volt/70"}`}>
+      <div className={`relative h-full w-full cursor-crosshair ${isBroken ? "" : "overflow-hidden rounded-2xl ring-1 ring-white/15 transition-all duration-200 hover:ring-azure/60"}`}>
         <img
           src={isBroken ? brokenSrc : src}
           alt={alt}

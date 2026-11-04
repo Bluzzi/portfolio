@@ -16,7 +16,7 @@ export const ExperienceSection = (): ReactElement => {
       />
 
       {/* Timeline rail: */}
-      <div className="relative space-y-5 before:absolute before:inset-y-3 before:left-[7px] before:w-px before:bg-gradient-to-b before:from-volt/80 before:via-volt/40 before:to-transparent">
+      <div className="relative space-y-5 before:absolute before:inset-y-3 before:left-[7px] before:w-px before:bg-gradient-to-b before:from-azure/60 before:via-azure/20 before:to-transparent">
         {experiences.map((experience) => <ExperienceInfo key={experience.company} experience={experience} className="pl-9" />)}
       </div>
     </section>

@@ -12,9 +12,9 @@ export const ExperienceInfo = ({ experience, className, ...props }: ExperiencePr
   return (
     <div className={clsx("relative", className)} {...props}>
       {/* Timeline dot: */}
-      <span aria-hidden className="absolute top-[26px] left-0 size-[15px] rounded-full border-2 border-night-950 bg-volt" />
+      <span aria-hidden className="absolute top-[26px] left-0 size-[15px] rounded-full border-2 border-night-950 bg-azure" />
 
-      <article className="relative rounded-2xl border border-white/10 bg-night-900 p-6 transition-all hover:border-white/20 hover:shadow-[0_0_48px_-20px_rgb(234_255_61/0.25)]">
+      <article className="relative rounded-2xl border border-white/10 bg-night-900 p-6 transition-all hover:border-azure/20 hover:shadow-[0_12px_48px_-24px_rgb(122_162_247/0.2)]">
         {/* Header: */}
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -25,7 +25,7 @@ export const ExperienceInfo = ({ experience, className, ...props }: ExperiencePr
                 href={experience.link}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-0.5 text-sm text-gray-400 transition-colors hover:border-volt/50 hover:text-white"
+                className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-0.5 text-sm text-gray-400 transition-colors hover:border-azure/50 hover:text-white"
               >
                 Voir le site
                 <ExternalLinkIcon size={12} />
@@ -52,7 +52,7 @@ export const ExperienceInfo = ({ experience, className, ...props }: ExperiencePr
         <div className="mt-4 space-y-2">
           {experience.description.map((line) => (
             <div key={line} className="flex items-start gap-3">
-              <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-volt" />
+              <span aria-hidden className="mt-[7px] size-1.5 shrink-0 rounded-full bg-azure/80" />
               <Text size="small" color="gray">{line}</Text>
             </div>
           ))}

@@ -3,7 +3,7 @@
 @theme {
   /* Custom fonts: */
   --font-sans: "Inter", "sans-serif";
-  --font-display: "Space Grotesk", "sans-serif";
+  --font-display: "Instrument Serif", "serif";
 
   /* Font sizes: */
   --text-*: initial;
@@ -20,6 +20,8 @@
   --text-4xl--line-height: 1.1;
   --text-5xl: 3.25rem;
   --text-5xl--line-height: 1.05;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1.05;
 
   /* Colors: */
   --color-*: initial;
@@ -29,14 +31,14 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  /* Deep night palette, slightly tinted towards blue: */
-  --color-night-800: #14141f;
-  --color-night-900: #0c0c14;
-  --color-night-950: #050509;
+  /* Near-black palette with a faint blue undertone: */
+  --color-night-800: #15151c;
+  --color-night-900: #0c0c11;
+  --color-night-950: #060608;
 
   /* Accents: */
-  --color-volt: #eaff3d;
-  --color-green: #4ade80;
+  --color-azure: #7aa2f7;
+  --color-royal: #2f4fd0;
 
   --color-gray-400: oklch(0.707 0.022 261.325);
   --color-gray-500: oklch(0.551 0.027 264.364);
@@ -80,19 +82,19 @@
   }
 }
 
-/* Pulse traveling along a line, like current in a wire: */
-@keyframes travel {
+/* Soft light pulse gliding along a hairline, like moonlight on water: */
+@keyframes shimmer {
   0% {
     left: -6rem;
     opacity: 0;
   }
 
-  10% {
-    opacity: 1;
+  12% {
+    opacity: 0.75;
   }
 
-  85% {
-    opacity: 1;
+  70% {
+    opacity: 0.75;
   }
 
   100% {
@@ -101,58 +103,26 @@
   }
 }
 
-/* Tiny electric shock, used by the skill pills on hover: */
-@keyframes zap {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-
-  15% {
-    transform: translate(-2px, -1px) rotate(-0.6deg);
-  }
-
-  30% {
-    transform: translate(2px, 1px) rotate(0.6deg);
-  }
-
-  45% {
-    transform: translate(-2px, 0);
-  }
-
-  60% {
-    transform: translate(2px, 0) rotate(-0.3deg);
-  }
-
-  75% {
-    transform: translate(-1px, 1px);
-  }
-}
-
 /* Breathing glow blob: */
 .breathe {
-  animation: breathe 9s ease-in-out infinite;
+  animation: breathe 11s ease-in-out infinite;
 }
 
-/* Current pulse, hidden unless the travel animation runs: */
-.travel-pulse {
+/* Shimmer pulse, hidden unless the shimmer animation runs: */
+.shimmer-pulse {
   position: absolute;
   top: 0;
   left: -6rem;
   height: 1px;
   width: 6rem;
   opacity: 0;
-  background: linear-gradient(to right, transparent, var(--color-volt), transparent);
+  background: linear-gradient(to right, transparent, var(--color-azure), transparent);
 }
 
-/* All electric animations are disabled for reduced motion users: */
+/* Motion is disabled for reduced motion users: */
 @media (prefers-reduced-motion: no-preference) {
-  .travel-pulse {
-    animation: travel 7s linear infinite;
-    animation-delay: var(--travel-delay, 0s);
-  }
-
-  .skill-pill:hover {
-    animation: zap 0.4s linear;
+  .shimmer-pulse {
+    animation: shimmer 11s linear infinite;
+    animation-delay: var(--shimmer-delay, 0s);
   }
 }

@@ -13,7 +13,7 @@ const NotFound = (): ReactElement => {
 
       <Link
         to="/"
-        className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 text-white transition-all hover:-translate-y-0.5 hover:border-volt/50"
+        className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 text-white transition-all hover:-translate-y-0.5 hover:border-azure/50"
       >
         Retour à l'accueil
       </Link>
