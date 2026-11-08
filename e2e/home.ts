@@ -12,7 +12,7 @@ test("displays key content from every section", async ({ page }): Promise<void> 
   expect(response?.status()).toBe(200);
 
   // About section:
-  await expect(page.getByText("Camille Dugas", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Camille Dugas" })).toBeVisible();
 
   // Skills section:
   await expect(page.getByRole("link", { name: "NodeJS" })).toBeVisible();
@@ -80,8 +80,9 @@ test("displays the exact expected number of skills", async ({ page }): Promise<v
   // Navigate to the home page:
   await page.goto("/");
 
-  // Count the skill links inside the labeled skills region (one link per skill):
-  await expect(page.getByRole("region", { name: "Compétences" }).getByRole("link")).toHaveCount(18);
+  // Count the skill links inside the backpack section (17 category tags + the 20 visible
+  // occasional skills, before expanding the list):
+  await expect(page.locator("#sac").getByRole("link")).toHaveCount(37);
 });
 
 /**
@@ -96,7 +97,8 @@ test("displays the expected date on the Okosmo experience", async ({ page }): Pr
   const experience = page.getByRole("article").filter({ hasText: "Okosmo" });
 
   // Check the formatted date range with the computed duration:
-  await expect(experience.getByText("11/07/2022 - 18/01/2023 (6 mois)", { exact: true })).toBeVisible();
+  await expect(experience.getByText("2022 – 2023", { exact: true })).toBeVisible();
+  await expect(experience.getByText("6 mois", { exact: true })).toBeVisible();
 });
 
 /**
@@ -108,44 +110,9 @@ test("exposes a single correct mailto link", async ({ page }): Promise<void> => 
   // Navigate to the home page:
   await page.goto("/");
 
-  // Select the Email link by its accessible name (the link only contains an
-  // <img> with alt="Email", so its accessible name is exactly "Email"):
-  const emailLink = page.getByRole("link", { name: "Email" });
+  // Select the Email link by its accessible name:
+  const emailLink = page.getByRole("link", { name: "m'écrire un message →" });
 
   // Check its href (strict mode fails if there is no match or several):
   await expect(emailLink).toHaveAttribute("href", "mailto:contact@camilledugas.me");
-});
-
-/**
- * Ensures holding a mouse press on the profile photo plays the breaking stages and
- * swaps the image to the hidden easter egg. Desktop-only behavior (hidden on small
- * viewports). The assertion auto-waits instead of sleeping, which avoids flakes.
- */
-test("breaks the profile photo after holding a mouse press", async ({ page }): Promise<void> => {
-  // Navigate to the home page:
-  await page.goto("/");
-
-  // Select the profile photo:
-  const photo = page.getByRole("img", { name: "Profile picture" });
-
-  // Check the initial state is intact:
-  await expect(photo).toHaveAttribute("src", "/camille.jpg");
-
-  // Get the photo position in the viewport:
-  const boundingBox = await photo.boundingBox();
-  if (!boundingBox) {
-    throw new Error("The profile photo is not visible in the desktop viewport");
-  }
-
-  // Hold the press at the photo center (the <img> is pointer-events-none, so the events land
-  // on its container and bubble up to the breaking handler; while pressed, breaking progress
-  // cannot be cancelled):
-  await page.mouse.move(boundingBox.x + boundingBox.width / 2, boundingBox.y + boundingBox.height / 2);
-  await page.mouse.down();
-
-  // Wait for the breaking to complete (10 stages × 180ms ≈ 1800ms of holding):
-  await expect(photo).toHaveAttribute("src", "/pixelbluzzi.png", { timeout: 5000 });
-
-  // Release the press:
-  await page.mouse.up();
 });

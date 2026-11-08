@@ -59,19 +59,19 @@ export const populateExperience = (experienceBase: ExperienceBase[]): Experience
 const experienceBase: ExperienceBase[] = [
   {
     company: "Melcad",
-    title: "Fondateur & indépendant",
+    title: "Co-fondateur & CTO",
     date: {
       start: date(1, 8, 2025),
       end: null,
     },
     icon: "/bivouac/icons/tent.svg",
     iconSize: 36,
-    description: "Je construis aujourd'hui Melcad, un SaaS web / PWA qui simplifie l'hygiène alimentaire et la gestion des restaurants en France. Seul aux commandes, je porte tout : la vision produit, le design des interfaces et l'ensemble du code.",
+    description: "Je construis aujourd'hui Melcad avec mon associé, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires : gestion quotidienne, hygiène et traçabilité HACCP réunies au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec un objectif clair : devenir les leaders du marché et simplifier la vie de nos clients.",
     points: [
-      "Création d'une webapp proposant divers modules de gestion à destination des commerces et restaurants",
+      "Création d'une application web SaaS proposant divers modules de gestion, d'hygiène et de traçabilité HACCP à destination des restaurateurs et commerces alimentaires",
       "... en cours !",
     ],
-    skills: ["SaaS", "PWA", "Lancement en cours"],
+    skills: ["SaaS", "HACCP", "Lancement en cours"],
   },
   {
     company: "Seedext",
@@ -82,7 +82,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/robot.svg",
     iconSize: 32,
-    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout : web app, application Microsoft Teams et panel admin, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service RabbitMQ au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
+    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout : web app, application Microsoft Teams et panel admin, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
     points: [
       "Sécurisation des services pour répondre aux exigences rigoureuses des grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
       "Supervision du développement d'une webapp, d'une application Microsoft Teams ainsi que d'un panel admin",
@@ -90,10 +90,10 @@ const experienceBase: ExperienceBase[] = [
       "Définition et priorisation de la roadmap produit et des spécifications techniques qui lui sont associées",
       "Automatisation complète de l'enregistrement de réunions sur Google Meet, Teams, Zoom et Webex via le développement de bots",
       "Leadership sur le recrutement, l'onboarding et le management d'une équipe technique",
-      "Scaling du processus de traitement des réunions (optimisation du fichier, transcription et synthétisation) via un micro-service utilisant RabbitMQ",
+      "Scaling du processus de traitement des réunions (optimisation du fichier, transcription et synthétisation) via un micro-service utilisant Temporal.io",
       "Mise en place d'un monorepo pour améliorer l'efficacité des processus de développement et la collaboration en équipe",
     ],
-    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "RabbitMQ", "GCP", "Azure", "GitHub Actions"],
+    skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "Temporal.io", "GCP", "Azure", "GitHub Actions"],
   },
   {
     company: "Pelico",
@@ -104,7 +104,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/clipboard.svg",
     iconSize: 32,
-    description: "Chez Pelico, j'ai posé les fondations de la qualité : architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
+    description: "Chez Pelico, dont la plateforme d'orchestration de fabrication aide les géants de l'aéronautique, de la défense et de l'industrie (Safran, Boeing, Air France-KLM) à piloter des chaînes d'approvisionnement complexes, j'ai posé les fondations de la qualité : architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
     points: [
       "Écriture et maintenance de plus de 500 tests end-to-end de la webapp avec Playwright",
       "Création de l'architecture de l'environnement de test pour optimiser l'efficacité de l'équipe QA",
@@ -123,7 +123,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/tooth.svg",
     iconSize: 32,
-    description: "J'ai développé un site e-commerce dédié aux professionnels de la santé bucco-dentaire : synchronisation automatique des produits des plateformes partenaires vers MongoDB, dashboard pour les distributeurs et API REST, avec une intégration et un déploiement continus entièrement automatisés sur Google Cloud.",
+    description: "Chez Okosmo, j'ai développé de bout en bout un site e-commerce dédié aux professionnels de la santé bucco-dentaire : un dashboard pour les distributeurs, une synchronisation automatique des produits depuis les plateformes partenaires (Shopify, PrestaShop) vers la base MongoDB, et une API REST pour faire tenir tout ça ensemble, le tout déployé en continu sur Google Cloud.",
     points: [
       "Développement d'un site e-commerce spécialisé pour les professionnels de la santé bucco-dentaire",
       "Implémentation d'un système de synchronisation des produits des partenaires (depuis Shopify, PrestaShop, etc) avec la BDD MongoDB",
