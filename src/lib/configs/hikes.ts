@@ -7,8 +7,8 @@ export type Hike = {
 };
 
 export const hikes: Hike[] = [
-  { image: "/bivouac/hikes/lake.png", alt: "Lac de montagne en pixel art", caption: "Lac · Septembre", rotation: -3 },
-  { image: "/bivouac/hikes/summit.png", alt: "Sommet enneigé en pixel art", caption: "Sommet · 2 738 m", rotation: 2, offset: 18 },
-  { image: "/bivouac/hikes/forest.png", alt: "Sentier en forêt en pixel art", caption: "Sentier · Octobre", rotation: -1 },
-  { image: "/bivouac/hikes/bivouac.png", alt: "Tente de bivouac en pixel art", caption: "Bivouac · Juin", rotation: 3, offset: 10 },
+  { image: "/bivouac/hikes/calenzana.jpg", alt: "Coucher de soleil sur les montagnes corses depuis Calenzana", caption: "Calenzana", rotation: -3 },
+  { image: "/bivouac/hikes/monte-cinto.jpg", alt: "Randonneur au sommet du Monte Cinto, face aux nuages", caption: "Monte Cinto · 2 706 m", rotation: 2, offset: 18 },
+  { image: "/bivouac/hikes/bavella.jpg", alt: "Aiguilles de Bavella au soleil couchant", caption: "Aiguilles de Bavella", rotation: -1 },
+  { image: "/bivouac/hikes/etretat.jpg", alt: "Vue sur la mer depuis les falaises d'Étretat", caption: "Falaises d'Étretat", rotation: 3, offset: 10 },
 ];

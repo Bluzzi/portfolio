@@ -1,5 +1,4 @@
 import type { CSSProperties, ReactElement } from "react";
-import { PixelImage } from "#/lib/components/pixel-image";
 
 export type PolaroidProps = {
   image: string;
@@ -16,7 +15,7 @@ export const Polaroid = ({ image, alt, caption, rotation, offset = 0 }: Polaroid
       className="relative translate-y-(--offset) rotate-(--rotation) bg-paper p-3 pb-13.5 shadow-polaroid transition-[rotate,translate] duration-200 hover:rotate-0 hover:-translate-y-2"
       style={{ "--offset": `${String(offset)}px`, "--rotation": `${String(rotation)}deg` } as CSSProperties}
     >
-      <PixelImage className="block aspect-square w-full object-cover" src={image} alt={alt} />
+      <img className="block aspect-square w-full object-cover" src={image} alt={alt} />
       <figcaption className="absolute bottom-3 left-3.5 font-caveat font-semibold text-[22px] text-ink">
         {caption}
       </figcaption>
