@@ -28,7 +28,15 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElemen
       </div>
 
       <div className="min-w-0 grow basis-[520px]">
-        <h3 className="font-jersey text-[52px] leading-none tracking-[1px] max-sm:text-[32px]">{experience.company}</h3>
+        <h3 className="font-jersey text-[52px] leading-none tracking-[1px] max-sm:text-[32px]">
+          {experience.link
+            ? (
+                <a className="text-cream transition-colors hover:text-amber" href={experience.link} target="_blank" rel="noreferrer">
+                  {experience.company}
+                </a>
+              )
+            : experience.company}
+        </h3>
         <p className="mt-1.5 mb-4 text-[16px] font-semibold text-pink">{experience.title}</p>
         <p className="mb-4.5 max-w-[720px] text-[17px] leading-[1.7] text-cream-soft">{experience.description}</p>
 

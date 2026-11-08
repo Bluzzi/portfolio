@@ -9,6 +9,7 @@ export type Experience = {
   duration: string;
   company: string;
   title: string;
+  link?: string;
   icon: string;
   iconSize: number;
   description: string;
@@ -60,6 +61,7 @@ const experienceBase: ExperienceBase[] = [
   {
     company: "Melcad",
     title: "Co-fondateur & CTO",
+    link: "https://melcad.com",
     date: {
       start: date(1, 8, 2025),
       end: null,
@@ -76,6 +78,7 @@ const experienceBase: ExperienceBase[] = [
   {
     company: "Seedext",
     title: "Co-fondateur & CTO",
+    link: "https://www.seedext.com",
     date: {
       start: date(20, 2, 2023),
       end: date(31, 7, 2025),
@@ -98,6 +101,7 @@ const experienceBase: ExperienceBase[] = [
   {
     company: "Pelico",
     title: "Ingénieur QA",
+    link: "https://www.pelico.ai",
     date: {
       start: date(3, 5, 2023),
       end: date(10, 5, 2024),
@@ -117,6 +121,7 @@ const experienceBase: ExperienceBase[] = [
   {
     company: "Okosmo",
     title: "Développeur full-stack",
+    link: "https://www.okosmo.io",
     date: {
       start: date(11, 7, 2022),
       end: date(18, 1, 2023),
@@ -136,6 +141,7 @@ const experienceBase: ExperienceBase[] = [
   {
     company: "Symphonia",
     title: "Développeur full-stack",
+    link: "https://github.com/Symphonia-Team",
     date: {
       start: date(16, 5, 2016),
       end: date(30, 4, 2022),
