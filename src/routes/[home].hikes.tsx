@@ -1,9 +1,15 @@
+import type { Hike } from "#/lib/configs/hikes";
 import type { ReactElement } from "react";
 import { Container } from "#/lib/components/container";
+import { Lightbox } from "#/lib/components/lightbox";
 import { Polaroid } from "#/lib/components/polaroid";
 import { hikes } from "#/lib/configs/hikes";
+import { useState } from "react";
 
 export const HikesSection = (): ReactElement => {
+  // Photo currently displayed fullscreen, null when the lightbox is closed:
+  const [selected, setSelected] = useState<Hike | null>(null);
+
   return (
     <section id="sorties" className="pt-12">
       <Container>
@@ -14,10 +20,12 @@ export const HikesSection = (): ReactElement => {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-7">
           {hikes.map((hike) => (
-            <Polaroid key={hike.image} {...hike} />
+            <Polaroid key={hike.image} {...hike} onPress={() => setSelected(hike)} />
           ))}
         </div>
       </Container>
+
+      {selected && <Lightbox key={selected.image} src={selected.fullImage} alt={selected.alt} caption={selected.caption} onClose={() => setSelected(null)} />}
     </section>
   );
 };
