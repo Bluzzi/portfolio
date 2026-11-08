@@ -1,6 +1,6 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
-import { Text } from "#/lib/components/text";
+import { Container } from "#/lib/components/container";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import "#/lib/styles/tailwind.css";
 import "#/lib/styles/reset.css";
@@ -8,9 +8,9 @@ import "#/lib/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: "Camille Dugas | Développeur Full-Stack" },
-    { name: "description", content: "Développeur Full-Stack depuis 2016. Spécialisé dans l'écosystème TypeScript, je travaille principalement avec NodeJS, ReactJS et NextJS." },
-    { name: "theme-color", content: "#FFFFFF" },
+    { title: "Camille Dugas — Développeur Full-Stack TypeScript" },
+    { name: "description", content: "Développeur full-stack TypeScript depuis 2016. Je construis des produits web qui tiennent, et je passe mes week-ends là-haut." },
+    { name: "theme-color", content: "#141A3F" },
   ];
 };
 
@@ -43,10 +43,8 @@ export const Layout = ({ children }: PropsWithChildren): ReactElement => {
 
 const App = (): ReactElement => {
   return (
-    <main className="min-h-screen scroll-smooth bg-black py-16 font-sans">
-      <div className="mx-auto w-1/2 max-xl:w-5/6 max-lg:w-3/4 max-sm:w-11/12">
-        <Outlet />
-      </div>
+    <main className="min-h-screen scroll-smooth bg-night font-sans text-cream">
+      <Outlet />
     </main>
   );
 };
@@ -66,12 +64,12 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps): ReactElement
   }
 
   return (
-    <main className="min-h-screen bg-black py-16 font-sans">
-      <div className="mx-auto w-1/2 max-xl:w-5/6 max-lg:w-3/4 max-sm:w-11/12 space-y-5">
-        <Text size="3xl">{title}</Text>
+    <main className="min-h-screen bg-night font-sans text-cream">
+      <Container className="space-y-5 py-16">
+        <h1 className="font-jersey text-[64px] leading-none max-sm:text-[40px]">{title}</h1>
 
-        {description && <Text color="gray">{description}</Text>}
-      </div>
+        {description && <p className="text-lavender">{description}</p>}
+      </Container>
     </main>
   );
 };

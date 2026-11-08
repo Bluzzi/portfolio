@@ -1,47 +1,31 @@
 import type { Dayjs } from "dayjs";
 import { date, humanizeDateDiff } from "#/lib/utils/date";
-import { dayJS } from "#/lib/utils/day-js";
-
-export type Skill
-  = "NodeJS" | "TypeScript" | "PHP"
-    | "ReactJS"
-    | "NextJS" | "NestJS" | "ExpressJS" | "Fastify" | "GraphQL"
-    | "PostgreSQL" | "MongoDB" | "RabbitMQ"
-    | "Playwright" | "Vitest"
-    | "GCP" | "Azure"
-    | "GitHub Actions" | "GitLab CI/CD"
-    | "PowerShell";
 
 export type Experience = {
   date: {
     start: Dayjs;
     end: Dayjs | null;
   };
-  dateFormat: {
-    start: string;
-    end: string;
-  };
   duration: string;
   company: string;
   title: string;
-  link: string | null;
-  description: string[];
-  skills: Skill[];
+  icon: string;
+  iconSize: number;
+  description: string;
+
+  // Original bullet points, kept for reference even if they are not displayed:
+  points: string[];
+
+  skills: string[];
 };
 
-export type ExperienceBase = Omit<Experience, "duration" | "dateFormat">;
+export type ExperienceBase = Omit<Experience, "duration">;
 
 export const populateExperience = (experienceBase: ExperienceBase[]): Experience[] => {
   const populated = experienceBase.map((exp) => {
-    const dateFormat = {
-      start: exp.date.start.format("DD/MM/YYYY"),
-      end: exp.date.end ? exp.date.end.format("DD/MM/YYYY") : "présent",
-    };
-
     return {
       ...exp,
-      duration: humanizeDateDiff(exp.date.start, exp.date.end ?? dayJS()),
-      dateFormat,
+      duration: exp.date.end === null ? "en cours" : humanizeDateDiff(exp.date.start, exp.date.end),
     };
   });
 
@@ -73,46 +57,33 @@ export const populateExperience = (experienceBase: ExperienceBase[]): Experience
 };
 
 const experienceBase: ExperienceBase[] = [
-  // {
-  //   company: "Melcad",
-  //   title: "Co-Fondateur & CTO",
-  //   link: "https://melcad.com",
-  //   date: {
-  //     start: date(1, 8, 2025),
-  //     end: null,
-  //   },
-  //   description: [
-  //     "Création d'une webapp proposant divers modules de gestion à destination des commerces et restaurants",
-  //     "... en cours !",
-  //   ],
-  //   skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "GCP", "GitHub Actions"],
-  // },
   {
-    company: "Pelico",
-    title: "Ingénieur QA",
-    link: "https://www.pelico.ai",
+    company: "Melcad",
+    title: "Fondateur & indépendant",
     date: {
-      start: date(3, 5, 2023),
-      end: date(10, 5, 2024),
+      start: date(1, 8, 2025),
+      end: null,
     },
-    description: [
-      "Écriture et maintenance de plus de 500 tests end-to-end de la webapp avec Playwright",
-      "Création de l'architecture de l'environnement de test pour optimiser l'efficacité de l'équipe QA",
-      "Mise en place d'une CI GitLab efficace pour une exécution ultra-rapide des tests",
-      "Amélioration de l'accessibilité et détection de bugs sur la webapp lors de l'automatisation des nouveaux tests",
-      "Écriture de documentation complète sur tout l'environnement de test pour l'équipe QA",
+    icon: "/bivouac/icons/tent.svg",
+    iconSize: 36,
+    description: "Je construis aujourd'hui Melcad, un SaaS web / PWA qui simplifie l'hygiène alimentaire et la gestion des restaurants en France. Seul aux commandes, je porte tout : la vision produit, le design des interfaces et l'ensemble du code.",
+    points: [
+      "Création d'une webapp proposant divers modules de gestion à destination des commerces et restaurants",
+      "... en cours !",
     ],
-    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell"],
+    skills: ["SaaS", "PWA", "Lancement en cours"],
   },
   {
     company: "Seedext",
-    title: "Co-Fondateur & CTO",
-    link: "https://www.seedext.com",
+    title: "Co-fondateur & CTO",
     date: {
       start: date(20, 2, 2023),
       end: date(31, 7, 2025),
     },
-    description: [
+    icon: "/bivouac/icons/robot.svg",
+    iconSize: 32,
+    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout : web app, application Microsoft Teams et panel admin, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service RabbitMQ au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
+    points: [
       "Sécurisation des services pour répondre aux exigences rigoureuses des grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
       "Supervision du développement d'une webapp, d'une application Microsoft Teams ainsi que d'un panel admin",
       "Gestion de projets en intelligence artificielle, incluant Speech to Text, Diarization et LLM",
@@ -125,14 +96,35 @@ const experienceBase: ExperienceBase[] = [
     skills: ["NodeJS", "TypeScript", "ReactJS", "NextJS", "Fastify", "Playwright", "Vitest", "PostgreSQL", "RabbitMQ", "GCP", "Azure", "GitHub Actions"],
   },
   {
+    company: "Pelico",
+    title: "Ingénieur QA",
+    date: {
+      start: date(3, 5, 2023),
+      end: date(10, 5, 2024),
+    },
+    icon: "/bivouac/icons/clipboard.svg",
+    iconSize: 32,
+    description: "Chez Pelico, j'ai posé les fondations de la qualité : architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
+    points: [
+      "Écriture et maintenance de plus de 500 tests end-to-end de la webapp avec Playwright",
+      "Création de l'architecture de l'environnement de test pour optimiser l'efficacité de l'équipe QA",
+      "Mise en place d'une CI GitLab efficace pour une exécution ultra-rapide des tests",
+      "Amélioration de l'accessibilité et détection de bugs sur la webapp lors de l'automatisation des nouveaux tests",
+      "Écriture de documentation complète sur tout l'environnement de test pour l'équipe QA",
+    ],
+    skills: ["Playwright", "TypeScript", "ReactJS", "GraphQL", "GitLab CI/CD", "PowerShell"],
+  },
+  {
     company: "Okosmo",
-    title: "Développeur Full-Stack",
-    link: "https://okosmo.io",
+    title: "Développeur full-stack",
     date: {
       start: date(11, 7, 2022),
       end: date(18, 1, 2023),
     },
-    description: [
+    icon: "/bivouac/icons/tooth.svg",
+    iconSize: 32,
+    description: "J'ai développé un site e-commerce dédié aux professionnels de la santé bucco-dentaire : synchronisation automatique des produits des plateformes partenaires vers MongoDB, dashboard pour les distributeurs et API REST, avec une intégration et un déploiement continus entièrement automatisés sur Google Cloud.",
+    points: [
       "Développement d'un site e-commerce spécialisé pour les professionnels de la santé bucco-dentaire",
       "Implémentation d'un système de synchronisation des produits des partenaires (depuis Shopify, PrestaShop, etc) avec la BDD MongoDB",
       "Création et développement d'un dashboard pour les distributeurs partenaires utilisant ReactJS et NextJS",
@@ -143,13 +135,15 @@ const experienceBase: ExperienceBase[] = [
   },
   {
     company: "Symphonia",
-    title: "Développeur Full-Stack",
-    link: "https://github.com/Symphonia-Team",
+    title: "Développeur full-stack",
     date: {
       start: date(16, 5, 2016),
       end: date(30, 4, 2022),
     },
-    description: [
+    icon: "/bivouac/icons/console.svg",
+    iconSize: 38,
+    description: "Pendant près de six ans, j'ai conçu les serveurs de jeux qui accueillaient des milliers de joueurs chaque jour, et fait évoluer l'architecture jusqu'à encaisser des dizaines de milliers de requêtes par seconde. J'y ai aussi mis en place la synchronisation des données via RabbitMQ, développé une API REST en NestJS et PostgreSQL, et construit le panel d'administration en React.",
+    points: [
       "Conception de serveurs de jeux vidéo, accueillant quotidiennement des milliers de joueurs",
       "Implémentation d'un serveur RabbitMQ qui garantit la synchronisation des données entre les serveurs",
       "Développement d'un backend (API REST) utilisant le framework NestJS et la BDD PostgreSQL",

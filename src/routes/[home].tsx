@@ -1,19 +1,27 @@
 import type { ReactElement } from "react";
-import { AboutSection } from "./[home].about";
-import { ExperienceSection } from "./[home].experience";
-import { SkillSection } from "./[home].skill";
-import { Line } from "#/lib/components/line";
+import { BackpackSection } from "./[home].backpack";
+import { ContactSection } from "./[home].contact";
+import { DividerBand } from "./[home].divider";
+import { HeroSection } from "./[home].hero";
+import { HikesSection } from "./[home].hikes";
+import { JourneySection } from "./[home].journey";
+import { NightSection } from "./[home].night";
+import { StrengthSection } from "./[home].strength";
 
 const Home = (): ReactElement => {
   return (
     <>
-      <AboutSection />
-      <Line className="my-7" />
+      <HeroSection />
+      <DividerBand />
 
-      <SkillSection />
-      <Line className="my-7" />
+      <NightSection>
+        <HikesSection />
+        <StrengthSection />
+        <JourneySection />
+        <BackpackSection />
+      </NightSection>
 
-      <ExperienceSection />
+      <ContactSection />
     </>
   );
 };

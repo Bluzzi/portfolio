@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom font: */
-  --font-sans: "Ubuntu", "sans-serif";
+  /* Fonts: */
+  --font-sans: "Figtree", "sans-serif";
+  --font-jersey: "Jersey 10", "sans-serif";
+  --font-caveat: "Caveat", "cursive";
 
   /* Font sizes: */
   --text-*: initial;
@@ -13,21 +15,38 @@
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
-  --text-3xl--line-height: 1;
 
   /* Colors: */
   --color-*: initial;
 
   --color-transparent: transparent;
-
   --color-white: #ffffff;
   --color-black: #000000;
-  
-  --color-blue: #1d4ed8;
-  --color-green: #15803d;
 
-  --color-gray-400: oklch(0.707 0.022 261.325);
-  --color-gray-500: oklch(0.551 0.027 264.364);
+  /* Page backgrounds: */
+  --color-night: #141a3f;
+  --color-card: #1f2750;
+  --color-card-hover: #1a2149;
+
+  /* Borders: */
+  --color-line: #3a4280;
+
+  /* Text: */
+  --color-cream: #edeafb;
+  --color-cream-dark: #e3e0f7;
+  --color-cream-soft: #dddaf2;
+  --color-lavender: #a9a6d6;
+  --color-lavender-dark: #c9c6e8;
+
+  /* Accents: */
+  --color-pink: #f2b5c6;
+  --color-amber: #ffb347;
+  --color-amber-light: #ffc870;
+  --color-abyss: #0b0f2a;
+
+  /* Polaroid: */
+  --color-paper: #f7f4ec;
+  --color-ink: #22201c;
 
   /* Breakpoints: */
   --breakpoint-sm: 40rem;
@@ -36,13 +55,92 @@
   --breakpoint-xl: 80rem;
   --breakpoint-2xl: 96rem;
 
-  /* Box shadow: */
+  /* Shadows: */
   --shadow-*: initial;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
-  /* Border radius: */
-  --radius-*: initial;
-  --radius: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-full: 9999px;
+  --shadow-polaroid: 0 14px 28px rgb(0 0 0 / 0.35);
+  --shadow-button: 5px 5px 0 #0b0f2a;
+  --shadow-button-press: 2px 2px 0 #0b0f2a;
+  --shadow-dot: 0 0 0 6px #141a3f;
+}
+
+/* Pixel art images must keep their crisp edges: */
+@utility pixelated {
+  image-rendering: pixelated;
+}
+
+/* Night wrapper: repeating starfield behind the middle sections: */
+@utility night {
+  position: relative;
+  overflow: hidden;
+  background: #141a3f url("/bivouac/stars.png") repeat;
+  background-size: 1024px 1024px;
+  padding-bottom: 8.5rem;
+}
+
+/* Firefly glowing and drifting across the night: */
+@keyframes firefly {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translate(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(12px, -8px);
+  }
+}
+
+@utility firefly {
+  position: absolute;
+  z-index: 0;
+  width: 4px;
+  height: 4px;
+  background: #ffe08a;
+  box-shadow: 0 0 8px 2px rgb(255 190 90 / 0.5);
+  animation: firefly 3.6s steps(6) infinite;
+}
+
+/* Shooting star streaking across the night: */
+@keyframes shooting-star {
+  0%,
+  86% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(-22deg);
+  }
+
+  88% {
+    opacity: 1;
+    transform: translate(-30px, 12px) rotate(-22deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-300px, 120px) rotate(-22deg);
+  }
+}
+
+@utility shooting-star {
+  position: absolute;
+  z-index: 0;
+  width: 4rem;
+  height: 4px;
+  background: linear-gradient(90deg, rgb(237 234 251 / 0), #edeafb);
+  opacity: 0;
+  animation: shooting-star 12s linear infinite;
+}
+
+/* Constellation drawing floating in the night: */
+@utility constellation {
+  position: absolute;
+  z-index: 0;
+}
+
+/* Night animations stop for users preferring reduced motion: */
+@media (prefers-reduced-motion: reduce) {
+  .firefly,
+  .shooting-star {
+    animation: none;
+  }
 }

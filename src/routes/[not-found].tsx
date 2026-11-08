@@ -1,16 +1,15 @@
 import type { ReactElement } from "react";
-import { Text } from "#/lib/components/text";
+import { Container } from "#/lib/components/container";
 import { data } from "react-router";
 
 export const loader = () => data(null, { status: 404 });
 
 const NotFound = (): ReactElement => {
   return (
-    <div className="space-y-5">
-      <Text size="3xl">404</Text>
-
-      <Text color="gray">Cette page n'existe pas.</Text>
-    </div>
+    <Container className="space-y-5 py-16">
+      <h1 className="font-jersey text-[64px] leading-none max-sm:text-[40px]">404</h1>
+      <p className="text-lavender">Cette page n'existe pas.</p>
+    </Container>
   );
 };
 

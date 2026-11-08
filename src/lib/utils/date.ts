@@ -48,7 +48,7 @@ export const humanizeDateDiff = (dateOne: Dayjs, dateTwo: Dayjs): string => {
       return element?.value !== undefined && element.value !== 0;
     }).map((element) => {
       return element.suffix ? `${String(element.value)} ${pluralize(element.name, element.value, element.suffix)}` : `${String(element.value)} ${element.name}`;
-    }).join(" et ");
+    }).join(" ");
   }
 
   throw new Error("The date difference is negative");

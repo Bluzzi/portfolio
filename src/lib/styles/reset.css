@@ -1,10 +1,13 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
+/* Layered so Tailwind utilities (colors, underlines) override it on anchors: */
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
