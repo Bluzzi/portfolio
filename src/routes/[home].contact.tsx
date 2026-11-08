@@ -28,7 +28,6 @@ export const ContactSection = (): ReactElement => {
           </span>
 
           <span className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
-            <span aria-hidden="true" className="text-amber">✦</span>
             <a className="text-cream transition-colors hover:text-amber" href="https://github.com/Bluzzi" target="_blank" rel="noreferrer">github</a>
             <a className="text-cream transition-colors hover:text-amber" href="https://www.linkedin.com/in/camille-dugas" target="_blank" rel="noreferrer">linkedin</a>
           </span>
