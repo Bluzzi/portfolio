@@ -16,7 +16,7 @@ export const strengths: Strength[] = [
     icon: "/bivouac/icons/server.svg",
     iconSize: 40,
     title: "Scalabilité",
-    description: "Faire évoluer la scalabilité d'un projet sous toutes ses formes, pour qu'elle suive le rythme des clients : l'architecture et le Cloud, le code, mais aussi les recrutements de l'équipe technique. Tout grandit ensemble, sans jamais devoir tout reconstruire en chemin.",
+    description: "Faire évoluer la scalabilité d'un projet sous toutes ses formes, pour qu'elle suive le rythme des clients, de l'architecture et du Cloud jusqu'aux recrutements de l'équipe technique, en passant par le code. Tout grandit ensemble, sans jamais devoir tout reconstruire en chemin.",
   },
   {
     icon: "/bivouac/icons/clipboard.svg",

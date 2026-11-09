@@ -80,7 +80,7 @@ export const ContactSection = (): ReactElement => {
       <Container className="pt-24 text-center">
         <h2 className="mb-4.5 font-jersey text-[96px] leading-[0.95] tracking-[2px] text-shadow-[0_6px_0_#0b0f2a] max-sm:text-[40px]">Un projet en tête ?</h2>
         <p className="mx-auto mb-9 max-w-[520px] text-[19px] leading-[1.6] text-cream-dark">
-          Collaboration, besoin technique ou juste discuter autour du feu : écris-moi.
+          Collaboration, besoin technique ou juste discuter autour du feu, écris-moi.
         </p>
         <Button href="mailto:contact@camilledugas.me">m'écrire un message →</Button>
       </Container>

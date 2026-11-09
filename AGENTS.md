@@ -12,8 +12,6 @@ Load the `check` skill and run its verification steps, fixing any failure. Never
 
 ## Conventions
 
-- The site content is French (UI strings, `<html lang="fr">`, dayjs date formatting) but code, identifiers and comments are English.
-- Never use em dashes in anything you write: code comments, docs, instruction files, commit messages. Prefer commas, parentheses, colons or separate sentences.
 - Segment code into logical blocks with a short English comment ending in a colon, like `// Navigate to the home page:` in `e2e/home.ts` or `// Plugins:` in `src/lib/utils/day-js.ts`. This exact style is used across the repo.
 - Import app code with the `#/*` alias (maps to `src/*`).
 - Tailwind default theme tokens are wiped in `src/lib/styles/tailwind.css` (`--text-*`, `--color-*`, `--shadow-*`, `--radius-*: initial`). Only the explicitly listed tokens exist, so `text-4xl` or `text-red-500` won't resolve; add tokens there instead of assuming defaults.
