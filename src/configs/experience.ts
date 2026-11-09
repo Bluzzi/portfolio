@@ -68,12 +68,9 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/icons/tent.svg",
     iconSize: 36,
-    description: "Je construis aujourd'hui Melcad avec mon associé, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires, qui réunit gestion quotidienne, hygiène et traçabilité HACCP au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec pour objectif de devenir les leaders du marché et de simplifier la vie de nos clients.",
-    points: [
-      "Création d'une application web SaaS proposant divers modules de gestion, d'hygiène et de traçabilité HACCP à destination des restaurateurs et commerces alimentaires",
-      "... en cours !",
-    ],
-    skills: ["SaaS", "HACCP", "Lancement en cours"],
+    description: "Je construis aujourd'hui Melcad avec mon associée, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires, qui réunit gestion quotidienne, hygiène et traçabilité HACCP au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec pour objectif de devenir les leaders du marché et de simplifier la vie de nos clients.",
+    points: [],
+    skills: ["NodeJS", "TypeScript", "ReactJS", "React Router", "Fastify", "Playwright", "PostgreSQL", "Railway", "Bucket S3", "GitHub Actions"],
   },
   {
     company: "Seedext",

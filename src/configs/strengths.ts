@@ -16,7 +16,7 @@ export const strengths: Strength[] = [
     icon: "/icons/server.svg",
     iconSize: 40,
     title: "Scalabilité",
-    description: "Faire évoluer la scalabilité d'un projet sous toutes ses formes, pour qu'elle suive le rythme des clients, de l'architecture et du Cloud jusqu'aux recrutements de l'équipe technique, en passant par le code. Tout grandit ensemble, sans jamais devoir tout reconstruire en chemin.",
+    description: "Concevoir et faire évoluer un projet, son architecture, le code et son équipe, de manière à toujours être capable de suivre la dynamique de l'entreprise.",
   },
   {
     icon: "/icons/clipboard.svg",
