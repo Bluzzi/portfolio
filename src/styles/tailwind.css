@@ -5,6 +5,7 @@
   --font-sans: "Figtree", "sans-serif";
   --font-jersey: "Jersey 10", "sans-serif";
   --font-caveat: "Caveat", "cursive";
+  --font-mono: "DM Mono", "monospace";
 
   /* Font sizes: */
   --text-*: initial;
@@ -45,6 +46,8 @@
   --color-amber-light: #ffc870;
   --color-amber-pale: #ffe3b8;
   --color-abyss: #0b0f2a;
+  --color-ember: #ff8a3d;
+  --color-error-box: #0e1330;
 
   /* Polaroid: */
   --color-paper: #f7f4ec;
@@ -283,6 +286,91 @@
   animation: smoke 5s steps(20) infinite;
 }
 
+/* Ember glowing on an extinguished fire, cycling through three colors: */
+@keyframes ember {
+  0%,
+  40% {
+    background: #c2452d;
+  }
+
+  50%,
+  70% {
+    background: #ff8a3d;
+  }
+
+  80%,
+  100% {
+    background: #7a2e22;
+  }
+}
+
+@utility ember {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #c2452d;
+  animation: ember 1.8s steps(1) infinite;
+}
+
+/* Lost hiker sprite looking left and right, with its "?" thought bubble bouncing above: */
+@keyframes look {
+  0%,
+  45% {
+    transform: scaleX(1);
+  }
+
+  50%,
+  95% {
+    transform: scaleX(-1);
+  }
+}
+
+@utility lost-hiker {
+  position: relative;
+  width: 84px;
+  height: 108px;
+  background-size: 168px 108px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: look 2.4s steps(1) infinite;
+}
+
+@keyframes bubble {
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@utility lost-bubble {
+  position: absolute;
+  left: 58px;
+  top: -46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: var(--font-jersey);
+  color: #141a3f;
+  background: #f7f4ec;
+  box-shadow:
+    0 -4px 0 #f7f4ec,
+    0 4px 0 #f7f4ec,
+    -4px 0 0 #f7f4ec,
+    4px 0 0 #f7f4ec;
+  animation: bubble 1.2s steps(2) infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -12px;
+    width: 8px;
+    height: 8px;
+    background: #f7f4ec;
+  }
+}
+
 /* Night and scene animations stop for users preferring reduced motion: */
 @media (prefers-reduced-motion: reduce) {
   .firefly,
@@ -292,7 +380,10 @@
   .cloud-drift,
   .campfire,
   .campfire-glow,
-  .smoke {
+  .smoke,
+  .ember,
+  .lost-hiker,
+  .lost-bubble {
     animation: none;
   }
 }
