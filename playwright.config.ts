@@ -1,9 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
 
-// Registers the throwing route used by the error page test in the served production build.
-// Set here so the webServer command inherits it, and production builds never include it:
-process.env.E2E_ERROR_ROUTE = "1";
-
 export default defineConfig({
   testDir: "./e2e",
   testMatch: "**/*.ts",

@@ -1,40 +1,44 @@
 import { expect, test } from "@playwright/test";
 
 /**
- * Ensures the root ErrorBoundary renders the dedicated error page when a route throws:
- * status propagated to the document, extinguished fire scene loaded, title, detail box
- * and actions. The /__error route is registered only for e2e runs (E2E_ERROR_ROUTE).
+ * Ensures the root ErrorBoundary renders the dedicated error page when a route fails.
+ * A POST on an action-less route makes React Router throw a 405 to the boundary, which
+ * exercises the real SSR error path with no test-only route involved:
  */
-test("renders the error page from the root error boundary", async ({ page }): Promise<void> => {
-  // Navigate to the test-only route that always throws, waiting for the error scene:
-  const scene = page.waitForResponse((response): boolean => response.url().includes("/backgrounds/scene-error.png"));
-  const response = await page.goto("/__error");
-  expect((await scene).status()).toBe(200);
+test("renders the error page from the root error boundary", async ({ request }): Promise<void> => {
+  // Send an unsupported method to trigger the boundary:
+  const response = await request.post("/");
 
   // Check the HTTP status:
-  expect(response?.status()).toBe(500);
+  expect(response.status()).toBe(405);
 
-  // Check the error page content:
-  await expect(page.getByText("Quelque chose s'est mal passé", { exact: true })).toBeVisible();
-  await expect(page.getByText("aïe… le feu s'est éteint")).toBeVisible();
-  await expect(page.getByText("détail de l'erreur", { exact: true })).toBeVisible();
+  // React escapes quotes and apostrophes in SSR markup, so unescape them before matching:
+  const html = (await response.text()).replaceAll("&#x27;", "'").replaceAll("&quot;", "\"");
 
-  // React Router sanitizes server error messages in production, so the detail box shows
-  // a generic placeholder. Only check that it renders with some content:
-  const detail = page.locator("p.font-mono");
-  await expect(detail).toBeVisible();
-  await expect(detail).toHaveText(/\S/u);
-
-  await expect(page.getByRole("button", { name: "↻ réessayer" })).toBeVisible();
+  // Check the error page markup:
+  expect(html).toContain("405 Method Not Allowed");
+  expect(html).toContain("aïe… le feu s'est éteint");
+  expect(html).toContain("détail de l'erreur");
+  expect(html).toContain("↻ réessayer");
+  expect(html).toContain("← retour au camp");
 });
 
 /**
- * Ensures the way home from the error page works: a dead escape link would trap
- * visitors on a broken state with no way out.
+ * Ensures the way home from the error page works: a dead escape link would trap visitors
+ * on a broken state with no way out.
  */
 test("navigates home from the error page", async ({ page }): Promise<void> => {
-  // Navigate to the test-only route that always throws:
-  await page.goto("/__error");
+  // A POST cannot be triggered by page.goto, so upgrade the document request to a POST on
+  // the fly to render the boundary in a real browser, then remove the interception so the
+  // escape link navigates normally:
+  await page.route("**/*", async (route): Promise<unknown> => {
+    return route.request().resourceType() === "document" ? route.continue({ method: "POST" }) : route.continue();
+  });
+  await page.goto("/");
+  await page.unroute("**/*");
+
+  // Check the error page rendered:
+  await expect(page.getByText("aïe… le feu s'est éteint")).toBeVisible();
 
   // Follow the way back home:
   await page.getByRole("link", { name: "← retour au camp" }).click();

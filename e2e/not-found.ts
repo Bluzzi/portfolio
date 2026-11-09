@@ -5,9 +5,10 @@ import { expect, test } from "@playwright/test";
  * and that the not-found content renders. The status matters for crawlers.
  */
 test("returns an HTTP 404 status for unknown URLs", async ({ page }): Promise<void> => {
-  // Navigate to an unknown URL, waiting for the lost hiker sprite (a background image,
-  // invisible to the every-image test on the home page):
-  const sprite = page.waitForResponse((response): boolean => response.url().includes("/images/lost-hiker.png"));
+  // Navigate to an unknown URL, watching for the lost hiker sprite network request. The
+  // sprite is a CSS background image (not an <img>), so the every-image check on the home
+  // page cannot cover it, and the watcher must be registered before the navigation:
+  const sprite = page.waitForResponse((response): boolean => response.url().endsWith("/images/lost-hiker.png"));
   const response = await page.goto("/this-page-does-not-exist");
   expect((await sprite).status()).toBe(200);
 
