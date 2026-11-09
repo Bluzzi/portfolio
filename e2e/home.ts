@@ -80,9 +80,9 @@ test("displays the exact expected number of skills", async ({ page }): Promise<v
   // Navigate to the home page:
   await page.goto("/");
 
-  // Count the skill links inside the backpack section (17 category tags + the 20 visible
+  // Count the skill links inside the backpack section (19 category tags + the 20 visible
   // occasional skills, before expanding the list):
-  await expect(page.locator("#sac").getByRole("link")).toHaveCount(37);
+  await expect(page.locator("#sac").getByRole("link")).toHaveCount(39);
 });
 
 /**
