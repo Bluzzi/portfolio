@@ -106,6 +106,29 @@ test("displays the exact expected number of skills", async ({ page }): Promise<v
 });
 
 /**
+ * Ensures the "et aussi" toggle actually expands and collapses the occasional skills
+ * list: the count test above never clicks, so a broken toggle would be a silently
+ * dead feature. Counts are deliberately brittle and match the config values.
+ */
+test("expands and collapses the occasional skills list", async ({ page }): Promise<void> => {
+  // Navigate to the home page:
+  await page.goto("/");
+
+  // Expand the list from the "…" chip (19 category links + 69 occasional links once open):
+  const backpack = page.locator("#sac");
+  const expand = page.getByRole("button", { name: "…", exact: true });
+  await expand.click();
+  await expect(backpack.getByRole("link")).toHaveCount(88);
+
+  // Collapse it back from the "réduire ↑" chip:
+  const collapse = page.getByRole("button", { name: "réduire ↑", exact: true });
+  await expect(collapse).toBeVisible();
+  await collapse.click();
+  await expect(backpack.getByRole("link")).toHaveCount(39);
+  await expect(expand).toBeVisible();
+});
+
+/**
  * Deliberately brittle assertion on a specific experience: fails as soon as its content
  * or duration formatting drifts. Update it consciously when the content legitimately changes.
  */
@@ -150,4 +173,47 @@ test("exposes a single correct Cal.com link", async ({ page }): Promise<void> =>
 
   // Check its href (strict mode fails if there is no match or several):
   await expect(calLink).toHaveAttribute("href", "https://cal.com/camilledugas/30min");
+});
+
+/**
+ * Same guard as the mailto and Cal.com tests for the GitHub and LinkedIn profiles:
+ * a wrong social URL silently sends visitors to the wrong account. Both occurrences
+ * are checked, scoped by location since the backpack also renders a "GitHub" skill
+ * chip pointing to github.com.
+ */
+test("exposes the expected GitHub and LinkedIn links", async ({ page }): Promise<void> => {
+  // Navigate to the home page:
+  await page.goto("/");
+
+  // Check the hero cluster (capitalized labels):
+  const hero = page.locator("#top");
+  await expect(hero.getByRole("link", { name: "GitHub", exact: true })).toHaveAttribute("href", "https://github.com/Bluzzi");
+  await expect(hero.getByRole("link", { name: "LinkedIn", exact: true })).toHaveAttribute("href", "https://www.linkedin.com/in/camille-dugas");
+
+  // Check the footer (lowercase labels):
+  const footer = page.locator("#contact");
+  await expect(footer.getByRole("link", { name: "github", exact: true })).toHaveAttribute("href", "https://github.com/Bluzzi");
+  await expect(footer.getByRole("link", { name: "linkedin", exact: true })).toHaveAttribute("href", "https://www.linkedin.com/in/camille-dugas");
+});
+
+/**
+ * Ensures the SSR head metadata stays correct: a broken title or description is
+ * invisible in the browser but crawler-visible, and a missing favicon fails
+ * silently on every visit.
+ */
+test("exposes the expected SEO metadata", async ({ page }): Promise<void> => {
+  // Navigate to the home page:
+  await page.goto("/");
+
+  // Check the document title:
+  await expect(page).toHaveTitle("Camille Dugas — Développeur Full-Stack TypeScript");
+
+  // Check the meta description:
+  const description = page.locator("meta[name='description']");
+  await expect(description).toHaveAttribute("content", "Développeur full-stack TypeScript depuis 2016. Je construis des produits web qui tiennent, et je passe mes week-ends là-haut.");
+
+  // Check the favicon is declared and actually served by the build:
+  const favicon = page.locator("link[rel='icon']");
+  await expect(favicon).toHaveAttribute("href", "/favicons/favicon.ico");
+  expect((await page.request.get("/favicons/favicon.ico")).status()).toBe(200);
 });
