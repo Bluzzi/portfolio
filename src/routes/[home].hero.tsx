@@ -121,7 +121,7 @@ export const HeroSection = (): ReactElement => {
       </Container>
 
       <Container className="pt-18">
-        <p className="mb-2 font-caveat font-semibold text-[26px] text-pink">bonsoir, installe-toi près du feu</p>
+        <p className="mb-2 font-caveat font-semibold text-[26px] text-pink-light text-shadow-[0_2px_0_#0b0f2a]">bonsoir, installe-toi près du feu</p>
         <h1 className="font-jersey text-[150px] leading-[0.85] tracking-[2px] text-shadow-[0_6px_0_#0b0f2a] max-sm:text-[68px]">
           Camille
           <br />
