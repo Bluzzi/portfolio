@@ -19,7 +19,7 @@ export const Button = ({ href, variant = "primary", newTab = false, children }: 
   return (
     <a
       className={clsx(
-        "inline-flex min-h-14 items-center border-3 border-abyss px-6.5 font-jersey text-[28px] tracking-[1px] transition-[translate,box-shadow] duration-[80ms] hover:translate-x-[3px] hover:translate-y-[3px]",
+        "inline-flex min-h-12 items-center border-3 border-abyss px-5 font-jersey text-[24px] tracking-[1px] transition-[translate,box-shadow] duration-[80ms] hover:translate-x-[3px] hover:translate-y-[3px] sm:min-h-14 sm:px-6.5 sm:text-[28px]",
         variantClasses[variant],
       )}
       href={href}
