@@ -20,3 +20,4 @@ Load the `check` skill and run its verification steps, fixing any failure. Never
 - Never search or read `node_modules/`, `build/`, `.react-router/`, `playwright-report/` or `test-results/`: build artifacts and generated code, searching them only wastes context.
 - ESLint runs `@bluzzi/eslint-config`, which also enforces stylistic code-style rules; the exact active rule list is documented at https://eslint.camilledugas.me/rules.
 - When a GitHub workflow (`.github/workflows/ci.yml`) or a package script changes, update the CI-related verification steps, the `check` skill (`.opencode/skills/check.md`) and the `/check` command (`.opencode/commands/check.md`) accordingly.
+- Do not attach screenshots or browser previews of layout work: the result is always checked by hand at every breakpoint by running the project locally by the user.

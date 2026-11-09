@@ -19,7 +19,9 @@ export const ContactSection = (): ReactElement => {
 
       {/* Footer pinned to the bottom of the section, aligned with the page content: */}
       <footer className="absolute inset-x-0 bottom-0">
-        <Container className="flex min-h-22 flex-wrap items-center justify-between gap-x-7 gap-y-1.5 py-2 font-jersey text-[24px] tracking-[1px] text-lavender-dark">
+        {/* On small screens the wrapped lines land on the tent, so the text gets
+            smaller plus the same dark offset shadow as the hero scene text: */}
+        <Container className="flex min-h-22 flex-wrap items-center justify-between gap-x-7 gap-y-1.5 py-2 font-jersey text-[24px] tracking-[1px] text-lavender-dark max-sm:text-[20px] max-sm:text-shadow-[0_2px_0_#0b0f2a]">
           <span>
             ©
             {dayJS().year()}
@@ -27,7 +29,7 @@ export const ContactSection = (): ReactElement => {
             camille dugas
           </span>
 
-          <span className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
+          <span className="flex flex-wrap items-center gap-x-7 gap-y-1.5 max-sm:ml-auto">
             <a className="text-cream transition-colors hover:text-amber" href="https://github.com/Bluzzi" target="_blank" rel="noreferrer">github</a>
             <a className="text-cream transition-colors hover:text-amber" href="https://www.linkedin.com/in/camille-dugas" target="_blank" rel="noreferrer">linkedin</a>
           </span>

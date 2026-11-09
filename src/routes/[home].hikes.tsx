@@ -18,7 +18,8 @@ export const HikesSection = (): ReactElement => {
           <p className="mt-3 font-caveat font-semibold text-[24px] text-pink">quand je ne code pas, je marche.</p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-7">
+        {/* Extra vertical breathing room on mobile so tilted polaroids never touch: */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-x-7 gap-y-12 md:gap-y-7">
           {hikes.map((hike) => (
             <Polaroid key={hike.image} {...hike} onPress={() => setSelected(hike)} />
           ))}
