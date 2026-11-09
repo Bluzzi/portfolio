@@ -14,16 +14,19 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): ReactElemen
 
   return (
     <article className="relative flex flex-wrap gap-x-10 gap-y-6 py-9 pr-6 transition-colors duration-150 hover:bg-card-hover">
-      <div className="w-40 shrink-0 pt-2.5 text-right">
-        <p className={clsx("font-jersey text-[34px] leading-none max-sm:text-[26px]", isOngoing ? "text-amber" : "text-cream")}>
-          {dateLine}
-        </p>
-        <p className="mt-2 text-[14px] text-lavender">{experience.duration}</p>
-      </div>
+      {/* Date and icon cluster: inline header on mobile, dedicated columns on desktop: */}
+      <div className="flex flex-row-reverse items-center gap-6 md:contents">
+        <div className="w-40 shrink-0 pt-2.5 text-right max-md:w-auto max-md:pt-0 max-md:text-left">
+          <p className={clsx("font-jersey text-[34px] leading-none max-sm:text-[26px]", isOngoing ? "text-amber" : "text-cream")}>
+            {dateLine}
+          </p>
+          <p className="mt-2 text-[14px] text-lavender">{experience.duration}</p>
+        </div>
 
-      <div className="flex w-14 shrink-0 justify-center">
-        <div className={clsx("flex h-14 w-14 items-center justify-center shadow-dot", isOngoing ? "bg-amber" : "border-2 border-line bg-card")}>
-          <img src={experience.icon} alt="" width={experience.iconSize} />
+        <div className="flex w-14 shrink-0 justify-center">
+          <div className={clsx("flex h-14 w-14 items-center justify-center shadow-dot", isOngoing ? "bg-amber" : "border-2 border-line bg-card")}>
+            <img src={experience.icon} alt="" width={experience.iconSize} />
+          </div>
         </div>
       </div>
 
