@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { SceneImage } from "#/lib/components/scene-image";
+import { SceneImage } from "#/components/scene-image";
 
 // Pixel transition band between the hero and the night sections:
 export const DividerBand = (): ReactElement => {

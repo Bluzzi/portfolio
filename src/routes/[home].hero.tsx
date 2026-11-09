@@ -1,9 +1,9 @@
 import type { ReactElement } from "react";
-import { Button } from "#/lib/components/button";
-import { Container } from "#/lib/components/container";
-import { SceneCampfire, SceneCloud, SceneSparkle, SceneStar, type SceneSparkProps } from "#/lib/components/scene-fx";
-import { SceneImage } from "#/lib/components/scene-image";
-import { mediaLinks } from "#/lib/configs/links";
+import { Button } from "#/components/button";
+import { Container } from "#/components/container";
+import { SceneCampfire, SceneCloud, SceneSparkle, SceneStar, type SceneSparkProps } from "#/components/scene-fx";
+import { SceneImage } from "#/components/scene-image";
+import { mediaLinks } from "#/configs/links";
 
 // Navigation entries with their anchor targets:
 const links = [

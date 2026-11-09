@@ -1,4 +1,4 @@
-import type { Experience } from "#/lib/configs/experience";
+import type { Experience } from "#/configs/experience";
 import type { ReactElement } from "react";
 import { clsx } from "clsx";
 

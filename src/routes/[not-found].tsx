@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { Container } from "#/lib/components/container";
+import { Container } from "#/components/container";
 import { data } from "react-router";
 
 export const loader = () => data(null, { status: 404 });

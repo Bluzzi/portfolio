@@ -1,6 +1,6 @@
-import type { Dayjs } from "#/lib/utils/day-js";
-import { dayJS } from "#/lib/utils/day-js";
-import { pluralize } from "#/lib/utils/string";
+import type { Dayjs } from "#/utils/day-js";
+import { dayJS } from "#/utils/day-js";
+import { pluralize } from "#/utils/string";
 
 export type DateUnit = {
   name: string;

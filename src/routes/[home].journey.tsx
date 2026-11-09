@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
-import { Container } from "#/lib/components/container";
-import { ExperienceCard } from "#/lib/components/experience-card";
-import { experiences } from "#/lib/configs/experience";
+import { Container } from "#/components/container";
+import { ExperienceCard } from "#/components/experience-card";
+import { experiences } from "#/configs/experience";
 
 export const JourneySection = (): ReactElement => {
   return (

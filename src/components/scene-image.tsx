@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
-import { PixelImage } from "#/lib/components/pixel-image";
+import { PixelImage } from "#/components/pixel-image";
 import { clsx } from "clsx";
 
 export type SceneImageProps = {

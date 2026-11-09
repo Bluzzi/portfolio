@@ -1,10 +1,10 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
-import { Container } from "#/lib/components/container";
+import { Container } from "#/components/container";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import "#/lib/styles/tailwind.css";
-import "#/lib/styles/reset.css";
-import "#/lib/styles/font.css";
+import "#/styles/tailwind.css";
+import "#/styles/reset.css";
+import "#/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
   return [

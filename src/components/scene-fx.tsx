@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactElement } from "react";
-import { PixelImage } from "#/lib/components/pixel-image";
+import { PixelImage } from "#/components/pixel-image";
 
 export type SceneSparkProps = {
   x: number;

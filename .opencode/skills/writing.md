@@ -8,7 +8,7 @@ description: Load before writing any text of any kind (code comments, user-visib
 - The site content is French (UI strings, `<html lang="fr">`, dayjs date formatting) but code, identifiers and comments are English.
 - Never use em dashes in anything you write: code comments, docs, instruction files, commit messages. Prefer commas, parentheses, colons or separate sentences.
 - In user-visible text (UI strings, page content, any text a visitor reads), never use a colon inside a paragraph or sentence. Code comments are exempt. Restructure the sentence instead: split it with a period, or fold the enumeration into the sentence.
-- Segment code into logical blocks with a short English comment ending in a colon, like `// Navigate to the home page:` in `e2e/home.ts` or `// Plugins:` in `src/lib/utils/day-js.ts`. This exact style is used across the repo.
+- Segment code into logical blocks with a short English comment ending in a colon, like `// Navigate to the home page:` in `e2e/home.ts` or `// Plugins:` in `src/utils/day-js.ts`. This exact style is used across the repo.
 
 ## Example (user-visible text)
 

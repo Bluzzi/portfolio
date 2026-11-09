@@ -1,10 +1,10 @@
 import type { ReactElement } from "react";
-import { Button } from "#/lib/components/button";
-import { Container } from "#/lib/components/container";
-import { SceneCampfire, SceneSparkle, SceneStar, type SceneSparkProps } from "#/lib/components/scene-fx";
-import { SceneImage } from "#/lib/components/scene-image";
-import { contactLinks, mediaLinks } from "#/lib/configs/links";
-import { dayJS } from "#/lib/utils/day-js";
+import { Button } from "#/components/button";
+import { Container } from "#/components/container";
+import { SceneCampfire, SceneSparkle, SceneStar, type SceneSparkProps } from "#/components/scene-fx";
+import { SceneImage } from "#/components/scene-image";
+import { contactLinks, mediaLinks } from "#/configs/links";
+import { dayJS } from "#/utils/day-js";
 
 // Twinkling stars scattered over the scene sky, positioned from the design:
 const sceneStars: SceneSparkProps[] = [
