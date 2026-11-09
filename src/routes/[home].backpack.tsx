@@ -14,7 +14,7 @@ export const BackpackSection = (): ReactElement => {
         <div className="mb-11">
           <h2 className="font-jersey text-[80px] leading-none tracking-[1px] max-sm:text-[44px]">Le sac à dos</h2>
           <p className="mt-4.5 max-w-[720px] text-[18px] leading-[1.65] text-lavender-dark">
-            Les outils que je choisis quand j'ai carte blanche, ceux que j'utilise au quotidien. Mais je ne m'y limite pas : je m'adapte sans difficulté à toutes les technologies de l'écosystème
+            Les outils que je choisis quand j'ai carte blanche, ceux que j'utilise au quotidien. Mais je ne m'y limite pas. Je m'adapte sans difficulté à toutes les technologies de l'écosystème
             {" "}
             <strong className="text-cream">TypeScript, React et Node</strong>
             .

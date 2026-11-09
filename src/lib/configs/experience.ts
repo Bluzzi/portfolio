@@ -68,7 +68,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/tent.svg",
     iconSize: 36,
-    description: "Je construis aujourd'hui Melcad avec mon associé, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires : gestion quotidienne, hygiène et traçabilité HACCP réunies au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec un objectif clair : devenir les leaders du marché et simplifier la vie de nos clients.",
+    description: "Je construis aujourd'hui Melcad avec mon associé, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires, qui réunit gestion quotidienne, hygiène et traçabilité HACCP au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec pour objectif de devenir les leaders du marché et de simplifier la vie de nos clients.",
     points: [
       "Création d'une application web SaaS proposant divers modules de gestion, d'hygiène et de traçabilité HACCP à destination des restaurateurs et commerces alimentaires",
       "... en cours !",
@@ -85,7 +85,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/robot.svg",
     iconSize: 32,
-    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout : web app, application Microsoft Teams et panel admin, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
+    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout, de la web app au panel admin en passant par l'application Microsoft Teams, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
     points: [
       "Sécurisation des services pour répondre aux exigences rigoureuses des grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
       "Supervision du développement d'une webapp, d'une application Microsoft Teams ainsi que d'un panel admin",
@@ -108,7 +108,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/clipboard.svg",
     iconSize: 32,
-    description: "Chez Pelico, dont la plateforme d'orchestration de fabrication aide les géants de l'aéronautique, de la défense et de l'industrie (Safran, Boeing, Air France-KLM) à piloter des chaînes d'approvisionnement complexes, j'ai posé les fondations de la qualité : architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
+    description: "Chez Pelico, dont la plateforme d'orchestration de fabrication aide les géants de l'aéronautique, de la défense et de l'industrie (Safran, Boeing, Air France-KLM) à piloter des chaînes d'approvisionnement complexes, j'ai posé les fondations de la qualité, avec une architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
     points: [
       "Écriture et maintenance de plus de 500 tests end-to-end de la webapp avec Playwright",
       "Création de l'architecture de l'environnement de test pour optimiser l'efficacité de l'équipe QA",
@@ -128,7 +128,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/bivouac/icons/tooth.svg",
     iconSize: 32,
-    description: "Chez Okosmo, j'ai développé de bout en bout un site e-commerce dédié aux professionnels de la santé bucco-dentaire : un dashboard pour les distributeurs, une synchronisation automatique des produits depuis les plateformes partenaires (Shopify, PrestaShop) vers la base MongoDB, et une API REST pour faire tenir tout ça ensemble, le tout déployé en continu sur Google Cloud.",
+    description: "Chez Okosmo, j'ai développé de bout en bout un site e-commerce dédié aux professionnels de la santé bucco-dentaire, avec un dashboard pour les distributeurs, une synchronisation automatique des produits depuis les plateformes partenaires (Shopify, PrestaShop) vers la base MongoDB, et une API REST pour faire tenir tout ça ensemble, le tout déployé en continu sur Google Cloud.",
     points: [
       "Développement d'un site e-commerce spécialisé pour les professionnels de la santé bucco-dentaire",
       "Implémentation d'un système de synchronisation des produits des partenaires (depuis Shopify, PrestaShop, etc) avec la BDD MongoDB",
