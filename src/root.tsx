@@ -61,7 +61,7 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps): ReactElement
     description = String(error.data);
   }
   else if (error instanceof Error) {
-    title = "Error";
+    title = "Quelque chose s'est mal passé";
     description = error.message;
   }
 
