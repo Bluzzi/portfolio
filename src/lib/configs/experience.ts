@@ -66,7 +66,7 @@ const experienceBase: ExperienceBase[] = [
       start: date(1, 8, 2025),
       end: null,
     },
-    icon: "/bivouac/icons/tent.svg",
+    icon: "/icons/tent.svg",
     iconSize: 36,
     description: "Je construis aujourd'hui Melcad avec mon associé, une application web SaaS pensée pour les restaurateurs et les commerces alimentaires, qui réunit gestion quotidienne, hygiène et traçabilité HACCP au même endroit. En tant que CTO, je porte la vision produit, le design des interfaces et l'ensemble du code, avec pour objectif de devenir les leaders du marché et de simplifier la vie de nos clients.",
     points: [
@@ -83,7 +83,7 @@ const experienceBase: ExperienceBase[] = [
       start: date(20, 2, 2023),
       end: date(31, 7, 2025),
     },
-    icon: "/bivouac/icons/robot.svg",
+    icon: "/icons/robot.svg",
     iconSize: 32,
     description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout, de la web app au panel admin en passant par l'application Microsoft Teams, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
     points: [
@@ -106,7 +106,7 @@ const experienceBase: ExperienceBase[] = [
       start: date(3, 5, 2023),
       end: date(10, 5, 2024),
     },
-    icon: "/bivouac/icons/clipboard.svg",
+    icon: "/icons/clipboard.svg",
     iconSize: 32,
     description: "Chez Pelico, dont la plateforme d'orchestration de fabrication aide les géants de l'aéronautique, de la défense et de l'industrie (Safran, Boeing, Air France-KLM) à piloter des chaînes d'approvisionnement complexes, j'ai posé les fondations de la qualité, avec une architecture complète des environnements de test, plus de 500 tests end-to-end écrits et maintenus avec Playwright, une pipeline GitLab CI rapide et une documentation claire, pour que l'équipe puisse livrer en confiance.",
     points: [
@@ -126,7 +126,7 @@ const experienceBase: ExperienceBase[] = [
       start: date(11, 7, 2022),
       end: date(18, 1, 2023),
     },
-    icon: "/bivouac/icons/tooth.svg",
+    icon: "/icons/tooth.svg",
     iconSize: 32,
     description: "Chez Okosmo, j'ai développé de bout en bout un site e-commerce dédié aux professionnels de la santé bucco-dentaire, avec un dashboard pour les distributeurs, une synchronisation automatique des produits depuis les plateformes partenaires (Shopify, PrestaShop) vers la base MongoDB, et une API REST pour faire tenir tout ça ensemble, le tout déployé en continu sur Google Cloud.",
     points: [
@@ -146,7 +146,7 @@ const experienceBase: ExperienceBase[] = [
       start: date(16, 5, 2016),
       end: date(30, 4, 2022),
     },
-    icon: "/bivouac/icons/console.svg",
+    icon: "/icons/console.svg",
     iconSize: 38,
     description: "Pendant près de six ans, j'ai conçu les serveurs de jeux qui accueillaient des milliers de joueurs chaque jour, et fait évoluer l'architecture jusqu'à encaisser des dizaines de milliers de requêtes par seconde. J'y ai aussi mis en place la synchronisation des données via RabbitMQ, développé une API REST en NestJS et PostgreSQL, et construit le panel d'administration en React.",
     points: [

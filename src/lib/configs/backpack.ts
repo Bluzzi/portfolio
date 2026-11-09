@@ -13,7 +13,7 @@ export type BackpackCategory = {
 // Everyday stack, when there is full freedom of choice:
 export const backpackCategories: BackpackCategory[] = [
   {
-    icon: "/bivouac/icons/computer.svg",
+    icon: "/icons/computer.svg",
     iconSize: 44,
     title: "Front",
     skills: [
@@ -25,7 +25,7 @@ export const backpackCategories: BackpackCategory[] = [
     ],
   },
   {
-    icon: "/bivouac/icons/server.svg",
+    icon: "/icons/server.svg",
     iconSize: 34,
     title: "Back & données",
     skills: [
@@ -38,7 +38,7 @@ export const backpackCategories: BackpackCategory[] = [
     ],
   },
   {
-    icon: "/bivouac/icons/clipboard.svg",
+    icon: "/icons/clipboard.svg",
     iconSize: 34,
     title: "Qualité & outillage",
     skills: [

@@ -3,6 +3,7 @@ import { Button } from "#/lib/components/button";
 import { Container } from "#/lib/components/container";
 import { SceneCampfire, SceneSparkle, SceneStar, type SceneSparkProps } from "#/lib/components/scene-fx";
 import { SceneImage } from "#/lib/components/scene-image";
+import { contactLinks, mediaLinks } from "#/lib/configs/links";
 import { dayJS } from "#/lib/utils/day-js";
 
 // Twinkling stars scattered over the scene sky, positioned from the design:
@@ -54,7 +55,7 @@ const sceneFireflies: { x: number; y: number; delay: number }[] = [
 export const ContactSection = (): ReactElement => {
   return (
     <section id="contact" className="relative min-h-[880px] overflow-hidden bg-night">
-      <SceneImage src="/bivouac/scene-contact.png" alt="">
+      <SceneImage src="/backgrounds/scene-contact.png" alt="">
         {/* Stars twinkling in the sky: */}
         {sceneStars.map((star) => (
           <SceneStar key={`${String(star.x)}-${String(star.y)}`} {...star} />
@@ -69,7 +70,7 @@ export const ContactSection = (): ReactElement => {
         <span aria-hidden="true" className="shooting-star" style={{ left: 2300, top: 60, animationDelay: "7s" }} />
 
         {/* Campfire by the tent with its glow and smoke: */}
-        <SceneCampfire sprite="/bivouac/campfire-contact.png" x={1572} y={508} />
+        <SceneCampfire sprite="/images/campfire-contact.png" x={1572} y={508} />
 
         {/* Fireflies hovering around the camp: */}
         {sceneFireflies.map((firefly) => (
@@ -84,8 +85,8 @@ export const ContactSection = (): ReactElement => {
         </p>
         {/* The two call to action buttons wrap side by side on small screens: */}
         <div className="flex flex-wrap items-center justify-center gap-x-5.5 gap-y-4.5">
-          <Button href="mailto:contact@camilledugas.me">m'écrire un message →</Button>
-          <Button href="https://cal.com/camilledugas/30min" variant="secondary" newTab>réserver un appel</Button>
+          <Button href={contactLinks.email}>m'écrire un message →</Button>
+          <Button href={contactLinks.booking} variant="secondary" newTab>réserver un appel</Button>
         </div>
       </Container>
 
@@ -104,8 +105,8 @@ export const ContactSection = (): ReactElement => {
           </span>
 
           <span className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
-            <a className="text-cream transition-colors hover:text-amber" href="https://github.com/Bluzzi" target="_blank" rel="noreferrer">github</a>
-            <a className="text-cream transition-colors hover:text-amber" href="https://www.linkedin.com/in/camille-dugas" target="_blank" rel="noreferrer">linkedin</a>
+            <a className="text-cream transition-colors hover:text-amber" href={mediaLinks.github} target="_blank" rel="noreferrer">github</a>
+            <a className="text-cream transition-colors hover:text-amber" href={mediaLinks.linkedin} target="_blank" rel="noreferrer">linkedin</a>
           </span>
         </Container>
       </footer>
