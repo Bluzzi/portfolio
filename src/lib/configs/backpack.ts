@@ -82,6 +82,7 @@ export const otherSkills: BackpackSkill[] = [
   { title: "Stripe", link: "https://stripe.com" },
   { title: "Zustand", link: "https://zustand.docs.pmnd.rs" },
   { title: "React Hook Form", link: "https://react-hook-form.com" },
+  { title: "Motion", link: "https://motion.dev" },
   { title: "WebSocket", link: "https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API" },
   { title: "Socket.io", link: "https://socket.io" },
   { title: "Vitest", link: "https://vitest.dev" },
