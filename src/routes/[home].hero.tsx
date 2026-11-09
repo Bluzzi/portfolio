@@ -131,13 +131,14 @@ export const HeroSection = (): ReactElement => {
           Développeur full-stack TypeScript depuis 2016. Je construis des produits web qui tiennent, et je passe mes week-ends là-haut.
         </p>
 
-        {/* Social links live in their own cluster so they wrap as a pair below the CTA: */}
-        <div className="mt-8.5 flex flex-wrap items-center gap-6">
+        {/* Social links render as secondary buttons in their own cluster so they wrap as a pair
+            below the CTA and stay readable over the lake: */}
+        <div className="mt-8.5 space-y-6">
           <Button href="#parcours">voir mon parcours →</Button>
 
           <div className="flex items-center gap-6">
-            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href={mediaLinks.github} target="_blank" rel="noreferrer">GitHub</a>
-            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href={mediaLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <Button href={mediaLinks.github} variant="secondary" newTab>GitHub</Button>
+            <Button href={mediaLinks.linkedin} variant="secondary" newTab>LinkedIn</Button>
           </div>
         </div>
       </Container>
