@@ -72,3 +72,20 @@ export const SceneCampfire = ({ sprite, x, y }: SceneCampfireProps): ReactElemen
     </>
   );
 };
+
+// Extinguished fire with its log, two glowing embers and five smoke puffs, positioned in
+// the 3200px scene space, the offsets coming from the design:
+export const SceneEmbers = ({ x, y }: { x: number; y: number }): ReactElement => {
+  return (
+    <>
+      <span aria-hidden="true" className="absolute h-1 w-3" style={{ left: x + 8, top: y + 24, background: "#5A3A22" }} />
+      <span aria-hidden="true" className="ember" style={{ left: x + 12, top: y + 20 }} />
+      <span aria-hidden="true" className="ember" style={{ left: x + 8, top: y + 20, animationDelay: "0.9s" }} />
+      <span aria-hidden="true" className="smoke" style={{ left: x + 8, top: y, animationDelay: "0.8s" }} />
+      <span aria-hidden="true" className="smoke" style={{ left: x + 16, top: y - 4, animationDelay: "2.5s" }} />
+      {[0, 1.7, 3.4].map((delay) => (
+        <span key={delay} aria-hidden="true" className="smoke" style={{ left: x + 12, top: y - 8, animationDelay: `${String(delay)}s` }} />
+      ))}
+    </>
+  );
+};

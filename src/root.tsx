@@ -1,6 +1,6 @@
 import type { Route } from "./+types/root";
 import type { PropsWithChildren, ReactElement } from "react";
-import { Container } from "#/components/container";
+import { ErrorPage } from "#/components/error-page";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import "#/styles/tailwind.css";
 import "#/styles/reset.css";
@@ -67,11 +67,7 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps): ReactElement
 
   return (
     <main className="min-h-screen bg-night font-sans text-cream">
-      <Container className="space-y-5 py-16">
-        <h1 className="font-jersey text-[64px] leading-none max-sm:text-[40px]">{title}</h1>
-
-        {description && <p className="text-lavender">{description}</p>}
-      </Container>
+      <ErrorPage title={title} description={description} />
     </main>
   );
 };

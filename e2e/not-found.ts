@@ -13,5 +13,5 @@ test("returns an HTTP 404 status for unknown URLs", async ({ page }): Promise<vo
 
   // Check the not-found content:
   await expect(page.getByText("404", { exact: true })).toBeVisible();
-  await expect(page.getByText("Cette page n'existe pas.", { exact: true })).toBeVisible();
+  await expect(page.getByText("Cette page n'existe pas, ou plus. Pas de panique : le campement n'est pas loin et le feu est encore allumé.", { exact: true })).toBeVisible();
 });
