@@ -59,7 +59,27 @@ test("loads every image without a 404", async ({ page }): Promise<void> => {
   const total = await page.getByRole("img").count();
   expect(total).toBeGreaterThan(0);
 
-  // List broken images (after the "load" event, a broken image has naturalWidth === 0):
+  // Scroll through the page so below-the-fold lazy images start loading:
+  await page.evaluate(async (): Promise<void> => {
+    return new Promise((resolve): void => {
+      const scrollToNext = (): void => {
+        window.scrollBy(0, 600);
+        if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+          resolve();
+          return;
+        }
+        window.setTimeout(scrollToNext, 50);
+      };
+      scrollToNext();
+    });
+  });
+
+  // Wait until every image finished loading:
+  await page.waitForFunction((): boolean => {
+    return Array.from(document.images).every((image): boolean => image.complete);
+  });
+
+  // List broken images (a broken image has naturalWidth === 0):
   const brokenImages = await page.evaluate((): string[] => {
     return Array.from(document.images).filter((image): boolean => {
       return !image.complete || image.naturalWidth === 0;
