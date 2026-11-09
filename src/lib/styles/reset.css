@@ -6,6 +6,12 @@
     margin: 0;
   }
 
+  /* The scrollbar gutter is always reserved, so locking the page scroll while the lightbox
+     is open never shifts the layout (browsers without support keep the old shift as fallback): */
+  html {
+    scrollbar-gutter: stable;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
