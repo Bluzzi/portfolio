@@ -34,6 +34,7 @@ export const Layout = ({ children }: PropsWithChildren): ReactElement => {
       <body
         // https://stackoverflow.com/questions/75337953/what-causes-nextjs-warning-extra-attributes-from-the-server-data-new-gr-c-s-c
         suppressHydrationWarning={true}
+        className="bg-night"
       >
         {children}
         <ScrollRestoration />
