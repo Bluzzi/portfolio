@@ -82,7 +82,11 @@ export const ContactSection = (): ReactElement => {
         <p className="mx-auto mb-9 max-w-[520px] text-[19px] leading-[1.6] text-cream-dark">
           Collaboration, besoin technique ou juste discuter autour du feu, écris-moi.
         </p>
-        <Button href="mailto:contact@camilledugas.me">m'écrire un message →</Button>
+        {/* The two call to action buttons wrap side by side on small screens: */}
+        <div className="flex flex-wrap items-center justify-center gap-x-5.5 gap-y-4.5">
+          <Button href="mailto:contact@camilledugas.me">m'écrire un message →</Button>
+          <Button href="https://cal.com/camilledugas/30min" variant="secondary" newTab>réserver un appel</Button>
+        </div>
       </Container>
 
       {/* Footer pinned to the bottom of the section, aligned with the page content: */}

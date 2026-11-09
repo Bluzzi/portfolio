@@ -42,6 +42,7 @@
   --color-pink: #f2b5c6;
   --color-amber: #ffb347;
   --color-amber-light: #ffc870;
+  --color-amber-pale: #ffe3b8;
   --color-abyss: #0b0f2a;
 
   /* Polaroid: */
@@ -61,6 +62,8 @@
   --shadow-polaroid: 0 14px 28px rgb(0 0 0 / 0.35);
   --shadow-button: 5px 5px 0 #0b0f2a;
   --shadow-button-press: 2px 2px 0 #0b0f2a;
+  --shadow-button-outline: inset 0 0 0 2px #ffb347, 5px 5px 0 #0b0f2a;
+  --shadow-button-outline-press: inset 0 0 0 2px #ffb347, 2px 2px 0 #0b0f2a;
   --shadow-dot: 0 0 0 6px #141a3f;
 }
 

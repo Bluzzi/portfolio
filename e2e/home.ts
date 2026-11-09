@@ -116,3 +116,18 @@ test("exposes a single correct mailto link", async ({ page }): Promise<void> => 
   // Check its href (strict mode fails if there is no match or several):
   await expect(emailLink).toHaveAttribute("href", "mailto:contact@camilledugas.me");
 });
+
+/**
+ * Same guard for the Cal.com booking link: a wrong booking URL silently
+ * sends visitors to someone else's calendar. Strict mode enforces uniqueness.
+ */
+test("exposes a single correct Cal.com link", async ({ page }): Promise<void> => {
+  // Navigate to the home page:
+  await page.goto("/");
+
+  // Select the booking link by its accessible name:
+  const calLink = page.getByRole("link", { name: "réserver un appel" });
+
+  // Check its href (strict mode fails if there is no match or several):
+  await expect(calLink).toHaveAttribute("href", "https://cal.com/camilledugas/30min");
+});
