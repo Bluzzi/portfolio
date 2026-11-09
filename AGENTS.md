@@ -12,9 +12,9 @@ Load the `check` skill and run its verification steps, fixing any failure. Never
 
 ## Conventions
 
-- Segment code into logical blocks with a short English comment ending in a colon, like `// Navigate to the home page:` in `e2e/home.ts` or `// Plugins:` in `src/lib/utils/day-js.ts`. This exact style is used across the repo.
+- Segment code into logical blocks with a short English comment ending in a colon, like `// Navigate to the home page:` in `e2e/home.ts` or `// Plugins:` in `src/utils/day-js.ts`. This exact style is used across the repo.
 - Import app code with the `#/*` alias (maps to `src/*`).
-- Tailwind default theme tokens are wiped in `src/lib/styles/tailwind.css` (`--text-*`, `--color-*`, `--shadow-*`, `--radius-*: initial`). Only the explicitly listed tokens exist, so `text-4xl` or `text-red-500` won't resolve; add tokens there instead of assuming defaults.
+- Tailwind default theme tokens are wiped in `src/styles/tailwind.css` (`--text-*`, `--color-*`, `--shadow-*`, `--radius-*: initial`). Only the explicitly listed tokens exist, so `text-4xl` or `text-red-500` won't resolve; add tokens there instead of assuming defaults.
 - Never search or read `node_modules/`, `build/`, `.react-router/`, `playwright-report/` or `test-results/`: build artifacts and generated code, searching them only wastes context.
 - ESLint runs `@bluzzi/eslint-config`, which also enforces stylistic code-style rules; the exact active rule list is documented at https://eslint.camilledugas.me/rules.
 - When a GitHub workflow (`.github/workflows/ci.yml`) or a package script changes, update the CI-related verification steps, the `check` skill (`.opencode/skills/check.md`) and the `/check` command (`.opencode/commands/check.md`) accordingly.

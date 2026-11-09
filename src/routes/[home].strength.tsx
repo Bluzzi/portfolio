@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { Container } from "#/lib/components/container";
-import { strengths } from "#/lib/configs/strengths";
+import { Container } from "#/components/container";
+import { strengths } from "#/configs/strengths";
 
 export const StrengthSection = (): ReactElement => {
   return (

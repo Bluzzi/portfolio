@@ -1,8 +1,8 @@
 import type { ReactElement } from "react";
-import { Chip } from "#/lib/components/chip";
-import { Container } from "#/lib/components/container";
-import { SkillTag } from "#/lib/components/skill-tag";
-import { backpackCategories, otherSkills, otherSkillsLimit } from "#/lib/configs/backpack";
+import { Chip } from "#/components/chip";
+import { Container } from "#/components/container";
+import { SkillTag } from "#/components/skill-tag";
+import { backpackCategories, otherSkills, otherSkillsLimit } from "#/configs/backpack";
 import { useState } from "react";
 
 export const BackpackSection = (): ReactElement => {

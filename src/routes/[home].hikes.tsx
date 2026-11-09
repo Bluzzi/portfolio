@@ -1,9 +1,9 @@
-import type { Hike } from "#/lib/configs/hikes";
+import type { Hike } from "#/configs/hikes";
 import type { ReactElement } from "react";
-import { Container } from "#/lib/components/container";
-import { Lightbox } from "#/lib/components/lightbox";
-import { Polaroid } from "#/lib/components/polaroid";
-import { hikes } from "#/lib/configs/hikes";
+import { Container } from "#/components/container";
+import { Lightbox } from "#/components/lightbox";
+import { Polaroid } from "#/components/polaroid";
+import { hikes } from "#/configs/hikes";
 import { AnimatePresence, MotionConfig } from "motion/react";
 import { useState } from "react";
 

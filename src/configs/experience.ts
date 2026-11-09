@@ -1,5 +1,5 @@
 import type { Dayjs } from "dayjs";
-import { date, humanizeDateDiff } from "#/lib/utils/date";
+import { date, humanizeDateDiff } from "#/utils/date";
 
 export type Experience = {
   date: {
