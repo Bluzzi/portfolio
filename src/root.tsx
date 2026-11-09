@@ -15,12 +15,14 @@ export const meta: Route.MetaFunction = () => {
 };
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: "/favicon.ico" },
+  { rel: "icon", href: "/favicons/favicon.ico" },
 ];
 
 export const Layout = ({ children }: PropsWithChildren): ReactElement => {
   return (
-    <html lang="fr">
+    // Smooth scrolling applies to the document root, where fragment navigation happens.
+    // Motion-safe keeps instant jumps for users preferring reduced motion:
+    <html lang="fr" className="motion-safe:scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -43,7 +45,7 @@ export const Layout = ({ children }: PropsWithChildren): ReactElement => {
 
 const App = (): ReactElement => {
   return (
-    <main className="min-h-screen scroll-smooth bg-night font-sans text-cream">
+    <main className="min-h-screen bg-night font-sans text-cream">
       <Outlet />
     </main>
   );

@@ -76,7 +76,7 @@
 @utility night {
   position: relative;
   overflow: hidden;
-  background: #141a3f url("/bivouac/stars.png") repeat;
+  background: #141a3f url("/backgrounds/stars.png") repeat;
   background-size: 1024px 1024px;
   padding-bottom: 8.5rem;
 }

@@ -3,6 +3,7 @@ import { Button } from "#/lib/components/button";
 import { Container } from "#/lib/components/container";
 import { SceneCampfire, SceneCloud, SceneSparkle, SceneStar, type SceneSparkProps } from "#/lib/components/scene-fx";
 import { SceneImage } from "#/lib/components/scene-image";
+import { mediaLinks } from "#/lib/configs/links";
 
 // Navigation entries with their anchor targets:
 const links = [
@@ -76,13 +77,13 @@ export const HeroSection = (): ReactElement => {
       {/* Scaled down as one unit on small screens so the scene height fits the section and
           the mountain peaks stay visible instead of being clipped by the bottom anchor: */}
       <SceneImage
-        src="/bivouac/scene-hero.png"
+        src="/backgrounds/scene-hero.png"
         alt="Montagnes en pixel art au crépuscule, une tente et un feu de camp au bord du lac"
         className="origin-bottom max-sm:scale-[0.669]"
       >
         {/* Clouds drifting across the sky: */}
-        <SceneCloud src="/bivouac/cloud-wide.png" x={1088} y={136} width={136} height={36} />
-        <SceneCloud src="/bivouac/cloud-small.png" x={2584} y={104} width={108} height={24} duration={38} delay={-12} />
+        <SceneCloud src="/images/cloud-wide.png" x={1088} y={136} width={136} height={36} />
+        <SceneCloud src="/images/cloud-small.png" x={2584} y={104} width={108} height={24} duration={38} delay={-12} />
 
         {/* Stars twinkling in the sky: */}
         {sceneStars.map((star) => (
@@ -98,7 +99,7 @@ export const HeroSection = (): ReactElement => {
         <span aria-hidden="true" className="shooting-star" style={{ left: 1500, top: 90, animationDelay: "3s" }} />
 
         {/* Campfire by the tent with its glow and smoke: */}
-        <SceneCampfire sprite="/bivouac/campfire-hero.png" x={2052} y={712} />
+        <SceneCampfire sprite="/images/campfire-hero.png" x={2052} y={712} />
 
         {/* Fireflies hovering around the camp: */}
         {sceneFireflies.map((firefly) => (
@@ -135,8 +136,8 @@ export const HeroSection = (): ReactElement => {
           <Button href="#parcours">voir mon parcours →</Button>
 
           <div className="flex items-center gap-6">
-            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href="https://github.com/Bluzzi" target="_blank" rel="noreferrer">GitHub</a>
-            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href="https://www.linkedin.com/in/camille-dugas" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href={mediaLinks.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a className="text-[17px] font-semibold text-white underline decoration-amber decoration-2 underline-offset-6 hover:text-amber" href={mediaLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
       </Container>
