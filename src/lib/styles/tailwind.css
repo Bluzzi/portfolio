@@ -137,10 +137,158 @@
   z-index: 0;
 }
 
-/* Night animations stop for users preferring reduced motion: */
+/* Star twinkling over a scene sky, positioned in the 3200px scene space: */
+@keyframes twinkle {
+  0%,
+  72% {
+    opacity: 0;
+  }
+
+  74%,
+  80% {
+    opacity: 1;
+  }
+
+  82%,
+  86% {
+    opacity: 0;
+  }
+
+  88%,
+  92% {
+    opacity: 1;
+  }
+
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@utility twinkle-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  opacity: 0;
+  animation: twinkle 6s steps(1) infinite;
+}
+
+/* Sparkle glinting on a scene lake, positioned in the 3200px scene space: */
+@keyframes water-sparkle {
+  0%,
+  60% {
+    opacity: 0;
+  }
+
+  62%,
+  78% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@utility water-sparkle {
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  opacity: 0;
+  animation: water-sparkle 4s steps(1) infinite;
+}
+
+/* Cloud drifting slowly across a scene sky: */
+@keyframes cloud-drift {
+  to {
+    transform: translateX(60px);
+  }
+}
+
+@utility cloud-drift {
+  position: absolute;
+  display: block;
+  animation: cloud-drift 30s steps(15) infinite alternate;
+}
+
+/* Campfire flames cycling through a 4-frame sprite sheet: */
+@keyframes campfire {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -112px 0;
+  }
+}
+
+@utility campfire {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  background-size: 112px 28px;
+  background-repeat: no-repeat;
+  animation: campfire 0.55s steps(4) infinite;
+}
+
+/* Warm light pulsing around a campfire, centered on its anchor point: */
+@keyframes campfire-glow {
+  from {
+    opacity: 0.55;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@utility campfire-glow {
+  position: absolute;
+  width: 200px;
+  height: 96px;
+  margin: -48px 0 0 -100px;
+  background: radial-gradient(ellipse at center, rgb(255 170 80 / 0.22), rgb(255 170 80 / 0) 70%);
+  animation: campfire-glow 1.4s steps(4) infinite alternate;
+}
+
+/* Smoke puff rising from a campfire: */
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  8% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(20px, -80px);
+  }
+}
+
+@utility smoke {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #7c78b0;
+  opacity: 0;
+  animation: smoke 5s steps(20) infinite;
+}
+
+/* Night and scene animations stop for users preferring reduced motion: */
 @media (prefers-reduced-motion: reduce) {
   .firefly,
-  .shooting-star {
+  .shooting-star,
+  .twinkle-star,
+  .water-sparkle,
+  .cloud-drift,
+  .campfire,
+  .campfire-glow,
+  .smoke {
     animation: none;
   }
 }
