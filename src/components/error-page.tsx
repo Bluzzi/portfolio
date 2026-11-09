@@ -14,7 +14,7 @@ export const ErrorPage = ({ title, description }: ErrorPageProps): ReactElement 
     <section className="relative flex min-h-[max(100vh,900px)] flex-col overflow-hidden bg-night">
       <SceneNight src="/backgrounds/scene-error.png" alt="Montagnes en pixel art au crépuscule, une tente au bord du lac et un feu éteint qui fume" fire="extinguished" />
 
-      <Container className="flex flex-wrap items-center justify-between gap-4 py-6 max-sm:py-4">
+      <Container className="flex w-full flex-wrap items-center justify-between gap-4 py-6 max-sm:py-4">
         <a className="font-jersey text-[30px] tracking-[1px] text-cream transition-colors hover:text-amber" href="/">camille dugas</a>
         <nav className="flex flex-wrap gap-7">
           <a className="font-jersey text-[22px] tracking-[1px] text-cream transition-colors hover:text-amber" href="/#parcours">parcours</a>
@@ -22,10 +22,10 @@ export const ErrorPage = ({ title, description }: ErrorPageProps): ReactElement 
         </nav>
       </Container>
 
-      <Container className="relative flex flex-1 flex-col items-center pt-10 pb-95 max-sm:pt-6 max-sm:pb-75 text-center">
+      <Container className="relative flex w-full flex-1 flex-col items-center pt-10 pb-95 max-sm:pt-6 max-sm:pb-75 text-center">
         <p className="mb-2.5 font-caveat font-semibold text-[28px] text-pink">aïe… le feu s'est éteint</p>
         <h1 className="max-w-[900px] font-jersey text-[88px] leading-[0.95] tracking-[2px] text-shadow-[0_6px_0_#0b0f2a] max-sm:text-[56px]">{title}</h1>
-        <p className="mt-[22px] mb-7 max-w-[540px] text-[18px] leading-[1.6] text-cream-dark text-shadow-[0_2px_0_#0b0f2a]">Une erreur inattendue s'est produite. Ce n'est pas de ta faute : réessaie dans un instant, ou reviens au campement.</p>
+        <p className="mt-[22px] mb-7 max-w-[540px] text-[18px] leading-[1.6] text-cream-dark text-shadow-[0_2px_0_#0b0f2a]">Une erreur inattendue s'est produite. Ce n'est pas de ta faute. Réessaie dans un instant, ou reviens au campement.</p>
 
         {description && (
           <div className="relative w-full max-w-[640px] text-left bg-error-box border-3 border-abyss shadow-[inset_0_0_0_2px_#3a4280,5px_5px_0_#0b0f2a]">
