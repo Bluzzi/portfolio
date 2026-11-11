@@ -218,7 +218,7 @@ test("exposes the expected SEO metadata", async ({ page }): Promise<void> => {
   await page.goto("/");
 
   // Check the document title:
-  await expect(page).toHaveTitle("Camille Dugas — Développeur Full-Stack TypeScript");
+  await expect(page).toHaveTitle("Camille Dugas | Développeur Full-Stack TypeScript");
 
   // Check the meta description:
   const description = page.locator("meta[name='description']");
