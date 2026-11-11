@@ -8,7 +8,7 @@ import "#/styles/font.css";
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: "Camille Dugas — Développeur Full-Stack TypeScript" },
+    { title: "Camille Dugas | Développeur Full-Stack TypeScript" },
     { name: "description", content: "Développeur full-stack TypeScript depuis 2016. Je construis des produits web qui tiennent, et je passe mes week-ends là-haut." },
     { name: "theme-color", content: "#141A3F" },
   ];
