@@ -12,13 +12,15 @@ const CONFIRMATION_MS = 1600;
 // client (an async write can race with that handoff):
 const copyEmailSync = (): boolean => {
   const area = document.createElement("textarea");
-  area.value = contactLinks.email;
+  area.value = contactLinks.emailAddress;
   area.setAttribute("readonly", "");
   area.style.position = "fixed";
   area.style.top = "-9999px";
   document.body.append(area);
   area.select();
-  area.setSelectionRange(0, contactLinks.email.length);
+  // iOS Safari builds no selection from select() alone, so the explicit range is what
+  // makes execCommand copy anything at all on iPhones:
+  area.setSelectionRange(0, contactLinks.emailAddress.length);
   const copied = document.execCommand("copy");
   area.remove();
   return copied;
@@ -35,20 +37,22 @@ export const CopyEmailButton = (): ReactElement => {
   // Clear the pending confirmation timer on unmount:
   useEffect(() => () => window.clearTimeout(copiedTimeoutRef.current), []);
 
+  // Shows the confirmation tag for a short while, restarting the timer when the
+  // visitor clicks the button again while the tag is already visible:
+  const showConfirmation = (): void => {
+    setCopied(true);
+    window.clearTimeout(copiedTimeoutRef.current);
+    copiedTimeoutRef.current = window.setTimeout(() => setCopied(false), CONFIRMATION_MS);
+  };
+
   const copyEmail = (): void => {
     // Synchronous copy first, async Clipboard API as a fallback if execCommand is refused:
     if (copyEmailSync()) {
-      setCopied(true);
-      window.clearTimeout(copiedTimeoutRef.current);
-      copiedTimeoutRef.current = window.setTimeout(() => setCopied(false), CONFIRMATION_MS);
+      showConfirmation();
       return;
     }
 
-    navigator.clipboard.writeText(contactLinks.email).then(() => {
-      setCopied(true);
-      window.clearTimeout(copiedTimeoutRef.current);
-      copiedTimeoutRef.current = window.setTimeout(() => setCopied(false), CONFIRMATION_MS);
-    }).catch(() => {
+    navigator.clipboard.writeText(contactLinks.emailAddress).then(showConfirmation).catch(() => {
       // Clipboard access denied, the mailto still opens as a fallback:
     });
   };
@@ -74,7 +78,7 @@ export const CopyEmailButton = (): ReactElement => {
           </motion.span>
         )}
       </AnimatePresence>
-      <Button href={`mailto:${contactLinks.email}`} onClick={copyEmail} variant="secondary">m'écrire un message</Button>
+      <Button href={`mailto:${contactLinks.emailAddress}`} onClick={copyEmail} variant="secondary">m'écrire un message</Button>
       {/* Announces the copy to screen readers: */}
       <span className="sr-only" role="status">{copied ? "email copié" : ""}</span>
     </span>

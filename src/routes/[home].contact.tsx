@@ -55,7 +55,7 @@ const sceneFireflies: { x: number; y: number; delay: number }[] = [
 
 export const ContactSection = (): ReactElement => {
   return (
-    <section id="contact" className="relative min-h-[880px] overflow-clip bg-night">
+    <section id="contact" className="relative min-h-[880px] overflow-hidden bg-night">
       <SceneImage src="/backgrounds/scene-contact.png" alt="">
         {/* Stars twinkling in the sky: */}
         {sceneStars.map((star) => (
