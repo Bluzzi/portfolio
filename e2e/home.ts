@@ -145,19 +145,31 @@ test("displays the expected date on the Okosmo experience", async ({ page }): Pr
 });
 
 /**
- * Ensures the Email contact link exists exactly once and points to the expected
- * address: a wrong email is a fully silent failure for visitors. Strict mode
- * enforces uniqueness (fails if the link is missing or duplicated).
+ * The contact button keeps its mailto link but also copies the email address to the
+ * clipboard on click: a wrong address or a silent copy failure sends visitors away
+ * with nothing when their mail client is missing. Clipboard permissions are granted
+ * for the test so the copied content can be verified, alongside the link href and
+ * the visible confirmation feedback.
  */
-test("exposes a single correct mailto link", async ({ page }): Promise<void> => {
+test("copies the expected email address on click", async ({ page, context }): Promise<void> => {
+  // Grant clipboard access so the copy can be verified:
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+
   // Navigate to the home page:
   await page.goto("/");
 
-  // Select the Email link by its accessible name:
-  const emailLink = page.getByRole("link", { name: "m'écrire un message →" });
+  // Select the contact link by its accessible name:
+  const emailLink = page.getByRole("link", { name: "m'écrire un message" });
 
   // Check its href (strict mode fails if there is no match or several):
   await expect(emailLink).toHaveAttribute("href", "mailto:contact@camilledugas.me");
+
+  // Copy the address and check the visible confirmation feedback:
+  await emailLink.click();
+  await expect(page.getByRole("status")).toHaveText("email copié");
+
+  // Check the copied content:
+  await expect.poll(async () => page.evaluate(async () => navigator.clipboard.readText())).toBe("contact@camilledugas.me");
 });
 
 /**
@@ -169,14 +181,14 @@ test("exposes a single correct Cal.com link", async ({ page }): Promise<void> =>
   await page.goto("/");
 
   // Select the booking link by its accessible name:
-  const calLink = page.getByRole("link", { name: "réserver un appel" });
+  const calLink = page.getByRole("link", { name: "réserver un appel →" });
 
   // Check its href (strict mode fails if there is no match or several):
   await expect(calLink).toHaveAttribute("href", "https://cal.com/camilledugas/30min");
 });
 
 /**
- * Same guard as the mailto and Cal.com tests for the GitHub and LinkedIn profiles:
+ * Same guard as the email copy and Cal.com tests for the GitHub and LinkedIn profiles:
  * a wrong social URL silently sends visitors to the wrong account. Both occurrences
  * are checked, scoped by location since the backpack also renders a "GitHub" skill
  * chip pointing to github.com.
@@ -206,7 +218,7 @@ test("exposes the expected SEO metadata", async ({ page }): Promise<void> => {
   await page.goto("/");
 
   // Check the document title:
-  await expect(page).toHaveTitle("Camille Dugas — Développeur Full-Stack TypeScript");
+  await expect(page).toHaveTitle("Camille Dugas | Développeur Full-Stack TypeScript");
 
   // Check the meta description:
   const description = page.locator("meta[name='description']");

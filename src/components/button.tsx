@@ -16,10 +16,11 @@ const variantClasses = {
 };
 
 // Pixel button with a hard shadow that presses down on hover, rendered as an anchor when href
-// is set and as a plain button otherwise:
+// is set and as a plain button otherwise, with the click handler passed through in both cases:
 export const Button = ({ href, onClick, variant = "primary", newTab = false, children }: ButtonProps): ReactElement => {
   const className = clsx(
-    "inline-flex min-h-12 items-center border-3 border-abyss px-5 font-jersey text-[24px] tracking-[1px] transition-[translate,box-shadow] duration-[80ms] hover:translate-x-[3px] hover:translate-y-[3px] sm:min-h-14 sm:px-6.5 sm:text-[28px]",
+    "inline-flex min-h-12 items-center border-3 border-abyss px-5 font-jersey text-[24px] tracking-[1px] transition-[translate,box-shadow] duration-[80ms] sm:min-h-14 sm:px-6.5 sm:text-[28px]",
+    "hover:translate-x-[3px] hover:translate-y-[3px]",
     variantClasses[variant],
   );
 
@@ -32,7 +33,7 @@ export const Button = ({ href, onClick, variant = "primary", newTab = false, chi
   }
 
   return (
-    <a className={className} href={href} target={newTab ? "_blank" : undefined} rel={newTab ? "noreferrer" : undefined}>
+    <a className={className} href={href} target={newTab ? "_blank" : undefined} rel={newTab ? "noreferrer" : undefined} onClick={onClick}>
       {children}
     </a>
   );
