@@ -74,7 +74,7 @@ export const CopyEmailButton = (): ReactElement => {
           </motion.span>
         )}
       </AnimatePresence>
-      <Button href={`mailto:${contactLinks.email}`} onClick={copyEmail} variant="secondary" noShift>m'écrire un message</Button>
+      <Button href={`mailto:${contactLinks.email}`} onClick={copyEmail} variant="secondary">m'écrire un message</Button>
       {/* Announces the copy to screen readers: */}
       <span className="sr-only" role="status">{copied ? "email copié" : ""}</span>
     </span>
