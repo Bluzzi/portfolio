@@ -1,6 +1,6 @@
 // Contact and social media links, defined once and used across the site:
 export const contactLinks = {
-  email: "mailto:contact@camilledugas.me",
+  email: "contact@camilledugas.me",
   booking: "https://cal.com/camilledugas/30min",
 };
 

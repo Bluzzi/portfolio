@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
 import { Button } from "#/components/button";
 import { Container } from "#/components/container";
+import { CopyEmailButton } from "#/components/copy-email";
 import { SceneCampfire, SceneSparkle, SceneStar, type SceneSparkProps } from "#/components/scene-fx";
 import { SceneImage } from "#/components/scene-image";
 import { contactLinks, mediaLinks } from "#/configs/links";
@@ -54,7 +55,7 @@ const sceneFireflies: { x: number; y: number; delay: number }[] = [
 
 export const ContactSection = (): ReactElement => {
   return (
-    <section id="contact" className="relative min-h-[880px] overflow-hidden bg-night">
+    <section id="contact" className="relative min-h-[880px] overflow-clip bg-night">
       <SceneImage src="/backgrounds/scene-contact.png" alt="">
         {/* Stars twinkling in the sky: */}
         {sceneStars.map((star) => (
@@ -83,10 +84,11 @@ export const ContactSection = (): ReactElement => {
         <p className="mx-auto mb-9 max-w-[520px] text-[19px] leading-[1.6] text-cream-dark">
           Collaboration, besoin technique ou juste discuter autour du feu, écris-moi.
         </p>
-        {/* The two call to action buttons wrap side by side on small screens: */}
+        {/* The booking button opens Cal.com and the contact button copies the email on
+            click while keeping its mailto link, both wrap side by side on small screens: */}
         <div className="flex flex-wrap items-center justify-center gap-x-5.5 gap-y-4.5">
-          <Button href={contactLinks.email}>m'écrire un message →</Button>
-          <Button href={contactLinks.booking} variant="secondary" newTab>réserver un appel</Button>
+          <Button href={contactLinks.booking} newTab>réserver un appel →</Button>
+          <CopyEmailButton />
         </div>
       </Container>
 
