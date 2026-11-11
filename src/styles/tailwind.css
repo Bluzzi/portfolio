@@ -133,7 +133,7 @@
   z-index: 0;
   width: 4rem;
   height: 4px;
-  background: linear-gradient(90deg, rgb(237 234 251 / 0), #edeafb);
+  background: linear-gradient(90deg, #edeafb, rgb(237 234 251 / 0));
   opacity: 0;
   animation: shooting-star 12s linear infinite;
 }
