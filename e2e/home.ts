@@ -158,9 +158,6 @@ test("copies the expected email address on click", async ({ page, context }): Pr
   // Navigate to the home page:
   await page.goto("/");
 
-  // Wait for the layout to settle, late webfonts can reflow the page after the load event:
-  await page.evaluate(async () => document.fonts.ready);
-
   // Select the contact link by its accessible name:
   const emailLink = page.getByRole("link", { name: "m'écrire un message" });
 
