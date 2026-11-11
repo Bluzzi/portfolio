@@ -10,4 +10,21 @@
       }
     }
   }
+  "permissions": [
+    // Shell commands that mutate dependencies require approval:
+    { "action": "shell", "resource": "pnpm add *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm install *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm remove *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm rm *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm update *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm up *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm unlink *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm import *", "effect": "ask" },
+    
+    // Editing dependency manifests requires approval:
+    { "action": "edit", "resource": "package.json", "effect": "ask" },
+    { "action": "edit", "resource": "pnpm-lock.yaml", "effect": "ask" },
+    { "action": "edit", "resource": "**/package.json", "effect": "ask" },
+    { "action": "edit", "resource": "**/pnpm-lock.yaml", "effect": "ask" }
+  ]
 }
