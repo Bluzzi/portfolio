@@ -9,7 +9,7 @@
         "url": "https://mcp.context7.com/mcp"
       }
     }
-  }
+  },
   "permissions": [
     // Shell commands that mutate dependencies require approval:
     { "action": "shell", "resource": "pnpm add *", "effect": "ask" },
