@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "openrouter/z-ai/glm-5.3-flash",
   "mcp": {
     "servers": {
       // Fetches up-to-date, curated library documentation:
@@ -11,17 +10,87 @@
     }
   },
   "permissions": [
-    // Shell commands that mutate dependencies require approval:
-    { "action": "shell", "resource": "pnpm add *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm install *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm remove *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm rm *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm update *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm up *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm unlink *", "effect": "ask" },
-    { "action": "shell", "resource": "pnpm import *", "effect": "ask" },
-    
+    // Secrets: deny reading .env entirely:
+    { "action": "read", "resource": "**/.env", "effect": "deny" },
+
+    // pnpm: everything asks by default, then safe day-to-day commands are
+    // allowlisted, then mutating verbs are re-asked after the allows so the
+    // ask wins over overlapping allows (last matching rule wins):
+    { "action": "shell", "resource": "pnpm *", "effect": "ask" },
+
+    // Safe day-to-day pnpm commands (dev, build, lint, exec, queries):
+    { "action": "shell", "resource": "pnpm * run *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * dev *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * build *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * test *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * start *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * lint *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * lint:fix *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * ts:check *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * exec *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * ls *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * list *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * why *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm * outdated *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm --version", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm -v", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm help *", "effect": "allow" },
+
+    // Mutating verbs re-asked AFTER the allows above, so an ask wins when a
+    // command also matches a broad allow like `pnpm * exec *`:
+    { "action": "shell", "resource": "pnpm * add *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * install *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * remove *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * rm *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * un *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * update *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * up *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * dlx *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * import *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * patch *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * link *", "effect": "ask" },
+    { "action": "shell", "resource": "pnpm * unlink *", "effect": "ask" },
+
+    // npm / yarn / bun: denied entirely, everything goes through pnpm. Bare
+    // `npm` / `bun` (help output) are harmless and stay allowed; nested calls
+    // like `pnpm exec npm install` are caught by the `pnpm * install *` rule
+    // above:
+    { "action": "shell", "resource": "npm *", "effect": "deny" },
+    { "action": "shell", "resource": "npx *", "effect": "deny" },
+    { "action": "shell", "resource": "yarn", "effect": "deny" },
+    { "action": "shell", "resource": "yarn *", "effect": "deny" },
+    { "action": "shell", "resource": "bun *", "effect": "deny" },
+    { "action": "shell", "resource": "bunx *", "effect": "deny" },
+
+    // Software installation on the machine → ask (winget only):
+    { "action": "shell", "resource": "winget *", "effect": "ask" },
+
+    // Pipe-to-shell installers (irm | iex ...) → ask:
+    { "action": "shell", "resource": "curl * | pwsh", "effect": "ask" },
+    { "action": "shell", "resource": "curl * | powershell", "effect": "ask" },
+    { "action": "shell", "resource": "curl * | iex", "effect": "ask" },
+    { "action": "shell", "resource": "irm * | iex", "effect": "ask" },
+    { "action": "shell", "resource": "iwr * | iex", "effect": "ask" },
+    { "action": "shell", "resource": "Invoke-RestMethod * | Invoke-Expression", "effect": "ask" },
+
+    // Other precautions for agentic development:
+    { "action": "shell", "resource": "git push", "effect": "ask" },
+    { "action": "shell", "resource": "git push *", "effect": "ask" },
+
+    // Best-effort shell reads of .env (the Read denial above is the reliable
+    // layer; these close the common PowerShell paths, cat and type being
+    // aliases of Get-Content):
+    { "action": "shell", "resource": "cat *.env", "effect": "deny" },
+    { "action": "shell", "resource": "cat *.env *", "effect": "deny" },
+    { "action": "shell", "resource": "type *.env", "effect": "deny" },
+    { "action": "shell", "resource": "type *.env *", "effect": "deny" },
+    { "action": "shell", "resource": "Get-Content *.env", "effect": "deny" },
+    { "action": "shell", "resource": "Get-Content *.env *", "effect": "deny" },
+    { "action": "shell", "resource": "rg *.env", "effect": "deny" },
+    { "action": "shell", "resource": "rg *.env *", "effect": "deny" },
+
     // Editing dependency manifests requires approval:
+    { "action": "edit", "resource": "package.json5", "effect": "ask" },
     { "action": "edit", "resource": "package.json", "effect": "ask" },
     { "action": "edit", "resource": "pnpm-lock.yaml", "effect": "ask" },
     { "action": "edit", "resource": "**/package.json", "effect": "ask" },
