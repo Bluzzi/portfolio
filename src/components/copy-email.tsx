@@ -69,9 +69,7 @@ export const CopyEmailButton = (): ReactElement => {
             className="copy-pop"
             initial={reduceMotion ? false : { opacity: 0, x: "-50%", y: 8 }}
             animate={reduceMotion ? { opacity: 1, x: "-50%", y: 0 } : { opacity: 1, x: "-50%", y: -2 }}
-            exit={reduceMotion
-              ? { opacity: 0, x: "-50%", y: 0, transition: { duration: 0 } }
-              : { opacity: 0, x: "-50%", y: -12, transition: { duration: 0.35, ease: "easeIn" } }}
+            exit={reduceMotion ? { opacity: 0, x: "-50%", y: 0, transition: { duration: 0 } } : { opacity: 0, x: "-50%", y: -12, transition: { duration: 0.35, ease: "easeIn" } }}
             transition={{ type: "spring", stiffness: 480, damping: 26 }}
           >
             email copié !

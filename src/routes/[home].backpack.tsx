@@ -21,7 +21,7 @@ export const BackpackSection = (): ReactElement => {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {backpackCategories.map((category) => (
             <div key={category.title} className="bg-card p-7">
               <div className="mb-5 flex items-center gap-3.5">

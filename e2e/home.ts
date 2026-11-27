@@ -100,9 +100,9 @@ test("displays the exact expected number of skills", async ({ page }): Promise<v
   // Navigate to the home page:
   await page.goto("/");
 
-  // Count the skill links inside the backpack section (19 category tags + the 20 visible
+  // Count the skill links inside the backpack section (27 category tags + the 20 visible
   // occasional skills, before expanding the list):
-  await expect(page.locator("#sac").getByRole("link")).toHaveCount(39);
+  await expect(page.locator("#sac").getByRole("link")).toHaveCount(47);
 });
 
 /**
@@ -114,17 +114,17 @@ test("expands and collapses the occasional skills list", async ({ page }): Promi
   // Navigate to the home page:
   await page.goto("/");
 
-  // Expand the list from the "…" chip (19 category links + 69 occasional links once open):
+  // Expand the list from the "…" chip (27 category links + 69 occasional links once open):
   const backpack = page.locator("#sac");
   const expand = page.getByRole("button", { name: "…", exact: true });
   await expand.click();
-  await expect(backpack.getByRole("link")).toHaveCount(88);
+  await expect(backpack.getByRole("link")).toHaveCount(96);
 
   // Collapse it back from the "réduire ↑" chip:
   const collapse = page.getByRole("button", { name: "réduire ↑", exact: true });
   await expect(collapse).toBeVisible();
   await collapse.click();
-  await expect(backpack.getByRole("link")).toHaveCount(39);
+  await expect(backpack.getByRole("link")).toHaveCount(47);
   await expect(expand).toBeVisible();
 });
 
