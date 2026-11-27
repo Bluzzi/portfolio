@@ -82,7 +82,7 @@ const experienceBase: ExperienceBase[] = [
     },
     icon: "/icons/robot.svg",
     iconSize: 32,
-    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout, de la web app au panel admin en passant par l'application Microsoft Teams, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
+    description: "J'ai cofondé Seedext et construit sa plateforme de bout en bout, de la web app au panel admin en passant par l'application Microsoft Teams, avec un niveau de sécurité à la hauteur des clients grands comptes. J'ai piloté les briques IA (speech-to-text, diarization, LLM, RAG, agent) et conçu des bots capables d'enregistrer les réunions sur Meet, Teams, Zoom et Webex, orchestrés par un micro-service Temporal.io au sein d'un monorepo. En parallèle, j'ai recruté et fait grandir l'équipe technique.",
     points: [
       "Sécurisation des services pour répondre aux exigences rigoureuses des grands comptes", // TODO: ", notamment AXA, SNCF, et La Poste" ?
       "Supervision du développement d'une webapp, d'une application Microsoft Teams ainsi que d'un panel admin",
