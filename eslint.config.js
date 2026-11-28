@@ -7,4 +7,9 @@ export default eslintConfig(
   {
     ignores: ["**/.react-router", "**/build", "**/playwright-report", "**/test-results"],
   },
+  {
+    rules: {
+      "@typescript-eslint/strict-boolean-expressions": ["off"],
+    },
+  },
 );

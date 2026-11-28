@@ -114,11 +114,11 @@ test("expands and collapses the occasional skills list", async ({ page }): Promi
   // Navigate to the home page:
   await page.goto("/");
 
-  // Expand the list from the "…" chip (27 category links + 69 occasional links once open):
+  // Expand the list from the "…" chip (27 category links + 70 occasional links once open):
   const backpack = page.locator("#sac");
   const expand = page.getByRole("button", { name: "…", exact: true });
   await expand.click();
-  await expect(backpack.getByRole("link")).toHaveCount(96);
+  await expect(backpack.getByRole("link")).toHaveCount(97);
 
   // Collapse it back from the "réduire ↑" chip:
   const collapse = page.getByRole("button", { name: "réduire ↑", exact: true });

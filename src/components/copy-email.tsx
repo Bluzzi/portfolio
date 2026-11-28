@@ -21,6 +21,9 @@ const copyEmailSync = (): boolean => {
   // iOS Safari builds no selection from select() alone, so the explicit range is what
   // makes execCommand copy anything at all on iPhones:
   area.setSelectionRange(0, contactLinks.emailAddress.length);
+  // execCommand is the only synchronous clipboard write, which is exactly why the copy
+  // must happen inside the click gesture, so the deprecation is accepted here:
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const copied = document.execCommand("copy");
   area.remove();
   return copied;
@@ -45,6 +48,18 @@ export const CopyEmailButton = (): ReactElement => {
     copiedTimeoutRef.current = window.setTimeout(() => setCopied(false), CONFIRMATION_MS);
   };
 
+  // Async fallback copy through the Clipboard API, used when the synchronous copy is
+  // refused by the browser:
+  const copyEmailFallback = async (): Promise<void> => {
+    try {
+      await navigator.clipboard.writeText(contactLinks.emailAddress);
+      showConfirmation();
+    }
+    catch {
+      // Clipboard access denied, the mailto still opens as a fallback:
+    }
+  };
+
   const copyEmail = (): void => {
     // Synchronous copy first, async Clipboard API as a fallback if execCommand is refused:
     if (copyEmailSync()) {
@@ -52,9 +67,7 @@ export const CopyEmailButton = (): ReactElement => {
       return;
     }
 
-    navigator.clipboard.writeText(contactLinks.emailAddress).then(showConfirmation).catch(() => {
-      // Clipboard access denied, the mailto still opens as a fallback:
-    });
+    void copyEmailFallback();
   };
 
   return (
