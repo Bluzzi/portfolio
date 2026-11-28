@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
 import { Button } from "#/components/button";
 import { contactLinks } from "#/configs/links";
+import { copyToClipboard } from "#/utils/clipboard";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
@@ -51,13 +52,9 @@ export const CopyEmailButton = (): ReactElement => {
   // Async fallback copy through the Clipboard API, used when the synchronous copy is
   // refused by the browser:
   const copyEmailFallback = async (): Promise<void> => {
-    try {
-      await navigator.clipboard.writeText(contactLinks.emailAddress);
-      showConfirmation();
-    }
-    catch {
-      // Clipboard access denied, the mailto still opens as a fallback:
-    }
+    const copied = await copyToClipboard(contactLinks.emailAddress);
+    // Clipboard access denied, the mailto still opens as a fallback:
+    if (copied) showConfirmation();
   };
 
   const copyEmail = (): void => {
